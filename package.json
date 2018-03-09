@@ -1,0 +1,32 @@
+{
+  "name": "behance_summative",
+  "version": "1.0.0",
+  "description": "behance api",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/careykwan/Behance-API.git"
+  },
+  "author": "carey, flo, kelsey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/careykwan/Behance-API/issues"
+  },
+  "homepage": "https://github.com/careykwan/Behance-API#readme",
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "grunt": "^1.0.2",
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "grunt-contrib-csslint": "^2.0.0",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
