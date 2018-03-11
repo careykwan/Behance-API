@@ -43,6 +43,16 @@ module.exports = function (grunt) {
                 }
             }
         },
+        browserSync: {
+            bsFiles: {
+                src: "css/style.css"
+            },
+            options: {
+                server: {
+                    baseDir: "./"
+                }
+            }
+        },
         watch: {
             sass: {
                 files: ["scss/**/*.*"],
@@ -72,6 +82,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     // run gruntSass
     grunt.loadNpmTasks('grunt-contrib-sass');
+    // run browser sync
+    grunt.loadNpmTasks('grunt-browser-sync');
     // run gruntwatch
     grunt.loadNpmTasks('grunt-contrib-watch');
    
@@ -83,5 +95,6 @@ module.exports = function (grunt) {
     grunt.registerTask("min", ["csslint", "cssmin", "jshint", "uglify"]);
     grunt.registerTask("compile", ["sass"]);
     grunt.registerTask("w", ["watch"]);
+    grunt.registerTask("server", ["browserSync", "watch"]);
 
 };
