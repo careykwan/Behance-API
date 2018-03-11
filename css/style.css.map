@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,IAAI;EACA,KAAK,EAAE,OAAiB",
+"sources": ["../scss/modules/flo.scss"],
+"names": [],
+"file": "style.css"
+}

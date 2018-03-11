@@ -32,7 +32,7 @@ module.exports = function (grunt) {
         uglify: {
             my_target: {
                 files: {
-                    'js/minjs/script.min.js': ['js/*.js']
+                    'js/script.min.js': ['js/*.js']
                 }
             }
         },
@@ -45,11 +45,11 @@ module.exports = function (grunt) {
         },
         browserSync: {
             bsFiles: {
-                src: "css/style.css"
+                src: "./"
             },
             options: {
                 server: {
-                    baseDir: "./"
+                    baseDir: "./**/*.*"
                 }
             }
         },
@@ -94,7 +94,6 @@ module.exports = function (grunt) {
     grunt.registerTask("default", ["jshint", "csslint"]);
     grunt.registerTask("min", ["csslint", "cssmin", "jshint", "uglify"]);
     grunt.registerTask("compile", ["sass"]);
-    grunt.registerTask("w", ["watch"]);
     grunt.registerTask("server", ["browserSync", "watch"]);
-
+    grunt.registerTask("w", ["watch"]);
 };
