@@ -45,11 +45,11 @@ module.exports = function (grunt) {
         },
         browserSync: {
             bsFiles: {
-                src: "./"
+                src: "./*.html"
             },
             options: {
                 server: {
-                    baseDir: "./**/*.*"
+                    baseDir: "./"
                 }
             }
         },
@@ -94,6 +94,6 @@ module.exports = function (grunt) {
     grunt.registerTask("default", ["jshint", "csslint"]);
     grunt.registerTask("min", ["csslint", "cssmin", "jshint", "uglify"]);
     grunt.registerTask("compile", ["sass"]);
-    grunt.registerTask("server", ["browserSync", "watch"]);
+    grunt.registerTask("server", ["browserSync"]);
     grunt.registerTask("w", ["watch"]);
 };
