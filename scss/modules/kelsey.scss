@@ -13,15 +13,13 @@ body {
 	display: grid;
 	grid-template-columns:repeat(3, 1fr) ;
 }
-.box {
-	background-color: grey;
-}
+
 #box1{
  grid-column: 1 / 6;
     padding: 0;
     margin-top:0;
-   height: 10%;
-   background-color: lightgrey;
+   height: 8%;
+   background-color:$lighterGrey;
 }
 #box2{
  grid-column: 1 / 6;
@@ -31,5 +29,47 @@ body {
 #box3 {
 grid-column: 1 / 6;
  height: 20%;
+ background-color: $lighterGrey;
  
+}
+.return3{
+	background-color: $darkBlue;
+	border:$darkBlue;
+	border-radius: 5px;
+	color: white;
+	width:220px;
+	height: 40px;
+	font:italic 12px Lato, sans-serif;
+	margin-left: 40px;
+	margin-top:30px;
+}
+#chart1Container {
+	background-color: $darkerGrey;
+	width:520px;
+	height: 420px;
+	float: left;
+	margin-left: 40px;
+	margin-top:30px;
+}
+#chart2Container {
+	background-color: $darkerGrey;
+	width:320px;
+	height: 420px;
+	float: right;
+	margin-right: 40px;
+	margin-top: 30px;
+
+}
+#chart1 {
+	background-color: white;
+	height:400px;
+	width:500px;
+	margin: 10px;
+	
+}
+#chart2 {
+	background-color: white;
+	height:400px;
+	width: 300px;
+	margin:10px;
 }
