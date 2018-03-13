@@ -3,7 +3,7 @@ module.exports = function (grunt) {
     // initiliased the config
     grunt.initConfig({
         jshint: {
-            files: ["*.js", "js/*.js", "js/carey.js", "js/kelsey.js", "js/flo.js"],
+            files: ['js/carey.js', 'js/kelsey.js', 'js/flo.js'],
             options: {
                 globals: {
                     jQuery: true
@@ -15,7 +15,7 @@ module.exports = function (grunt) {
                 options: {
                     import: 2
                 },
-                src: ["css/style.css"]
+                src: ['css/style.css']
             }
         },
         cssmin: {
@@ -32,45 +32,51 @@ module.exports = function (grunt) {
         uglify: {
             my_target: {
                 files: {
-                    'js/script.min.js': ['js/*.js']
+                    'js/script.min.js': ['js/script.js']
                 }
             }
+        },
+        concat: {
+          
+            dist: {
+                src: ['js/carey.js', 'js/kelsey.js', 'js/flo.js'],
+                dest: 'js/script.js',
+            },
         },
         sass: {
             dist: {
                 files: {
-                    "css/style.css": "scss/style.scss"
+                    'css/style.css': 'scss/style.scss'
                 }
             }
         },
         browserSync: {
             bsFiles: {
                 src: [
-                    "./*.html"
+                    './*.html'
                 ]
             },
             options: {
                 server: {
                     baseDir: [
-                        "./"
+                        './'
                     ]
                 }
             }
         },
         watch: {
             sass: {
-                files: ["scss/**/*.*"],
-                tasks: ["sass"]
+                files: ['scss/**/*.*'],
+                tasks: ['sass']
             },
             css: {
-                files: ["css/style.css"],
-                tasks: ["csslint", "cssmin"]
+                files: ['css/style.css'],
+                tasks: ['cssmin']
             },
             js: {
-                files: ["js/*.js"],
-                tasks: ["jshint"]
+                files: ['js/*.js'],
+                tasks: ['jshint', 'concat']
             }
-            
         }
         
 
@@ -82,7 +88,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-csslint');
     // run grunt mincss
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    // run grunt uglifyy js
+    // run grunt concat
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    // run grunt uglify js
     grunt.loadNpmTasks('grunt-contrib-uglify');
     // run gruntSass
     grunt.loadNpmTasks('grunt-contrib-sass');
@@ -95,9 +103,9 @@ module.exports = function (grunt) {
 
     // In terminal if entered 'grunt debug', 
     // it will only run the tasks inside the array 
-    grunt.registerTask("default", ["jshint", "csslint"]);
-    grunt.registerTask("min", ["csslint", "cssmin", "jshint", "uglify"]);
-    grunt.registerTask("compile", ["sass"]);
-    grunt.registerTask("server", ["browserSync"]);
-    grunt.registerTask("w", ["watch"]);
+    grunt.registerTask('default', ['jshint', 'csslint']);
+    grunt.registerTask('min', ['csslint', 'cssmin', 'jshint', 'uglify']);
+    grunt.registerTask('compile', ['sass']);
+    grunt.registerTask('server', ['browserSync']);
+    grunt.registerTask('w', ['watch']);
 };

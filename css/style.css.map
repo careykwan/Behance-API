@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,EAAE;EACE,KAAK,EAAE,OAAO",
+"mappings": "AAAA,CAAC;EACG,KAAK,EAAE,OAAgB",
 "sources": ["../scss/modules/flo.scss"],
 "names": [],
 "file": "style.css"
