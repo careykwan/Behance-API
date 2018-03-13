@@ -3,7 +3,7 @@ module.exports = function (grunt) {
     // initiliased the config
     grunt.initConfig({
         jshint: {
-            files: ["*.js", "js/script.js", "js/carey.js", "js/kelsey.js", "js/flo.js" ],
+            files: ["*.js", "js/*.js", "js/carey.js", "js/kelsey.js", "js/flo.js"],
             options: {
                 globals: {
                     jQuery: true
@@ -45,11 +45,15 @@ module.exports = function (grunt) {
         },
         browserSync: {
             bsFiles: {
-                src: "./*.html"
+                src: [
+                    "./*.html"
+                ]
             },
             options: {
                 server: {
-                    baseDir: "./"
+                    baseDir: [
+                        "./"
+                    ]
                 }
             }
         },
@@ -63,8 +67,8 @@ module.exports = function (grunt) {
                 tasks: ["csslint", "cssmin"]
             },
             js: {
-                files: ["js/**/*.*"],
-                tasks: ["jshint", "uglify"]
+                files: ["js/*.js"],
+                tasks: ["jshint"]
             }
             
         }
