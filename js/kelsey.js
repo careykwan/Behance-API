@@ -2,7 +2,7 @@
 // google.charts.load('current', {'packages':['corechart']});
 // google.charts.setOnLoadCallback(drawDashboard);
 
-// var apiKey;
+var apiKey;
 // var designerIdOne;
 // var designerIdTwo;
 // var designerIdThree;
@@ -10,23 +10,23 @@
 // var designerIdFive;
 // var designerIdSix;
 
-// function getConfig(){
-// 	    $.ajax({
-//         url: "../config.json",
-//         dataType: 'json',
-//         success: function(configData){
-//            apiKey = configData[0].apiKey;
-//            console.log(apiKey);
+function getConfig(){
+	    $.ajax({
+        url: "../config.json",
+        dataType: 'json',
+        success: function(configData){
+           apiKey = configData[0].apiKey;
+           console.log(apiKey);
          
-//             // getBehance();
-//         },
-//         error: function(error){
-//             console.log(error);
-//             console.log("Something has gone wrong");
-//         }
-//     })
-// }
-
+            // getBehance();
+        },
+        error: function(error){
+            console.log(error);
+            console.log("Something has gone wrong");
+        }
+    });
+}
+getConfig();
 // // function drawDashboard(){
 // // 	console.log(apiKey);
 // // 	    $.ajax({
