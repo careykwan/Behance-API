@@ -12,26 +12,22 @@
 	height: 8%;
 	width: 100%;
 	overflow: hidden;
-	background-color: #f1f2f6;
+	background-color: $lighterGrey;
 }
 
 .heading_one {
-	width: 40px;
-	font-family: 'Playfair Display', serif;
-	color: #E41E26;
-	font-size: 40px;
+	height: 45%;
+	width: 25%;
 	margin-left: 60px;
-	padding-top: 15px;
-	font-weight: bold;
+	padding-top: 23px;
 	display: inline-block;
 }
 
-.logo_one {
-	width: 30%;
+.behance_one {
+	width: 15%;
 	height: 60%;
-	background-color: black;
 	float: right;
-	margin-top: 15px;
+	margin-top: 25px;
 	margin-right: 60px;
 }
 
@@ -42,7 +38,7 @@
 .button_one {
 	width: 220px;
 	height: 40px;
-	background-color: #1E3E75;
+	background-color: $darkBlue;
 	border-radius: 5px;
 	margin-top: 30px;
 	margin-left: 40px;
@@ -70,7 +66,7 @@
 .creator_name {
 	width: 60%;
 	font: bold 38px Playfair Display, serif;
-	color: #1E3E75;
+	color: $darkBlue;
 	float: right;
 	margin-top: -39px;
 	letter-spacing: 2px;
@@ -108,6 +104,7 @@
 
 .arrow {
 	margin-right: 8px;
+	color: $accentRed;
 
 }
 
