@@ -1,3 +1,4 @@
+
 // google.charts.load('current', {'packages':['corechart']});
 // google.charts.setOnLoadCallback(drawDashboard);
 
@@ -40,3 +41,6 @@
 // //         }
 // //     })
 // // }
+
+console.log('hello kelsey');
+
