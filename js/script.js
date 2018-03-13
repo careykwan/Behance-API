@@ -4,22 +4,24 @@ console.log('hello carey');
 // google.charts.setOnLoadCallback(drawDashboard);
 
 var apiKey;
-// var designerIdOne;
+var desingerId = ['njenworks', 'RomaNaim', "stefanocolferai"];
+var url1 = "https://api.behance.net/v2/users/njenworks/projects?client_id=s2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG";
+var url2 = "https://api.behance.net/v2/users/RomanNaim/projects?client_id=s2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG";
 // var designerIdTwo;
 // var designerIdThree;
 // var designerIdFour;
 // var designerIdFive;
 // var designerIdSix;
 
-function getConfig(){
-	    $.ajax({
-        url: "../config.json",
-        dataType: 'json',
-        success: function(configData){
-           apiKey = configData[0].apiKey;
-           console.log(apiKey);
-         
-            // getBehance();
+
+function drawDashboard(){
+	    $.ajax({     
+        url: url1, 
+        dataType: 'jsonP',
+        success: function(data){
+            console.log(data);
+          //where the function to create the charts will go
+
         },
         error: function(error){
             console.log(error);
@@ -27,22 +29,7 @@ function getConfig(){
         }
     });
 }
-getConfig();
-// // function drawDashboard(){
-// // 	console.log(apiKey);
-// // 	    $.ajax({
-// //         url: "https://api.behance.net/v2/users/matiascorea/projects?client_id=1234567890",
-// //         dataType: 'jsonP',
-// //         success: function(data){
-// //           //where the function to create the charts wiill go
-// //         },
-// //         error: function(error){
-// //             console.log(error);
-// //             console.log("Something has gone wrong");
-// //         }
-// //     })
-// // }
-
+drawDashboard();
 console.log('hello kelsey');
 
 
