@@ -23,13 +23,13 @@ body {
 }
 #box2{
  grid-column: 1 / 6;
- height: 70%;
+ height: 80%;
  background-color: white;
 }
 #box3 {
 grid-column: 1 / 6;
- height: 20%;
- background-color: $lighterGrey;
+ height: 30%;
+ background-color: white;
  
 }
 .return3{
@@ -45,7 +45,7 @@ grid-column: 1 / 6;
 }
 #chart1Container {
 	background-color: $darkerGrey;
-	width:520px;
+	width:820px;
 	height: 420px;
 	float: left;
 	margin-left: 40px;
@@ -53,7 +53,7 @@ grid-column: 1 / 6;
 }
 #chart2Container {
 	background-color: $darkerGrey;
-	width:320px;
+	width:520px;
 	height: 420px;
 	float: right;
 	margin-right: 40px;
@@ -63,13 +63,26 @@ grid-column: 1 / 6;
 #chart1 {
 	background-color: white;
 	height:400px;
-	width:500px;
+	width:800px;
 	margin: 10px;
 	
 }
 #chart2 {
 	background-color: white;
 	height:400px;
-	width: 300px;
+	width: 500px;
 	margin:10px;
+}
+#statsContainer {
+	width:90%;
+	height: 50%;
+	margin: 0 auto;
+	background-color: $darkerGrey;
+
+}
+#stats {
+	background-color: white;
+	width: 90%;
+	height:90%;
+	margin: 0 auto;
 }
