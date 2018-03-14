@@ -340,8 +340,8 @@ body {
     justify-content: center;
     align-items: center; }
     .designer-details-modal .designer-details-modal-dialog .modal-content {
-      max-width: 900px;
-      max-height: 500px;
+      max-width: 1000px;
+      max-height: 600px;
       border-radius: 5px;
       border: none; }
       .designer-details-modal .designer-details-modal-dialog .modal-content .modal-header {
@@ -368,14 +368,51 @@ body {
             font-size: 30px;
             color: black; }
       .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body {
+        width: 100%;
+        max-height: 500px;
         background-color: white;
-        text-align: center;
-        color: #1B2D47;
-        padding-bottom: 20px; }
-        .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body ul {
-          padding: 0;
-          padding-top: 10px;
-          list-style-type: none; }
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-picture-2 {
+          width: 30%;
+          height: 100%;
+          overflow: hidden;
+          margin: 10px; }
+          .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-picture-2 img {
+            height: 100%; }
+        .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 {
+          height: 100%;
+          width: 70%;
+          margin: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column; }
+          .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-basic-info-container-2 {
+            height: 40%;
+            width: 100%;
+            border-bottom: solid 2px #EFEFEF; }
+            .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-basic-info-container-2 .designer-name-loaction-wrapper-2 {
+              display: flex;
+              flex-direction: row; }
+              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-basic-info-container-2 .designer-name-loaction-wrapper-2 h2 {
+                width: 50%; }
+              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-basic-info-container-2 .designer-name-loaction-wrapper-2 p {
+                width: 50%; }
+          .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 {
+            height: 60%;
+            width: 100%; }
+            .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .icon-wrapper-2 {
+              width: 30px;
+              height: 30px; }
+            .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-views-appreciations-wrapper-2 {
+              display: flex;
+              flex-direction: row; }
+            .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-followers-following-wrapper-2 {
+              display: flex;
+              flex-direction: row; }
       .designer-details-modal .designer-details-modal-dialog .modal-content .modal-footer {
         padding: 0;
         height: 80px;
