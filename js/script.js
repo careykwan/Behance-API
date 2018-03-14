@@ -20,12 +20,12 @@ function getApiData(){
     console.log(dataFromJSONP.projects[0].stats.appreciations);
     
     var data = new google.visualization.arrayToDataTable([
-        ['Group', 'Appreciations', 'Views', ],
-        ['Project One', dataFromJSONP.projects[0].stats.appreciations, 
+        ['Project Name', 'Appreciations', 'Views', ],
+        [dataFromJSONP.projects[0].name, dataFromJSONP.projects[0].stats.appreciations, 
         dataFromJSONP.projects[0].stats.views ],
-        ['Project Two', dataFromJSONP.projects[1].stats.appreciations, 
+        [dataFromJSONP.projects[1].name, dataFromJSONP.projects[1].stats.appreciations, 
         dataFromJSONP.projects[1].stats.views ],
-        ['Project Three', dataFromJSONP.projects[2].stats.appreciations, 
+        [dataFromJSONP.projects[2].name, dataFromJSONP.projects[2].stats.appreciations, 
         dataFromJSONP.projects[2].stats.views ]
         
     
@@ -34,17 +34,24 @@ function getApiData(){
    
        var options = {
           chart: {
-            title: 'Appreciations vs Views',
+            titlePosition: 'none',
           },
-          legend: false,
+          legend: {
+            position: 'none'
+          },
+          bar: {
+            groupWidth: '100%'
+          },
+        
           fontName: 'Playfair Display, serif',
           bars: 'vertical',
           vAxis: {format: 'decimal'},
-          height: 400,
+          height: 300,
+          width:700,
           colors: ['#1B2D47', '#1E3E75']
         };
  
-   var classicChart = new google.charts.Bar(document.getElementById('chart1'));
+   var classicChart = new google.charts.Bar(document.getElementById('chart1Location'));
     classicChart.draw(data, options);
        
               
