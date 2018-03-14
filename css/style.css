@@ -196,7 +196,8 @@ body {
   flex-direction: row; }
   .top-section-wrapper-2 .pentagramer-logo-wrapper-2 {
     width: 30%;
-    margin-left: 75px; }
+    margin-left: 75px;
+    cursor: pointer; }
     .top-section-wrapper-2 .pentagramer-logo-wrapper-2 img {
       width: 100%; }
   .top-section-wrapper-2 .behance-logo-wrapper-2 {
@@ -245,9 +246,7 @@ body {
     .middle-section-wrapper-2 .homepage-middle-content-2 .designer-content-container-2 {
       background: white;
       padding: 30px;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
+      padding-right: 0px; }
       .middle-section-wrapper-2 .homepage-middle-content-2 .designer-content-container-2 .designer-profiles-section-container-2 {
         width: 100%;
         height: 100%;
@@ -266,9 +265,28 @@ body {
             width: 30%;
             height: 45%;
             margin: 10px;
-            overflow: hidden; }
-            .middle-section-wrapper-2 .homepage-middle-content-2 .designer-content-container-2 .designer-profiles-section-container-2 .designer-profiles-wrapper-2 .profile-image-2 img {
-              width: 100%; }
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            cursor: pointer; }
+            .middle-section-wrapper-2 .homepage-middle-content-2 .designer-content-container-2 .designer-profiles-section-container-2 .designer-profiles-wrapper-2 .profile-image-2 .designer-profile-name-div-2 {
+              width: 10%;
+              height: 100%; }
+              .middle-section-wrapper-2 .homepage-middle-content-2 .designer-content-container-2 .designer-profiles-section-container-2 .designer-profiles-wrapper-2 .profile-image-2 .designer-profile-name-div-2 h3 {
+                width: 100%;
+                transform: rotate(90deg);
+                font-size: 15px;
+                padding-left: 15px;
+                white-space: nowrap;
+                font-family: "Lato", sans-serif;
+                text-transform: uppercase;
+                font-weight: 400;
+                color: #1B2D47; }
+            .middle-section-wrapper-2 .homepage-middle-content-2 .designer-content-container-2 .designer-profiles-section-container-2 .designer-profiles-wrapper-2 .profile-image-2 .designer-profile-photo-wrapper-2 {
+              width: 90%;
+              height: 100%; }
+              .middle-section-wrapper-2 .homepage-middle-content-2 .designer-content-container-2 .designer-profiles-section-container-2 .designer-profiles-wrapper-2 .profile-image-2 .designer-profile-photo-wrapper-2 img {
+                width: 100%; }
           .middle-section-wrapper-2 .homepage-middle-content-2 .designer-content-container-2 .designer-profiles-section-container-2 .designer-profiles-wrapper-2 .designer-two-profile-2,
           .middle-section-wrapper-2 .homepage-middle-content-2 .designer-content-container-2 .designer-profiles-section-container-2 .designer-profiles-wrapper-2 .designer-five-profile-2 {
             margin-left: 10px;
@@ -311,5 +329,83 @@ body {
 .menu-item-2:hover {
   border-bottom: solid 3px #1E3E75;
   cursor: pointer; }
+
+.designer-details-modal {
+  height: 100vh;
+  width: 100vw; }
+  .designer-details-modal .designer-details-modal-dialog {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .designer-details-modal .designer-details-modal-dialog .modal-content {
+      max-width: 900px;
+      max-height: 500px;
+      border-radius: 5px;
+      border: none; }
+      .designer-details-modal .designer-details-modal-dialog .modal-content .modal-header {
+        background-color: #F7F7F7;
+        border-bottom: none;
+        height: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row; }
+        .designer-details-modal .designer-details-modal-dialog .modal-content .modal-header .modal-title {
+          width: 100%;
+          font-family: "Playfair Display", serif;
+          font-size: 30px;
+          color: #E41E26;
+          font-weight: 700;
+          text-transform: uppercase;
+          text-align: center;
+          padding-left: 50px; }
+        .designer-details-modal .designer-details-modal-dialog .modal-content .modal-header .close {
+          opacity: 1;
+          justify-content: flex-end; }
+          .designer-details-modal .designer-details-modal-dialog .modal-content .modal-header .close .fa-times {
+            font-size: 30px;
+            color: black; }
+      .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body {
+        background-color: white;
+        text-align: center;
+        color: #1B2D47;
+        padding-bottom: 20px; }
+        .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body ul {
+          padding: 0;
+          padding-top: 10px;
+          list-style-type: none; }
+      .designer-details-modal .designer-details-modal-dialog .modal-content .modal-footer {
+        padding: 0;
+        height: 80px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        background-color: #F7F7F7; }
+        .designer-details-modal .designer-details-modal-dialog .modal-content .modal-footer .project-link-wrapper-2 {
+          border-right: solid 4px #EFEFEF; }
+        .designer-details-modal .designer-details-modal-dialog .modal-content .modal-footer .other-pages-link-wrapper-2 {
+          margin: 0;
+          padding: 0;
+          width: 50%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          .designer-details-modal .designer-details-modal-dialog .modal-content .modal-footer .other-pages-link-wrapper-2 .project-page-link-2,
+          .designer-details-modal .designer-details-modal-dialog .modal-content .modal-footer .other-pages-link-wrapper-2 .statistics-page-link-2 {
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            font-family: "Lato", sans-serif;
+            font-size: 16px;
+            color: #1E3E75;
+            font-weight: 400;
+            font-style: italic;
+            text-transform: uppercase;
+            text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

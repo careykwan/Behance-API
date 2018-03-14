@@ -10,6 +10,7 @@
 
 	<!-- STYLE SHEETS -->
 	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap-grid.min.css">
 	<link rel="stylesheet" type="text/css" href="node_modules/slick-carousel/slick/slick.css">
 	<link rel="stylesheet" type="text/css" href="node_modules/slick-carousel/slick/slick-theme.css">
 	<link rel="stylesheet" type="text/css" href="css/style.min.css">
@@ -35,7 +36,7 @@
 			</div>
 
 			<div class="homepage-middle-content-2">
-
+				<!-- Slide Show Content -->
 				<div class="slick-designer-slideshow-2">
 					<div>
 						<img src="img/placeholderImg/angusImg.jpg" alt="angus image"/>
@@ -57,30 +58,68 @@
 					</div>
 				</div>
 
+				<!-- Designer links Content -->
 				<div class="designer-content-container-2">
 					<div class="designer-profiles-section-container-2">
 						<div class="designer-profiles-wrapper-2">
-							<div class="designer-one-profile-2 profile-image-2">
-								<img src="img/placeholderImg/placeholderImg.png" alt="designer 1 profile image" />
+
+							<div class="designer-one-profile-2 profile-image-2" id="designer-one-profile-2" data-toggle="modal" data-target="#designer-details-modal">
+								<div class="designer-profile-photo-wrapper-2">
+									<img src="img/placeholderImg/placeholderImg.png" alt="designer 1 profile image" />
+								</div>
+								<div class="designer-profile-name-div-2">
+									<h3>Designer Name</h3>
+								</div>
 							</div>
-							<div class="designer-two-profile-2 profile-image-2">
-								<img src="img/placeholderImg/placeholderImg.png" alt="designer 1 profile image" />
+
+							<div class="designer-two-profile-2 profile-image-2" id="designer-two-profile-2" data-toggle="modal" data-target="#designer-details-modal">
+								<div class="designer-profile-photo-wrapper-2">
+									<img src="img/placeholderImg/placeholderImg.png" alt="designer 1 profile image" />
+								</div>
+								<div class="designer-profile-name-div-2">
+									<h3>Designer Name</h3>
+								</div>
 							</div>
-							<div class="designer-three-profile-2 profile-image-2">
-								<img src="img/placeholderImg/placeholderImg.png" alt="designer 1 profile image" />
+
+							<div class="designer-three-profile-2 profile-image-2" id="designer-three-profile-2" data-toggle="modal" data-target="#designer-details-modal">
+								<div class="designer-profile-photo-wrapper-2">
+									<img src="img/placeholderImg/placeholderImg.png" alt="designer 1 profile image" />
+								</div>
+								<div class="designer-profile-name-div-2">
+									<h3>Designer Name</h3>
+								</div>
 							</div>
-							<div class="designer-four-profile-2 profile-image-2">
-								<img src="img/placeholderImg/placeholderImg.png" alt="designer 1 profile image" />
+
+							<div class="designer-four-profile-2 profile-image-2" id="designer-four-profile-2" data-toggle="modal" data-target="#designer-details-modal">
+								<div class="designer-profile-photo-wrapper-2">
+									<img src="img/placeholderImg/placeholderImg.png" alt="designer 1 profile image" />
+								</div>
+								<div class="designer-profile-name-div-2">
+									<h3>Designer Name</h3>
+								</div>
 							</div>
-							<div class="designer-five-profile-2 profile-image-2">
-								<img src="img/placeholderImg/placeholderImg.png" alt="designer 1 profile image" />
+
+							<div class="designer-five-profile-2 profile-image-2" id="designer-five-profile-2" data-toggle="modal" data-target="#designer-details-modal">
+								<div class="designer-profile-photo-wrapper-2">
+									<img src="img/placeholderImg/placeholderImg.png" alt="designer 1 profile image" />
+								</div>
+								<div class="designer-profile-name-div-2">
+									<h3>Designer Name</h3>
+								</div>								
 							</div>
-							<div class="designer-six-profile-2 profile-image-2">
-								<img src="img/placeholderImg/placeholderImg.png" alt="designer 1 profile image" />
+
+							<div class="designer-six-profile-2 profile-image-2" id="designer-six-profile-2" data-toggle="modal" data-target="#designer-details-modal">
+								<div class="designer-profile-photo-wrapper-2">
+									<img src="img/placeholderImg/placeholderImg.png" alt="designer 1 profile image" />
+								</div>
+								<div class="designer-profile-name-div-2">
+									<h3>Designer Name</h3>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+	
 			</div>
 			
 			<div class="contact-link-wrapper-2">
@@ -94,6 +133,47 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- Designer Details Modal Pop -->
+	<div class="modal fade designer-details-modal" id="designer-details-modal" tabindex="-1" role="dialog" aria-labelledby="designer-details-modal-label"
+	 aria-hidden="true">
+		<div class="modal-dialog modal-lg designer-details-modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<h5 class="modal-title" id="designer-details-modal-label">How It Works?</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<i class="fa fa-times" aria-hidden="true"></i>
+					</button>
+				</div>
+	
+				<div class="modal-body">
+					<p>Find a rental vehicle with DrivePie and visit the places seen in the classic New Zealand movie, Goodbye Pork pie!</p>
+					<p>Only in a few steps, you can be on your way.</p>
+	
+					<ul class="designer-details-steps">
+						<li>
+							<span>1.</span> Pick a Trip you would like to go on, or customise your trip by selecting your route.</li>
+						<li>
+							<span>2.</span> Indicate amount of seats you require.</li>
+						<li>
+							<span>3.</span> Specify the amount of days you will be traveling.</li>
+						<li>
+							<span>4.</span> Select a rental vehicle.</li>
+					</ul>
+				</div>
+	
+				<div class="modal-footer">
+					<div class="other-pages-link-wrapper-2 project-link-wrapper-2">
+						<a class="project-page-link-2">View Designer's Projects</a>
+					</div>
+					<div class="other-pages-link-wrapper-2 statistic-link-wrapper-2">
+						<a class="statistics-page-link-2">View Designer's Project Statistics</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	
 
 
@@ -104,6 +184,7 @@
 
 	<!-- SCRIPTS -->
 	<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="node_modules/slick-carousel/slick/slick.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
