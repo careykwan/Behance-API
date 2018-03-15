@@ -57,8 +57,8 @@ function florenceJavaScript() {
 
     function changeModalInfo() {
         grabUserID();
-        var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOco';
-        // var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
+        // var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOco';
+        var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
         var userIDArray = [];
 
         // @grabUserID is a switch statement to push and empty certain UserIDs depending on what div has been clicked has been clicked.
@@ -144,18 +144,6 @@ function florenceJavaScript() {
         }
     }
     
-    // Slick JS (slideshow jQuery)
-    $('.slick-designer-slideshow-2').slick({
-        dots: true,
-        arrows: false,
-        infinite: true,
-        speed: 500,
-        fade: true,
-        cssEase: 'linear',
-        autoplay: true,
-        autoplaySpeed: 2500
-    });
-
 // This code is unnecessary but I wanted to use a AJAX request to append all the info possible for my site. 
 // I could have made multiple AJAX request from the start but decided to try a way to replace the UserID in the request instead. 
 
@@ -165,8 +153,8 @@ function florenceJavaScript() {
         // @AJAXBehanceRequest2 Runs a AJAX request to Behance API to grab data, if successful it will run showDesignerDetails function.
         function seconeAJAXBehanceRequest2() {
 
-            var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOco';
-            // var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
+            // var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOco';
+            var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
             var designer1 = 'rafaalvarez';
             var designer2 = 'clairehartley';
             var designer3 = 'Doralice';
@@ -307,6 +295,52 @@ function florenceJavaScript() {
             } 
         }
     }
+
+    // Homepage JavaScript 
+    // Slick JS (slideshow jQuery)
+    $('.slick-designer-slideshow-2').slick({
+        dots: true,
+        arrows: false,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 2500
+    });
+
+    // About and contact Open and close
+    $('button').click(function () {
+        switch (this.id) {
+            case 'aboutLink':
+                if ($('.about-overlay-container-2').css('display') !== 'none'){
+                    $('.about-overlay-container-2').css('display', 'none');
+                    $('.contact-overlay-container-2').css('display', 'none');
+                }
+                else{
+                    $('.about-overlay-container-2').css('display', 'block');
+                    $('.contact-overlay-container-2').css('display', 'none');
+                }
+                break;
+            case 'contactLink':
+                if ($('.contact-overlay-container-2').css('display') !== 'none') {
+                    $('.contact-overlay-container-2').css('display', 'none');
+                    $('.about-overlay-container-2').css('display', 'none');
+                }
+                else {
+                    $('.contact-overlay-container-2').css('display', 'block');
+                    $('.about-overlay-container-2').css('display', 'none');
+                }
+                break;
+            case 'closeContact':
+                $('.contact-overlay-container-2').css('display', 'none');
+                break;
+        }
+    });
+
+    $('#contactBackground').click(function () {
+        $('.contact-overlay-container-2').css('display', 'none');
+    });
 }
 
 

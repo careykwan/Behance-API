@@ -6,7 +6,7 @@
 
 	<!-- TYPEFACE LINKS -->
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,700i,900,900i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,700i,900,900i" rel="stylesheet">
 
 	<!-- STYLE SHEETS -->
 	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -32,10 +32,51 @@
 
 		<div class="middle-section-wrapper-2">
 			<div class="about-link-wrapper-2">
-				<button class="menu-item-2 about-menu-2">About</button>
+				<button class="menu-item-2 about-menu-2" id="aboutLink">About</button>
 			</div>
 
 			<div class="homepage-middle-content-2">
+				<!-- About overlay -->
+				<div class="about-overlay-container-2">
+					<div class="about-content-wrapper-2">
+						<div class="about-logo-container-2">
+							<div class="short-logo-wrapper">
+								<img src="img/pentagramerShortLogo.png" alt="Pentagramer Logo" />
+							</div>
+							<div class="long-logo-wrapper">
+								<img src="img/pentagramerLogo.png" alt="Pentagramer Logo" />
+							</div>
+						</div>
+						<div class="about-info-container-2">
+							<h2 class="about-header-2">About Us</h2>
+							<h4 class="top-about-paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam.</h4>
+							<p class="about-info-paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+							aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
+							ex ea</p>
+							<p class="about-info-paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+							aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
+							ex ea</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Contact overlay -->
+				<div class="contact-overlay-container-2">
+					<div class="contact-content-wrapper-2" id="contactBackground">
+						<div class="contact-box-wrapper-2">
+							<div class="close-wrapper-2">
+								<button type="button" class="close" id="closeContact" aria-label="Close">
+									<i class="fa fa-times" aria-hidden="true"></i>
+								</button>
+							</div>
+							<div class="contact-text-wrapper-2">
+								<p>Interested in working together?<br>Want to know more about our work?</p>
+							</div>
+							<a class="email-contact-us-button" href="mailto:pentergramer@emailexample.com?Subject=Hello!!" target="_top">Contact Us</a>
+						</div>
+					</div>
+				</div>
+
 				<!-- Slide Show Content -->
 				<div class="slick-designer-slideshow-2">
 					<div>
@@ -84,7 +125,7 @@
 			</div>
 			
 			<div class="contact-link-wrapper-2">
-				<button class="menu-item-2 contact-menu-2">Contact</button>
+				<button class="menu-item-2 contact-menu-2" id="contactLink">Contact</button>
 			</div>
 		</div>
 
