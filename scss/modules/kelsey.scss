@@ -81,12 +81,12 @@ body {
 }
 #chart1Location {
 	margin: 0 auto;
-	width: 70%;
+	width: 80%;
 	height: 60%;
 	padding-top: 6%;
 }
 #chart2Location {
-	margin-left:10%;
+	margin-left:8%;
 	width: 90%;
 	height: 70%;
 	padding-top: 6%;
@@ -200,11 +200,22 @@ body {
 	font:  20px Lato, sans-serif;
 	margin-left: 25%;
 }
+#phoneScreen {
+	background-color: black;
+	width: 100vw;
+	height: 100vh;
+	display: none;
+}
+#phoneMessage {
+	font: bold 32px Playfair Display, serif;
+	color: white;
+}
 
 @media only screen and (max-width: 768px) {
 #statsContainer {
 	margin-top: 60%;
 	width:90%;
+	margin-left:5.5%;
 	
 }
 #chart1Container{
@@ -217,5 +228,21 @@ width: 90%;
 	margin-left: 7%;
 	margin-top:3%;
 }
-
+#chart2Location {
+	margin-left: 5%;
+}
+.designerName {
+	font-size: 28px;
+	margin-right: -48%;
+	margin-top: 4%;
+}
+.nameDescription {
+	margin-right: 15%;
+	margin-top: 6%;
+}
+}
+@media only screen and (max-width: 725px){
+	#phoneScreen {
+		display: block;
+	}
 }
