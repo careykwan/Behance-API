@@ -191,6 +191,12 @@ body {
   height: 90%;
   padding-top: 6%; }
 
+#chart2Location {
+  margin: 0 auto;
+  width: 90%;
+  height: 90%;
+  padding-top: 6%; }
+
 #statsContainer {
   width: 93%;
   height: 78%;

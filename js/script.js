@@ -30,19 +30,19 @@ function getApiData(){
         var designerName = dataFromJSONP.projects[0].owners[0].display_name;
 
 
-  console.log(totalViews);
-    console.log(dataFromJSONP);
-    console.log(dataFromJSONP.projects[0].stats.appreciations);
+        console.log(totalViews);
+        console.log(dataFromJSONP);
+        console.log(dataFromJSONP.projects[0].stats.appreciations);
     
-    var data = new google.visualization.arrayToDataTable([
-        ['Project Name', 'Appreciations', 'Views', ],
-        [dataFromJSONP.projects[0].name, dataFromJSONP.projects[0].stats.appreciations, 
-        dataFromJSONP.projects[0].stats.views ],
-        [dataFromJSONP.projects[1].name, dataFromJSONP.projects[1].stats.appreciations, 
-        dataFromJSONP.projects[1].stats.views ],
-        [dataFromJSONP.projects[2].name, dataFromJSONP.projects[2].stats.appreciations, 
-        dataFromJSONP.projects[2].stats.views ]
-        
+        var data = new google.visualization.arrayToDataTable([
+            ['Project Name', 'Appreciations', 'Views', ],
+            [dataFromJSONP.projects[0].name, dataFromJSONP.projects[0].stats.appreciations, 
+            dataFromJSONP.projects[0].stats.views ],
+            [dataFromJSONP.projects[1].name, dataFromJSONP.projects[1].stats.appreciations, 
+            dataFromJSONP.projects[1].stats.views ],
+            [dataFromJSONP.projects[2].name, dataFromJSONP.projects[2].stats.appreciations, 
+            dataFromJSONP.projects[2].stats.views ]
+            
     
    ]);
 
@@ -67,8 +67,8 @@ function getApiData(){
           colors: ['#1B2D47', '#1E3E75']
         };
  
-   var classicChart = new google.charts.Bar(document.getElementById('chart1Location'));
-    classicChart.draw(data, options);
+         var classicChart = new google.charts.Bar(document.getElementById('chart1Location'));
+         classicChart.draw(data, options);
        
        // $('#designerName3').append(designerName);
        // $('#viewStats3').append(totalViews);
@@ -83,9 +83,7 @@ function getApiData(){
         }
     });
 }
-  $(window).resize(function(){
-        getApiData();
-        }) ;
+
 console.log('hello kelsey');
 
 
