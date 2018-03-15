@@ -204,50 +204,6 @@
 }
 
 // Stylings for designers details modal pop up
-// .designer-detail-modal-2{
-//     height: 100vh;
-//     width: 100vw;
-//     .designer-detail-modal-dialog-2{
-//         width: 100%;
-//         width: 100%;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         margin: 0;
-//          .modal-content{
-            
-//             min-width: 700px;
-//             border-radius: 5px;
-//             overflow: hidden;
-//             .modal-header{
-//                 background-color: $lighterGrey;
-//                 height: 70px;
-                
-//                 .modal-title{
-//                     width: 700;
-//                     font-family: $headerFont;
-//                     font-size: 30px;
-//                     color: $accentRed;
-//                     font-weight: $bold;
-//                     text-transform: uppercase;
-//                     text-align: center;
-//                     padding-left: 25px;
-//                 }
-//             }
-
-//             .modal-footer{
-//                 height: 70px;
-//                 // width: 700px;
-
-//                 .page-links-2{
-//                     width: 350px;
-//                 }            
-//             }
-//         }
-//     }
-   
-// }
-
 .designer-details-modal{
     height: 100vh;
     width: 100vw;
@@ -273,12 +229,12 @@
                 .modal-title{
                     width: 100%;
                     font-family: $headerFont;
-                    font-size: 30px;
+                    font-size: 40px;
                     color: $accentRed;
                     font-weight: $bold;
                     text-transform: uppercase;
                     text-align: center;
-                    padding-left: 50px;
+                    padding-left: 60px;
                 }
                 .close{
                     opacity: 1;
@@ -292,6 +248,7 @@
             .modal-body{
                 width: 100%;
                 max-height: 500px;
+
                 background-color: white;
                 padding: 15px;
                 display: flex;
@@ -299,63 +256,130 @@
                 align-items: center;
 
                 .designer-modal-picture-2{
-                    width: 30%;
+                    width: 40%;
                     height: 100%;
-                    overflow: hidden;
                     margin: 10px;
+                    margin-right: 20px;
                     img{
-                        height: 100%;
+                        width: 100%;
                     }
                 }
                 
                 .designer-modal-details-container-2{
                     height: 100%;
-                    width:  70%;
-                    margin: 10px;
+                    width:  60%;
                     display: flex;
                     justify-content: center;
-                    align-items: center;
+                    align-items: space-around;
                     flex-direction: column;
-
                     .designer-basic-info-container-2{
                         height: 40%;
                         width: 100%;
                         border-bottom: solid 2px $darkerGrey;
-
+                        padding-bottom: 10px;
+                        margin-bottom: 5px;
                         .designer-name-loaction-wrapper-2{
                             display: flex;
                             flex-direction: row;
+                            align-items: flex-end;
                             h2{
-                                width: 50%;
+                                margin: 0;
+                                font-family: $headerFont;
+                                font-size: 30px;
+                                color: $darkBlue;
+                                font-weight: $bold;
+                                text-transform: uppercase;
+                                white-space:nowrap;
                             }
                             p{
-                                width: 50%;
-                            }
+                                margin: 0;
+                                padding-left: 10px;
+                                font-family: $paragraphFont;
+                                font-size: 18px;
+                                font-weight: $light;
+                                text-transform: uppercase;
+                                font-style: italic;
+                                white-space:nowrap;
+                            }                          
                         }
+                        #focusInfo2{
+                            margin: 0;
+                            font-family: $paragraphFont;
+                            font-size: 20px;
+                            font-weight: $light;
+                            font-style: italic;
+                            white-space:nowrap;
+                        }
+                        #designerWebsiteLink2{
+                            margin: 0;
+                            margin: 0;
+                            font-family: $paragraphFont;
+                            font-size: 18px;
+                            font-weight: $light;
+                            font-style: italic;
+                            color: black;
+                            text-decoration: none;
+                            white-space:nowrap;
+                        }  
                     }
                     .designer-profile-statistics-wrapper-2{
                         height: 60%;
                         width: 100%;
+                        display: flex;
+                        flex-direction: row;
 
                         .icon-wrapper-2{
-                            width: 30px;
-                            height: 30px;
+                            width: 40px;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            img{
+                                width: 100%;
+                            }
                         }
 
-                        .project-views-appreciations-wrapper-2{
-                            display: flex;
-                            flex-direction: row;
+                        .info-wrapper-2{
+                            margin-left: 25px;
                         }
+
+                        .info-title-2{
+                            font-family: $paragraphFont;
+                            font-size: 18px;
+                            font-weight: $regular;
+                            font-style: italic;
+                            text-transform: uppercase;
+                        }
+                        .info-value-2{
+                            font-family: $paragraphFont;
+                            font-size: 25px;
+                            font-weight: $regular;
+                            font-style: italic;
+                        }
+
+                        .project-views-appreciations-wrapper-2,
                         .project-followers-following-wrapper-2{
                             display: flex;
-                            flex-direction: row;
+                            flex-direction: column;
+                            margin: 10px;
+                           
+                            .designer-views-wrapper-2,
+                            .designer-appreciation-wrapper-2,
+                            .designer-followers-wrapper-2,
+                            .designer-following-wrapper-2{
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                padding: 5px;
+                                margin-top: 20px;
+                            }
                         }
-
+                        .project-followers-following-wrapper-2{
+                              padding-left: 10px;
+                        }
                     }
-
-
                 }
-
             }
 
             .modal-footer{
@@ -382,7 +406,6 @@
                     .project-page-link-2,
                     .statistics-page-link-2{
                         width: 100%;
-                        text-align: center;
                         margin: 0 auto;
                         font-family: $paragraphFont;
                         font-size: 16px;

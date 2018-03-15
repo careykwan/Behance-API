@@ -355,12 +355,12 @@ body {
         .designer-details-modal .designer-details-modal-dialog .modal-content .modal-header .modal-title {
           width: 100%;
           font-family: "Playfair Display", serif;
-          font-size: 30px;
+          font-size: 40px;
           color: #E41E26;
           font-weight: 700;
           text-transform: uppercase;
           text-align: center;
-          padding-left: 50px; }
+          padding-left: 60px; }
         .designer-details-modal .designer-details-modal-dialog .modal-content .modal-header .close {
           opacity: 1;
           justify-content: flex-end; }
@@ -376,43 +376,109 @@ body {
         justify-content: space-between;
         align-items: center; }
         .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-picture-2 {
-          width: 30%;
+          width: 40%;
           height: 100%;
-          overflow: hidden;
-          margin: 10px; }
+          margin: 10px;
+          margin-right: 20px; }
           .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-picture-2 img {
-            height: 100%; }
+            width: 100%; }
         .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 {
           height: 100%;
-          width: 70%;
-          margin: 10px;
+          width: 60%;
           display: flex;
           justify-content: center;
-          align-items: center;
+          align-items: space-around;
           flex-direction: column; }
           .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-basic-info-container-2 {
             height: 40%;
             width: 100%;
-            border-bottom: solid 2px #EFEFEF; }
+            border-bottom: solid 2px #EFEFEF;
+            padding-bottom: 10px;
+            margin-bottom: 5px; }
             .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-basic-info-container-2 .designer-name-loaction-wrapper-2 {
               display: flex;
-              flex-direction: row; }
+              flex-direction: row;
+              align-items: flex-end; }
               .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-basic-info-container-2 .designer-name-loaction-wrapper-2 h2 {
-                width: 50%; }
+                margin: 0;
+                font-family: "Playfair Display", serif;
+                font-size: 30px;
+                color: #1B2D47;
+                font-weight: 700;
+                text-transform: uppercase;
+                white-space: nowrap; }
               .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-basic-info-container-2 .designer-name-loaction-wrapper-2 p {
-                width: 50%; }
+                margin: 0;
+                padding-left: 10px;
+                font-family: "Lato", sans-serif;
+                font-size: 18px;
+                font-weight: 300;
+                text-transform: uppercase;
+                font-style: italic;
+                white-space: nowrap; }
+            .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-basic-info-container-2 #focusInfo2 {
+              margin: 0;
+              font-family: "Lato", sans-serif;
+              font-size: 20px;
+              font-weight: 300;
+              font-style: italic;
+              white-space: nowrap; }
+            .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-basic-info-container-2 #designerWebsiteLink2 {
+              margin: 0;
+              margin: 0;
+              font-family: "Lato", sans-serif;
+              font-size: 18px;
+              font-weight: 300;
+              font-style: italic;
+              color: black;
+              text-decoration: none;
+              white-space: nowrap; }
           .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 {
             height: 60%;
-            width: 100%; }
+            width: 100%;
+            display: flex;
+            flex-direction: row; }
             .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .icon-wrapper-2 {
-              width: 30px;
-              height: 30px; }
-            .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-views-appreciations-wrapper-2 {
+              width: 40px;
+              height: 100%;
               display: flex;
-              flex-direction: row; }
+              justify-content: center;
+              align-items: center; }
+              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .icon-wrapper-2 img {
+                width: 100%; }
+            .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .info-wrapper-2 {
+              margin-left: 25px; }
+            .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .info-title-2 {
+              font-family: "Lato", sans-serif;
+              font-size: 18px;
+              font-weight: 400;
+              font-style: italic;
+              text-transform: uppercase; }
+            .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .info-value-2 {
+              font-family: "Lato", sans-serif;
+              font-size: 25px;
+              font-weight: 400;
+              font-style: italic; }
+            .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-views-appreciations-wrapper-2,
             .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-followers-following-wrapper-2 {
               display: flex;
-              flex-direction: row; }
+              flex-direction: column;
+              margin: 10px; }
+              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-views-appreciations-wrapper-2 .designer-views-wrapper-2,
+              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-views-appreciations-wrapper-2 .designer-appreciation-wrapper-2,
+              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-views-appreciations-wrapper-2 .designer-followers-wrapper-2,
+              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-views-appreciations-wrapper-2 .designer-following-wrapper-2,
+              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-followers-following-wrapper-2 .designer-views-wrapper-2,
+              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-followers-following-wrapper-2 .designer-appreciation-wrapper-2,
+              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-followers-following-wrapper-2 .designer-followers-wrapper-2,
+              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-followers-following-wrapper-2 .designer-following-wrapper-2 {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 5px;
+                margin-top: 20px; }
+            .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-followers-following-wrapper-2 {
+              padding-left: 10px; }
       .designer-details-modal .designer-details-modal-dialog .modal-content .modal-footer {
         padding: 0;
         height: 80px;
@@ -435,7 +501,6 @@ body {
           .designer-details-modal .designer-details-modal-dialog .modal-content .modal-footer .other-pages-link-wrapper-2 .project-page-link-2,
           .designer-details-modal .designer-details-modal-dialog .modal-content .modal-footer .other-pages-link-wrapper-2 .statistics-page-link-2 {
             width: 100%;
-            text-align: center;
             margin: 0 auto;
             font-family: "Lato", sans-serif;
             font-size: 16px;
