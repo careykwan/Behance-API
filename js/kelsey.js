@@ -1,4 +1,8 @@
 
+    $('#returnBtn').click(function(){
+        window.location = 'index.html';
+    });
+
 google.charts.load('current', {'packages':['corechart' ,'bar']});
 google.charts.setOnLoadCallback(getApiData);
 
@@ -12,6 +16,7 @@ var designer3 = 'Doralice';
 var designer4 = 'izutsu';
 var designer5 = 'MaryRabun';
 var designer6 = 'nahuelsal';
+
 
 function getApiData(){
 	    $.ajax({     
