@@ -485,17 +485,17 @@ body {
                 white-space: nowrap; }
               .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-basic-info-container-2 .designer-name-loaction-wrapper-2 p {
                 margin: 0;
-                padding-left: 10px;
+                padding-left: 5px;
                 font-family: "Lato", sans-serif;
                 font-size: 18px;
                 font-weight: 300;
-                text-transform: uppercase;
                 font-style: italic;
                 white-space: nowrap; }
             .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-basic-info-container-2 #focusInfo2 {
               margin: 0;
+              margin-top: 2px;
               font-family: "Lato", sans-serif;
-              font-size: 20px;
+              font-size: 16px;
               font-weight: 300;
               font-style: italic;
               white-space: nowrap; }
@@ -503,7 +503,7 @@ body {
               margin: 0;
               margin: 0;
               font-family: "Lato", sans-serif;
-              font-size: 18px;
+              font-size: 16px;
               font-weight: 300;
               font-style: italic;
               color: black;
@@ -551,8 +551,12 @@ body {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                padding: 5px;
-                margin-top: 20px; }
+                padding: 5px; }
+              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-views-appreciations-wrapper-2 .designer-appreciation-wrapper-2,
+              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-views-appreciations-wrapper-2 .designer-following-wrapper-2,
+              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-followers-following-wrapper-2 .designer-appreciation-wrapper-2,
+              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-followers-following-wrapper-2 .designer-following-wrapper-2 {
+                margin-top: 30px; }
             .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-followers-following-wrapper-2 {
               padding-left: 10px; }
       .designer-details-modal .designer-details-modal-dialog .modal-content .modal-footer {
