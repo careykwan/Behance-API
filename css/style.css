@@ -166,7 +166,7 @@ body {
 
 #chart2Container {
   background-color: #EFEFEF;
-  width: 30%;
+  width: 35%;
   height: 420px;
   float: right;
   margin-right: 3%;
@@ -188,13 +188,13 @@ body {
 #chart1Location {
   margin: 0 auto;
   width: 90%;
-  height: 90%;
+  height: 60%;
   padding-top: 6%; }
 
 #chart2Location {
   margin: 0 auto;
   width: 90%;
-  height: 90%;
+  height: 70%;
   padding-top: 6%; }
 
 #statsContainer {
@@ -274,11 +274,18 @@ body {
 
 #graphTitle {
   text-align: center;
-  font: bold 38px Playfair Display, serif;
+  font: bold 32px Playfair Display, serif;
   color: #1B2D47; }
 
 #titleLocation {
-  z-index: 2;
+  padding-top: 10px; }
+
+#graphTitle2 {
+  text-align: center;
+  font: bold 32px Playfair Display, serif;
+  color: #1B2D47; }
+
+#titleLocation2 {
   padding-top: 10px; }
 
 .statsStyle {

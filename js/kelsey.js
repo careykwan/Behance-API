@@ -18,29 +18,15 @@ function getApiData(){
         url:'https://api.behance.net/v2/users/' + designerId + '/projects?client_id=' + apiKey,
         dataType: 'jsonP',
         success: function(dataFromJSONP){
-        var totalAppreciations =  dataFromJSONP.projects[0].stats.appreciations + 
-        dataFromJSONP.projects[1].stats.appreciations + 
-        dataFromJSONP.projects[2].stats.appreciations;
-        var totalViews = dataFromJSONP.projects[0].stats.views + 
-        dataFromJSONP.projects[1].stats.views +
-        dataFromJSONP.projects[2].stats.views;
-        var totalComments = dataFromJSONP.projects[0].stats.comments +
-        dataFromJSONP.projects[1].stats.comments  +
-        dataFromJSONP.projects[2].stats.comments;
-        var designerName = dataFromJSONP.projects[0].owners[0].display_name;
-
-
-        console.log(totalViews);
-        console.log(dataFromJSONP);
-        console.log(dataFromJSONP.projects[0].stats.appreciations);
-    
+            console.log(dataFromJSONP);
+       
         var data = new google.visualization.arrayToDataTable([
-            ['Project Name', 'Appreciations', 'Views', ],
-            [dataFromJSONP.projects[0].name, dataFromJSONP.projects[0].stats.appreciations, 
+            ['Click bars for more details', 'Appreciations', 'Views', ],
+            ['Project One',dataFromJSONP.projects[0].stats.appreciations, 
             dataFromJSONP.projects[0].stats.views ],
-            [dataFromJSONP.projects[1].name, dataFromJSONP.projects[1].stats.appreciations, 
+            ['Project Two',dataFromJSONP.projects[1].stats.appreciations, 
             dataFromJSONP.projects[1].stats.views ],
-            [dataFromJSONP.projects[2].name, dataFromJSONP.projects[2].stats.appreciations, 
+            ['Project Three',dataFromJSONP.projects[2].stats.appreciations, 
             dataFromJSONP.projects[2].stats.views ]
             
     
@@ -54,11 +40,12 @@ function getApiData(){
           legend: {
             position: 'none'
           },
-          bar: {
-            groupWidth: '100%'
-          },
-        
-          fontName: 'Playfair Display, serif',
+          // chartArea:{
+          //   height:400,
+          //   width: 700
+          // },
+          
+          fontName: 'sans-serif',
           fontSize: 14,
           bars: 'vertical',
           vAxis: {
@@ -70,11 +57,7 @@ function getApiData(){
          var classicChart = new google.charts.Bar(document.getElementById('chart1Location'));
          classicChart.draw(data, options);
        
-       $('#designerName3').append(designerName);
-       $('#viewStats3').append(totalViews);
-       $('#apreciationStats3').append(totalAppreciations);
-       $('#commentStats3').append(totalComments);
-            
+        addDetails(dataFromJSONP);
         google.charts.setOnLoadCallback(drawPieChart(dataFromJSONP));
         },
         error: function(error){
@@ -85,6 +68,7 @@ function getApiData(){
 }
 
 console.log('hello kelsey');
+
 
 function drawPieChart(dataFromJSONP){
       var data = new google.visualization.DataTable();
@@ -103,10 +87,31 @@ function drawPieChart(dataFromJSONP){
             {color: '#1E3E75'},
             {color: '#2F4C93'},
              ],
-             legend: {
-                position: 'none'
-             }
+            chartArea:{
+            height:400,
+            width: 700
+          },
+         
+            };
 
         var chart = new google.visualization.PieChart(document.getElementById('chart2Location'));
         chart.draw(data, options);
+}
+
+function addDetails(dataFromJSONP){
+
+        $('#designerName3').empty();
+        $('#viewStats3').empty();
+        $('#commentStats3').empty();
+        $('#designerName3').append(dataFromJSONP.projects[0].owners[0].display_name);
+        $('#viewStats3').append(dataFromJSONP.projects[0].stats.views + 
+        dataFromJSONP.projects[1].stats.views +
+        dataFromJSONP.projects[2].stats.views);
+        $('#apreciationStats3').append(dataFromJSONP.projects[0].stats.appreciations + 
+        dataFromJSONP.projects[1].stats.appreciations + 
+        dataFromJSONP.projects[2].stats.appreciations);
+        $('#commentStats3').append(dataFromJSONP.projects[0].stats.comments +
+        dataFromJSONP.projects[1].stats.comments  +
+        dataFromJSONP.projects[2].stats.comments);
+            
 }
