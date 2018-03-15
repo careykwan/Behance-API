@@ -10,6 +10,7 @@ function florenceJavaScript() {
     function changeModalInfo() {
         grabUserID();
         var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOco';
+        // var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
         var userIDArray = [];
 
         // @grabUserID is a switch statement to push and empty certain UserIDs depending on what div has been clicked has been clicked.
@@ -18,7 +19,7 @@ function florenceJavaScript() {
                 switch (this.id) {
                     case 'designerOne2':
                         userIDArray.splice(0, 1);
-                        userIDArray.push('angushyland');
+                        userIDArray.push('rafaalvarez');
                         AJAXBehanceRequest2();
                         break;
                     case 'designerTwo2':
@@ -55,9 +56,6 @@ function florenceJavaScript() {
             $.ajax({
                 url: 'http://behance.net/v2/users/' + userIDArray[0] + '?api_key=' + apiKey,
                 dataType: 'jsonp',
-                beforeSend: function () {
-                    $("#loading-image").show();
-                },
                 success: function (data) {
                     showDesignerDetails(data);
                 },
@@ -120,7 +118,8 @@ function florenceJavaScript() {
         function seconeAJAXBehanceRequest2() {
 
             var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOco';
-            var designer1 = 'angushyland';
+            // var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
+            var designer1 = 'rafaalvarez';
             var designer2 = 'clairehartley';
             var designer3 = 'Doralice';
             var designer4 = 'izutsu';
@@ -140,8 +139,13 @@ function florenceJavaScript() {
             });
 
             function requestingDesigner1Data(data2) {
+                console.log(data2);
                 $('#profileImg1').attr("src", data2.projects[0].owners[0].images['276']);
                 $('.designer1-name-2').text(data2.projects[0].owners[0].first_name + ' ' + data2.projects[0].owners[0].last_name);
+                $('#slide-6').attr("src", data2.projects[0].covers.original);
+                $('#slideProjectName1').text(data2.projects[0].name);
+                $('#slideDesignerName1').text(data2.projects[0].owners[0].first_name + ' ' + data2.projects[0].owners[0].last_name);
+
             }
            
             // // AJAX Request Designer 2
@@ -161,6 +165,9 @@ function florenceJavaScript() {
             function requestingDesigner2Data(data2) {
                 $('#profileImg2').attr("src", data2.projects[0].owners[0].images['276']);
                 $('.designer2-name-2').text(data2.projects[0].owners[0].first_name + ' ' + data2.projects[0].owners[0].last_name);
+                $('#slide-2').attr("src", data2.projects[0].covers.original);
+                $('#slideProjectName2').text(data2.projects[0].name);
+                $('#slideDesignerName2').text(data2.projects[0].owners[0].first_name + ' ' + data2.projects[0].owners[0].last_name);
             }
 
             // // AJAX Request Designer 3
@@ -180,6 +187,9 @@ function florenceJavaScript() {
             function requestingDesigner3Data(data2) {
                 $('#profileImg3').attr("src", data2.projects[0].owners[0].images['276']);
                 $('.designer3-name-2').text(data2.projects[0].owners[0].first_name + ' ' + data2.projects[0].owners[0].last_name);
+                $('#slide-1').attr("src", data2.projects[1].covers.original);
+                $('#slideProjectName3').text(data2.projects[1].name);
+                $('#slideDesignerName3').text(data2.projects[1].owners[0].first_name + ' ' + data2.projects[0].owners[0].last_name);
             }
 
             // // AJAX Request Designer 4
@@ -199,6 +209,9 @@ function florenceJavaScript() {
             function requestingDesigner4Data(data2) {
                 $('#profileImg4').attr("src", data2.projects[0].owners[0].images['276']);
                 $('.designer4-name-2').text(data2.projects[0].owners[0].first_name + ' ' + data2.projects[0].owners[0].last_name);
+                $('#slide-4').attr("src", data2.projects[1].covers.original);
+                $('#slideProjectName4').text(data2.projects[1].name);
+                $('#slideDesignerName4').text(data2.projects[1].owners[0].first_name + ' ' + data2.projects[0].owners[0].last_name);
             }
 
             // // AJAX Request Designer 5
@@ -218,6 +231,9 @@ function florenceJavaScript() {
             function requestingDesigner5Data(data2) {
                 $('#profileImg5').attr("src", data2.projects[0].owners[1].images['276']);
                 $('.designer5-name-2').text(data2.projects[0].owners[1].first_name + ' ' + data2.projects[1].owners[1].last_name);
+                $('#slide-5').attr("src", data2.projects[1].covers.original);
+                $('#slideProjectName5').text(data2.projects[1].name);
+                $('#slideDesignerName5').text(data2.projects[1].owners[0].first_name + ' ' + data2.projects[0].owners[0].last_name);
             }
 
             // // AJAX Request Designer 6
@@ -237,6 +253,9 @@ function florenceJavaScript() {
             function requestingDesigner6Data(data2) {
                 $('#profileImg6').attr("src", data2.projects[0].owners[1].images['276']);
                 $('.designer6-name-2').text(data2.projects[0].owners[1].first_name + ' ' + data2.projects[1].owners[1].last_name);
+                $('#slide-3').attr("src", data2.projects[1].covers.original);
+                $('#slideProjectName6').text(data2.projects[1].name);
+                $('#slideDesignerName6').text(data2.projects[1].owners[0].first_name + ' ' + data2.projects[0].owners[0].last_name);
             } 
         }
     }
