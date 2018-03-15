@@ -157,7 +157,7 @@ body {
 
 #chart1Container {
   background-color: #EFEFEF;
-  width: 53.5%;
+  width: 47.5%;
   height: 420px;
   float: left;
   margin-left: 40px;
@@ -166,7 +166,7 @@ body {
 
 #chart2Container {
   background-color: #EFEFEF;
-  width: 35%;
+  width: 40%;
   height: 420px;
   float: right;
   margin-right: 3%;
@@ -187,12 +187,12 @@ body {
 
 #chart1Location {
   margin: 0 auto;
-  width: 90%;
+  width: 70%;
   height: 60%;
   padding-top: 6%; }
 
 #chart2Location {
-  margin: 0 auto;
+  margin-left: 10%;
   width: 90%;
   height: 70%;
   padding-top: 6%; }
@@ -230,23 +230,19 @@ body {
   grid-column: 3/4;
   height: 100%; }
 
-#name3 {
-  float: right;
-  width: 450px;
-  margin-right: -270px; }
-
 .nameDescription {
   font: italic 12px Lato, sans-serif;
-  margin-top: 50px;
-  margin-right: 10px; }
+  float: right;
+  margin-top: 4%;
+  margin-right: 5%; }
 
 .designerName {
   font: bold 38px Playfair Display, serif;
   color: #1B2D47;
   float: right;
-  margin-right: 30px;
-  margin-top: -39px;
-  letter-spacing: 2px; }
+  margin-top: 2%;
+  letter-spacing: 2px;
+  margin-right: -30%; }
 
 #logo3 {
   height: 45%;
@@ -269,13 +265,14 @@ body {
 
 .label {
   font: 20px Lato, sans-serif;
+  color: #E41E26;
   margin-left: 25%;
   margin-top: -50px; }
 
 #graphTitle {
   text-align: center;
   font: bold 32px Playfair Display, serif;
-  color: #1B2D47; }
+  color: #E41E26; }
 
 #titleLocation {
   padding-top: 10px; }
@@ -283,7 +280,7 @@ body {
 #graphTitle2 {
   text-align: center;
   font: bold 32px Playfair Display, serif;
-  color: #1B2D47; }
+  color: #E41E26; }
 
 #titleLocation2 {
   padding-top: 10px; }
@@ -292,6 +289,20 @@ body {
   font: 20px Lato, sans-serif;
   margin-left: 25%; }
 
+@media only screen and (max-width: 768px) {
+  #statsContainer {
+    margin-top: 60%;
+    width: 90%; }
+
+  #chart1Container {
+    width: 90%; }
+
+  #chart2Container {
+    width: 90%; }
+
+  #chart1Location {
+    margin-left: 7%;
+    margin-top: 3%; } }
 a {
   color: #ff0077; }
 
