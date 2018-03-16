@@ -11,8 +11,10 @@ google.charts.setOnLoadCallback(getApiData);
 
 
 
-var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
-var designerId = 'MaryRabun';
+// var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
+
+var apiKey = 'cPSHY669vPegbDmBas5ELAxsxAp6pigv';
+var designerId = 'izutsu';
 var designer1 = 'rafaalvarez';
 var designer2 = 'clairehartley';
 var designer3 = 'Doralice';
@@ -20,7 +22,8 @@ var designer4 = 'izutsu';
 var designer5 = 'MaryRabun';
 var designer6 = 'nahuelsal';
 
-getNameData();
+// getNameData();
+
 
 function getApiData(){
 	    $.ajax({     
@@ -85,22 +88,22 @@ function getApiData(){
 
 console.log('hello kelsey');
 
-function getNameData(){
-    $.ajax({     
-        url:'https://api.behance.net/v2/users/' + designerId + '?&api_key=' + apiKey,
-        dataType: 'jsonP',
-        success: function(dataFromJSONP2){
-            console.log(dataFromJSONP2);
+// function getNameData(){
+//     $.ajax({     
+//         url:'https://api.behance.net/v2/users/' + designerId + '?&api_key=' + apiKey,
+//         dataType: 'jsonP',
+//         success: function(dataFromJSONP2){
+//             console.log(dataFromJSONP2);
 
-            $('#designerName3').empty();
-             $('#designerName3').append(dataFromJSONP2.user.display_name);
-             },
-        error: function(error){
-            console.log(error);
-            console.log("Something has gone wrong");
-        }
-    });
-}
+//             $('#designerName3').empty();
+//              $('#designerName3').append(dataFromJSONP2.user.display_name);
+//              },
+//         error: function(error){
+//             console.log(error);
+//             console.log("Something has gone wrong");
+//         }
+//     });
+// }
 
 function drawPieChart(dataFromJSONP){
       var data = new google.visualization.DataTable();
