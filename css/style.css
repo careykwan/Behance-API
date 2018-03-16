@@ -203,6 +203,14 @@ body {
   .top-section-wrapper-2 .behance-logo-wrapper-2 {
     margin-right: 75px; }
 
+#loaderGIF1,
+#loaderGIF2,
+#loaderGIF3,
+#loaderGIF4,
+#loaderGIF5,
+#loaderGIF6 {
+  display: none; }
+
 .middle-section-wrapper-2 {
   width: 100%;
   height: 84%;
@@ -481,6 +489,7 @@ body {
       padding: 20px; }
       .designer-middle-section-wrapper-2 .designer-middle-content-2 .designer-profiles-wrapper-2 .profile-image-2 {
         width: 25%;
+        height: 45%;
         margin: 10px;
         overflow: hidden;
         display: flex;

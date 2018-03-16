@@ -29,7 +29,14 @@
     }
 
 }
-
+#loaderGIF1,
+#loaderGIF2,
+#loaderGIF3,
+#loaderGIF4,
+#loaderGIF5,
+#loaderGIF6{
+    display: none;
+}
 // HOMEPAGE MIDDLE SECTION STYLING
 .middle-section-wrapper-2{
     width: 100%;
@@ -403,6 +410,7 @@
 
             .profile-image-2{
                 width: 25%;
+                height: 45%;
                 margin: 10px;
                 overflow: hidden;
                 display: flex;

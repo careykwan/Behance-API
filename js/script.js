@@ -57,8 +57,8 @@ function florenceJavaScript() {
 
     function changeModalInfo() {
         grabUserID();
-        // var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOco';
-        var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
+        var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOco';
+        // var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
         var userIDArray = [];
 
         // @grabUserID is a switch statement to push and empty certain UserIDs depending on what div has been clicked has been clicked.
@@ -104,6 +104,9 @@ function florenceJavaScript() {
             $.ajax({
                 url: 'http://behance.net/v2/users/' + userIDArray[0] + '?api_key=' + apiKey,
                 dataType: 'jsonp',
+                // beforeSend: function (e) {
+                //     console.log(e);
+                // },
                 success: function (data) {
                     showDesignerDetails(data);
                 },
@@ -153,8 +156,8 @@ function florenceJavaScript() {
         // @AJAXBehanceRequest2 Runs a AJAX request to Behance API to grab data, if successful it will run showDesignerDetails function.
         function seconeAJAXBehanceRequest2() {
 
-            // var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOco';
-            var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
+            var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOco';
+            // var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
             var designer1 = 'rafaalvarez';
             var designer2 = 'clairehartley';
             var designer3 = 'Doralice';
@@ -166,8 +169,12 @@ function florenceJavaScript() {
             $.ajax({
                 url: 'https://api.behance.net/v2/users/' + designer1 + '/projects?client_id=' + apiKey,
                 dataType: 'jsonp',
+                beforeSend: function () {
+                    $('#loaderGIF1').show();
+                },
                 success: function (data2) {
                     requestingDesigner1Data(data2);
+                    $('#loaderGIF1').hide();
                 },
                 error: function (error2) {
                     console.log('Something has gone wrong');
@@ -175,7 +182,6 @@ function florenceJavaScript() {
             });
 
             function requestingDesigner1Data(data2) {
-                console.log(data2);
                 $('#profileImg1').attr("src", data2.projects[0].owners[0].images['276']);
                 $('.designer1-name-2').text(data2.projects[0].owners[0].first_name + ' ' + data2.projects[0].owners[0].last_name);
                 $('#slide-6').attr("src", data2.projects[0].covers.original);
@@ -188,9 +194,12 @@ function florenceJavaScript() {
             $.ajax({
                 url: 'https://api.behance.net/v2/users/' + designer2 + '/projects?client_id=' + apiKey,
                 dataType: 'jsonp',
+                beforeSend: function () {
+                    $('#loaderGIF2').show();
+                },
                 success: function (data2) {
                     requestingDesigner2Data(data2);
-
+                    $('#loaderGIF2').hide();
                 },
                 error: function (error2) {
                     console.log(error2);
@@ -210,9 +219,12 @@ function florenceJavaScript() {
             $.ajax({
                 url: 'https://api.behance.net/v2/users/' + designer3 + '/projects?client_id=' + apiKey,
                 dataType: 'jsonp',
+                beforeSend: function () {
+                    $('#loaderGIF3').show();
+                },
                 success: function (data2) {
                     requestingDesigner3Data(data2);
-
+                    $('#loaderGIF3').hide();
                 },
                 error: function (error2) {
                     console.log(error2);
@@ -232,9 +244,12 @@ function florenceJavaScript() {
             $.ajax({
                 url: 'https://api.behance.net/v2/users/' + designer4 + '/projects?client_id=' + apiKey,
                 dataType: 'jsonp',
+                beforeSend: function () {
+                    $('#loaderGIF4').show();
+                },
                 success: function (data2) {
                     requestingDesigner4Data(data2);
-
+                    $('#loaderGIF4').hide();
                 },
                 error: function (error2) {
                     console.log(error2);
@@ -254,9 +269,12 @@ function florenceJavaScript() {
             $.ajax({
                 url: 'https://api.behance.net/v2/users/' + designer5 + '/projects?client_id=' + apiKey,
                 dataType: 'jsonp',
+                beforeSend: function () {
+                    $('#loaderGIF5').show();
+                },
                 success: function (data2) {
                     requestingDesigner5Data(data2);
-
+                    $('#loaderGIF5').hide();
                 },
                 error: function (error2) {
                     console.log(error2);
@@ -276,9 +294,12 @@ function florenceJavaScript() {
             $.ajax({
                 url: 'https://api.behance.net/v2/users/' + designer6 + '/projects?client_id=' + apiKey,
                 dataType: 'jsonp',
+                beforeSend: function () {
+                    $('#loaderGIF6').show();
+                },
                 success: function (data2) {
                     requestingDesigner6Data(data2);
-
+                    $('#loaderGIF6').hide();
                 },
                 error: function (error2) {
                     console.log(error2);
