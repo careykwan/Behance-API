@@ -11,7 +11,8 @@ google.charts.setOnLoadCallback(getApiData);
 
 
 
-var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
+// var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
+var apiKey = '9GZKv2mtTMZwnLXjV4lOWIQONW7Xq2ip';
 var designerId = 'izutsu';
 var designer1 = 'rafaalvarez';
 var designer2 = 'clairehartley';
@@ -20,7 +21,7 @@ var designer4 = 'izutsu';
 var designer5 = 'MaryRabun';
 var designer6 = 'nahuelsal';
 
-// getNameData();
+
 
 
 function getApiData(){
@@ -85,23 +86,6 @@ function getApiData(){
 }
 
 console.log('hello kelsey');
-
-// function getNameData(){
-//     $.ajax({     
-//         url:'https://api.behance.net/v2/users/' + designerId + '?&api_key=' + apiKey,
-//         dataType: 'jsonP',
-//         success: function(dataFromJSONP2){
-//             console.log(dataFromJSONP2);
-
-//             $('#designerName3').empty();
-//              $('#designerName3').append(dataFromJSONP2.user.display_name);
-//              },
-//         error: function(error){
-//             console.log(error);
-//             console.log("Something has gone wrong");
-//         }
-//     });
-// }
 
 function drawPieChart(dataFromJSONP){
       var data = new google.visualization.DataTable();

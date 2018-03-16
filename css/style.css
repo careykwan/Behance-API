@@ -222,7 +222,8 @@ body {
   height: 40px;
   font: italic 12px Lato, sans-serif;
   margin-left: 40px;
-  margin-top: 30px; }
+  margin-top: 30px;
+  cursor: pointer; }
 
 #chart1Container {
   background-color: #EFEFEF;
@@ -300,10 +301,10 @@ body {
   height: 100%; }
 
 .nameDescription {
-  font: italic 12px Lato, sans-serif;
+  font: 12px Lato, sans-serif;
   float: right;
   margin-top: 4%;
-  margin-right: 5%; }
+  margin-right: 10%; }
 
 .designerName {
   font: bold 38px Playfair Display, serif;
@@ -311,7 +312,7 @@ body {
   float: right;
   margin-top: 2%;
   letter-spacing: 2px;
-  margin-right: -30%; }
+  margin-right: -35%; }
 
 #logo3 {
   width: 30%;
@@ -366,6 +367,27 @@ body {
 #phoneMessage {
   font: bold 32px Playfair Display, serif;
   color: white; }
+
+.kelsey {
+  margin-left: 70%;
+  margin-top: -2.75%;
+  font: 12px Lato, sans-serif; }
+
+.btn {
+  background-color: transparent;
+  color: black;
+  border: none; }
+
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:not(:disabled):not(.disabled):active,
+.show > .btn-secondary.dropdown-toggle {
+  background-color: transparent;
+  color: black;
+  border: none;
+  box-shadow: none; }
+
+.btn.focus, .btn:focus {
+  box-shadow: none; }
 
 @media only screen and (max-width: 768px) {
   #statsContainer {
