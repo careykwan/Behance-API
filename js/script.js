@@ -1,6 +1,9 @@
 console.log('hello carey');
+kelseyJavascript();
 
-    $('#returnBtn').click(function(){
+function kelseyJavascript() {
+    
+$('#returnBtn').click(function(){
         window.location = 'index.html';
     });
 
@@ -10,21 +13,22 @@ google.charts.setOnLoadCallback(getApiData);
 
 
 var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
-var designerId = 'clairehartley';
-var designer1 = 'angushyland';
+var designerId = 'MaryRabun';
+var designer1 = 'rafaalvarez';
 var designer2 = 'clairehartley';
 var designer3 = 'Doralice';
 var designer4 = 'izutsu';
 var designer5 = 'MaryRabun';
 var designer6 = 'nahuelsal';
 
+getNameData();
 
 function getApiData(){
 	    $.ajax({     
         url:'https://api.behance.net/v2/users/' + designerId + '/projects?client_id=' + apiKey,
         dataType: 'jsonP',
         success: function(dataFromJSONP){
-            console.log(dataFromJSONP);
+            // console.log(dataFromJSONP);
        
         var data = new google.visualization.arrayToDataTable([
             ['Click bars for more details', 'Appreciations', 'Views', ],
@@ -46,18 +50,16 @@ function getApiData(){
           legend: {
             position: 'none'
           },
-          // chartArea:{
-          //   height:400,
-          //   width: 700
-          // },
-          
           fontName: 'sans-serif',
           fontSize: 14,
           bars: 'vertical',
           vAxis: {
             format: 'decimal',
             },
-          colors: ['#1B2D47', '#1E3E75']
+          colors: ['#1B2D47', '#1E3E75'],
+          animation: {
+            startup:true
+        }
         };
  
          var classicChart = new google.charts.Bar(document.getElementById('chart1Location'));
@@ -65,6 +67,15 @@ function getApiData(){
        
         addDetails(dataFromJSONP);
         google.charts.setOnLoadCallback(drawPieChart(dataFromJSONP));
+
+        $('#designerName3').click(function(){
+            window.location = 'https://www.behance.net/' + designerId;
+        });
+         $('.nameDescription').click(function(){
+            window.location = 'https://www.behance.net/' + designerId;
+        });
+        
+       
         },
         error: function(error){
             console.log(error);
@@ -75,6 +86,22 @@ function getApiData(){
 
 console.log('hello kelsey');
 
+function getNameData(){
+    $.ajax({     
+        url:'https://api.behance.net/v2/users/' + designerId + '?&api_key=' + apiKey,
+        dataType: 'jsonP',
+        success: function(dataFromJSONP2){
+            console.log(dataFromJSONP2);
+
+            $('#designerName3').empty();
+             $('#designerName3').append(dataFromJSONP2.user.display_name);
+             },
+        error: function(error){
+            console.log(error);
+            console.log("Something has gone wrong");
+        }
+    });
+}
 
 function drawPieChart(dataFromJSONP){
       var data = new google.visualization.DataTable();
@@ -106,10 +133,8 @@ function drawPieChart(dataFromJSONP){
 
 function addDetails(dataFromJSONP){
 
-        $('#designerName3').empty();
         $('#viewStats3').empty();
         $('#commentStats3').empty();
-        $('#designerName3').append(dataFromJSONP.projects[0].owners[0].display_name);
         $('#viewStats3').append(dataFromJSONP.projects[0].stats.views + 
         dataFromJSONP.projects[1].stats.views +
         dataFromJSONP.projects[2].stats.views);
@@ -120,5 +145,6 @@ function addDetails(dataFromJSONP){
         dataFromJSONP.projects[1].stats.comments  +
         dataFromJSONP.projects[2].stats.comments);
             
+}
 }
 console.log('hello world');

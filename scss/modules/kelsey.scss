@@ -151,18 +151,15 @@ body {
 	
 
 #logo3 {
-	height: 45%;
-	width: 25%;
-	margin-left: 50px;
-	padding-top: 15px;
+	width: 30%;
+	margin-left: 75px;
+	padding-top: 18px;
 	display: inline-block;
 }
 #secondLogo3 {
-	width: 15%;
-	height: 60%;
 	float: right;
 	margin-top: 25px;
-	margin-right: 60px;
+	margin-right: 75px;
 
 }
 .icon {
@@ -205,6 +202,8 @@ body {
 	width: 100vw;
 	height: 100vh;
 	display: none;
+	position: absolute;
+	z-index: 2;
 }
 #phoneMessage {
 	font: bold 32px Playfair Display, serif;
@@ -213,16 +212,18 @@ body {
 
 @media only screen and (max-width: 768px) {
 #statsContainer {
-	margin-top: 60%;
+	margin-top: 38%;
 	width:90%;
 	margin-left:5.5%;
 	
 }
 #chart1Container{
 width: 90%;
+margin-top: -3%;
 }
 #chart2Container {
-	width:90%
+	width:90%;
+	margin-top: 2%;
 }
 #chart1Location {
 	margin-left: 7%;
@@ -233,16 +234,43 @@ width: 90%;
 }
 .designerName {
 	font-size: 28px;
-	margin-right: -48%;
-	margin-top: 4%;
+	margin-right: 6%;
+	margin-top: -5%;
 }
 .nameDescription {
-	margin-right: 15%;
+	margin-right: 40%;
 	margin-top: 6%;
+}
+.icon {
+	height: 25%;
+	width: 25%;
+	margin-left: 10%;
+}
+.label {
+	font-size: 16px;
+	margin-left: 35%;
+}
+.statsStyle {
+	font-size: 16px;
+	margin-top:4%;
+	margin-left: 35%;
+}
+#logo3 {
+	width: 39%;
+	margin-left:44px;
+	padding-top: 28px;
 }
 }
 @media only screen and (max-width: 725px){
 	#phoneScreen {
 		display: block;
+	}
+	#body-container3 {
+		display: none;
+	}
+}
+@media only screen and (max-width: 1024px) {
+	.designerName {
+		margin-right: -38%;
 	}
 }
