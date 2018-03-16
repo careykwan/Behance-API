@@ -1,61 +1,98 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Visualisations</title>
-	<link href="https://fonts.googleapis.com/css?family=Lato|Playfair+Display" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,400i” rel=“stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,700i,900,900i" rel="stylesheet">
+
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+	<div id='phoneScreen'>
+			<p id='phoneMessage'>Please Resize browser</p>
+		</div>
 	<div id='body-container3'>
-		<div id='grid-container3'>
-
+		
+		
 			<!-- header -->
 			<div class='box' id='box1'>
+				<a href="index.html"><img src="img/pentagramerLogo.png" alt="logo" id='logo3'></a>
+				<img src="img/behanceLogo.png" alt='behance logo'id='secondLogo3'>
 				
 			</div>
 
 			<!-- 	graphs -->
 			<div class='box' id='box2'>
-				<button class='return3'>
+				<button class='return3'id='returnBtn'>
 					<i class="fas fa-long-arrow-alt-left arrow"></i>
-					BACK TO DESINGERS LIST</button>
-
+					BACK TO DESIGNERS LIST</button>
+				
+					<p class='nameDescription'> View full profile in behance</p>
+					<p class='designerName' id='designerName3'></p>
+			
+			</div>
+			<div class='box' id='box3'>
 				<div id="dashboard">
 					<div id='chart1Container'>
-						<div id="chart1" class="section"></div>
+						<div id="chart1" class="section">
+							<div id='titleLocation'>
+								<p id='graphTitle'>PROJECT VIEWS vs APPRECIATIONS</p>
+								</div>
+							<div id='chart1Location'>
+
+							</div>
+						</div>
 					</div>
 	                <div id='chart2Container'>
-	                	<div id="chart2" class="section"></div>
+	                	<div id="chart2" class="section">
+	                		<div id='titleLocation2'>
+								<p id='graphTitle2'>COMMENTS</p>
+								</div>
+	                		<div id='chart2Location'>
+	                			
+	                		</div>
+	                	</div>
 	                </div>
 	                
             	</div>
 			</div>
 
 			<!-- 	project data totals -->
-			<div class='box' id='box3'>
-				
-				<div id='views'>
-					
+			<div class='box' id='box4'>
+				<div id='statsContainer'>
+					<div id='stats'>
+						<div id='statsGridContainer'>
+							<div id='views'>
+								<img src="img/viewicon.svg" alt="view" class='icon'>
+								<p class='label'>VIEWS</p>
+								<p id='viewStats3' class='statsStyle'></p>
+							</div>
+							<div id='appreciations'>
+								<img src="img/likeicon.svg" class='icon'>
+								<p class='label'>APPRECIATIONS</p>
+								<p id='apreciationStats3' class='statsStyle'></p>
+							</div>
+							<div id='comments'>
+								<img src="img/commentsicon.svg" class='icon'>
+								<p class='label'>COMMENTS</p>
+								<p id='commentStats3' class='statsStyle'</p>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div id='appreciations'>
-					
-				</div>
-				<div id='comments'>
-					
-				</div>
-			
 			</div>
+			
 
-		</div>
+
 		
-
-
 	</div>
+
 	<script src='node_modules/jquery/dist/jquery.min.js'></script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	
-	 <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
-	 <!-- <script src='js/kelsey.js'></script> -->
+	 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	 <script src='js/script.js'></script>
 	
 </body>
 </html>
