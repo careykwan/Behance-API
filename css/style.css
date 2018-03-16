@@ -143,6 +143,7 @@
 .profile_pic {
   width: 30px;
   height: 30px;
+  border-radius: 15px;
   display: inline-block; }
 
 .designer {

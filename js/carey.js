@@ -1,17 +1,17 @@
 careyjavascript();
 function careyjavascript(){
 
-	// var apiKey = 'cPSHY669vPegbDmBas5ELAxsxAp6pigv';
-	var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
+	var apiKey = 'cPSHY669vPegbDmBas5ELAxsxAp6pigv';
+	// var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
 	var userID = 'maryRabun';
 	var maryRabun = 58448623;
+	var projects = [];
 	// var claireHartley = this is ok
 	// var rafaalvarez = this is ok
 	// var Doralice = this is ok 
 	// var izutsu = this is ok
 	// var nahuelsal = this is ok
 	// var maryRabun =
-
 
 	behanceData();
 	commentsData();
@@ -39,7 +39,6 @@ function careyjavascript(){
 		$('#creator').empty();
 		$('#creator').append(dataNames.user.first_name + ' ' + dataNames.user.last_name);
 	}
-
 
 	// ajax request to grab user data
 	function behanceData(){
@@ -178,14 +177,6 @@ function careyjavascript(){
 
 	    var comments = document.createTextNode(dataFromServerTwo.comment);
 	    userComments.appendChild(comments);
-
-	    // var img = document.createTextNode(profileImg);
-	    // profilePic.appendChild(img);
-
-	    // $('#pic').attr({src: profileImg });
-	    
-
-	    // console.log(dataFromServerTwo);
 
 	}
 
