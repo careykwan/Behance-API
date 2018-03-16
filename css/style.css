@@ -455,6 +455,15 @@ body {
 #loaderGIF4,
 #loaderGIF5,
 #loaderGIF6 {
+  display: none;
+  height: 100%; }
+
+#loaderGIFSlide1,
+#loaderGIFSlide2,
+#loaderGIFSlide3,
+#loaderGIFSlide4,
+#loaderGIFSlide5,
+#loaderGIFSlide6 {
   display: none; }
 
 .middle-section-wrapper-2 {
@@ -838,120 +847,137 @@ body {
             color: black; }
       .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body {
         width: 100%;
-        max-height: 500px;
-        background-color: white;
-        padding: 15px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center; }
-        .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-picture-2 {
-          width: 40%;
+        max-height: 500px; }
+        .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body #loaderDiv2 {
+          padding: 15px;
+          width: 100%;
           height: 100%;
-          margin: 10px;
-          margin-right: 20px; }
-          .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-picture-2 img {
-            width: 100%; }
-        .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 {
-          height: 100%;
-          width: 60%;
-          display: flex;
+          background-color: white;
+          display: none;
           justify-content: center;
-          align-items: space-around;
-          flex-direction: column; }
-          .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-basic-info-container-2 {
-            height: 40%;
-            width: 100%;
-            border-bottom: solid 2px #EFEFEF;
-            padding-bottom: 10px;
-            margin-bottom: 5px; }
-            .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-basic-info-container-2 .designer-name-loaction-wrapper-2 {
-              display: flex;
-              flex-direction: row;
-              align-items: flex-end; }
-              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-basic-info-container-2 .designer-name-loaction-wrapper-2 h2 {
+          align-items: center; }
+          .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body #loaderDiv2 .loader-wrapper {
+            height: 100%;
+            margin: 10px;
+            margin-right: 20px; }
+            .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body #loaderDiv2 .loader-wrapper img {
+              width: 100%; }
+        .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 {
+          padding: 15px;
+          width: 100%;
+          height: 100%;
+          background-color: white;
+          display: flex;
+          justify-content: space-between;
+          align-items: center; }
+          .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-picture-2 {
+            width: 40%;
+            height: 100%;
+            margin: 10px;
+            margin-right: 20px; }
+            .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-picture-2 img {
+              width: 100%; }
+          .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-details-container-2 {
+            height: 100%;
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: space-around;
+            flex-direction: column; }
+            .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-details-container-2 .designer-basic-info-container-2 {
+              height: 40%;
+              width: 100%;
+              border-bottom: solid 2px #EFEFEF;
+              padding-bottom: 10px;
+              margin-bottom: 5px; }
+              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-details-container-2 .designer-basic-info-container-2 .designer-name-loaction-wrapper-2 {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end; }
+                .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-details-container-2 .designer-basic-info-container-2 .designer-name-loaction-wrapper-2 h2 {
+                  margin: 0;
+                  font-family: "Playfair Display", serif;
+                  font-size: 30px;
+                  color: #1B2D47;
+                  font-weight: 700;
+                  text-transform: uppercase;
+                  white-space: nowrap; }
+                .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-details-container-2 .designer-basic-info-container-2 .designer-name-loaction-wrapper-2 p {
+                  margin: 0;
+                  padding-left: 5px;
+                  font-family: "Lato", sans-serif;
+                  font-size: 18px;
+                  font-weight: 300;
+                  font-style: italic;
+                  white-space: nowrap; }
+              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-details-container-2 .designer-basic-info-container-2 #focusInfo2 {
                 margin: 0;
-                font-family: "Playfair Display", serif;
-                font-size: 30px;
-                color: #1B2D47;
-                font-weight: 700;
-                text-transform: uppercase;
-                white-space: nowrap; }
-              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-basic-info-container-2 .designer-name-loaction-wrapper-2 p {
-                margin: 0;
-                padding-left: 5px;
+                margin-top: 2px;
                 font-family: "Lato", sans-serif;
-                font-size: 18px;
+                font-size: 16px;
                 font-weight: 300;
                 font-style: italic;
                 white-space: nowrap; }
-            .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-basic-info-container-2 #focusInfo2 {
-              margin: 0;
-              margin-top: 2px;
-              font-family: "Lato", sans-serif;
-              font-size: 16px;
-              font-weight: 300;
-              font-style: italic;
-              white-space: nowrap; }
-            .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-basic-info-container-2 #designerWebsiteLink2 {
-              margin: 0;
-              margin: 0;
-              font-family: "Lato", sans-serif;
-              font-size: 16px;
-              font-weight: 300;
-              font-style: italic;
-              color: black;
-              text-decoration: none;
-              white-space: nowrap; }
-          .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 {
-            height: 60%;
-            width: 100%;
-            display: flex;
-            flex-direction: row; }
-            .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .icon-wrapper-2 {
-              width: 40px;
-              height: 100%;
+              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-details-container-2 .designer-basic-info-container-2 #designerWebsiteLink2 {
+                margin: 0;
+                margin: 0;
+                font-family: "Lato", sans-serif;
+                font-size: 16px;
+                font-weight: 300;
+                font-style: italic;
+                color: black;
+                text-decoration: none;
+                white-space: nowrap; }
+            .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 {
+              height: 60%;
+              width: 100%;
               display: flex;
-              justify-content: center;
-              align-items: center; }
-              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .icon-wrapper-2 img {
-                width: 100%; }
-            .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .info-wrapper-2 {
-              margin-left: 25px; }
-            .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .info-title-2 {
-              font-family: "Lato", sans-serif;
-              font-size: 18px;
-              font-weight: 400;
-              font-style: italic;
-              text-transform: uppercase; }
-            .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .info-value-2 {
-              font-family: "Lato", sans-serif;
-              font-size: 25px;
-              font-weight: 400;
-              font-style: italic; }
-            .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-views-appreciations-wrapper-2,
-            .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-followers-following-wrapper-2 {
-              display: flex;
-              flex-direction: column;
-              margin: 10px; }
-              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-views-appreciations-wrapper-2 .designer-views-wrapper-2,
-              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-views-appreciations-wrapper-2 .designer-appreciation-wrapper-2,
-              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-views-appreciations-wrapper-2 .designer-followers-wrapper-2,
-              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-views-appreciations-wrapper-2 .designer-following-wrapper-2,
-              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-followers-following-wrapper-2 .designer-views-wrapper-2,
-              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-followers-following-wrapper-2 .designer-appreciation-wrapper-2,
-              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-followers-following-wrapper-2 .designer-followers-wrapper-2,
-              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-followers-following-wrapper-2 .designer-following-wrapper-2 {
+              flex-direction: row; }
+              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .icon-wrapper-2 {
+                width: 40px;
+                height: 100%;
                 display: flex;
-                flex-direction: row;
-                align-items: center;
-                padding: 5px; }
-              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-views-appreciations-wrapper-2 .designer-appreciation-wrapper-2,
-              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-views-appreciations-wrapper-2 .designer-following-wrapper-2,
-              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-followers-following-wrapper-2 .designer-appreciation-wrapper-2,
-              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-followers-following-wrapper-2 .designer-following-wrapper-2 {
-                margin-top: 30px; }
-            .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-followers-following-wrapper-2 {
-              padding-left: 10px; }
+                justify-content: center;
+                align-items: center; }
+                .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .icon-wrapper-2 img {
+                  width: 100%; }
+              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .info-wrapper-2 {
+                margin-left: 25px; }
+              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .info-title-2 {
+                font-family: "Lato", sans-serif;
+                font-size: 18px;
+                font-weight: 400;
+                font-style: italic;
+                text-transform: uppercase; }
+              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .info-value-2 {
+                font-family: "Lato", sans-serif;
+                font-size: 25px;
+                font-weight: 400;
+                font-style: italic; }
+              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-views-appreciations-wrapper-2,
+              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-followers-following-wrapper-2 {
+                display: flex;
+                flex-direction: column;
+                margin: 10px; }
+                .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-views-appreciations-wrapper-2 .designer-views-wrapper-2,
+                .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-views-appreciations-wrapper-2 .designer-appreciation-wrapper-2,
+                .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-views-appreciations-wrapper-2 .designer-followers-wrapper-2,
+                .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-views-appreciations-wrapper-2 .designer-following-wrapper-2,
+                .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-followers-following-wrapper-2 .designer-views-wrapper-2,
+                .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-followers-following-wrapper-2 .designer-appreciation-wrapper-2,
+                .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-followers-following-wrapper-2 .designer-followers-wrapper-2,
+                .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-followers-following-wrapper-2 .designer-following-wrapper-2 {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  padding: 5px; }
+                .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-views-appreciations-wrapper-2 .designer-appreciation-wrapper-2,
+                .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-views-appreciations-wrapper-2 .designer-following-wrapper-2,
+                .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-followers-following-wrapper-2 .designer-appreciation-wrapper-2,
+                .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-followers-following-wrapper-2 .designer-following-wrapper-2 {
+                  margin-top: 30px; }
+              .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-details-container-2 .designer-profile-statistics-wrapper-2 .project-followers-following-wrapper-2 {
+                padding-left: 10px; }
       .designer-details-modal .designer-details-modal-dialog .modal-content .modal-footer {
         padding: 0;
         height: 80px;

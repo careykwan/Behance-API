@@ -51,16 +51,19 @@ function florenceJavaScript() {
             });
         }
 
-        // @AJAXBehanceRequest2 Runs a AJAX request to Behance API to grab data, if successful it will run showDesignerDetails function.
+        // @AJAXBehanceRequest2 Runs a AJAX request to Behance API to grab data for the designer details modal, if successful it will run showDesignerDetails function .
         function AJAXBehanceRequest2() {
             $.ajax({
                 url: 'http://behance.net/v2/users/' + userIDArray[0] + '?api_key=' + apiKey,
                 dataType: 'jsonp',
-                // beforeSend: function (e) {
-                //     console.log(e);
-                // },
+                beforeSend: function (e) {
+                    $(".modal-body-content-wrapper-2").css("display", "none");
+                    $("#loaderDiv2").css("display", "flex");
+                },
                 success: function (data) {
                     showDesignerDetails(data);
+                    $("#loaderDiv2").css("display", "none");
+                    $(".modal-body-content-wrapper-2").css("display", "flex");
                 },
                 error: function (error) {
                     console.log(error);
