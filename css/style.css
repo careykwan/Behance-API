@@ -40,7 +40,7 @@
   text-transform: uppercase; }
 
 .name_tag {
-  width: 450px;
+  width: 490px;
   height: 50px;
   float: right;
   margin-right: 50px;
@@ -91,7 +91,7 @@
   height: 30%;
   width: 92%;
   margin: 0 auto;
-  background-color: blue;
+  background-color: #FFF;
   margin-top: 15px;
   margin-bottom: 15px;
   overflow: scroll; }
@@ -140,24 +140,10 @@
 .icon {
   width: 35px; }
 
-.comment_tag {
-  margin: 0 auto;
-  margin-top: 10px;
-  width: 95%;
-  height: 40%;
-  background-color: pink; }
-
 .profile_pic {
-  width: 25%;
-  height: 100%;
+  width: 30px;
+  height: 30px;
   display: inline-block; }
-
-.text_box {
-  width: 65%;
-  height: 100%;
-  display: inline-block;
-  margin-left: 10px;
-  overflow: auto; }
 
 .designer {
   width: 50%;
@@ -174,6 +160,20 @@
 .images {
   height: 100%;
   width: 100%; }
+
+.profile_name {
+  width: 60%;
+  font: bold 16px Lato, sans-serif;
+  color: #1B2D47;
+  margin-left: 120px;
+  margin-top: 50px; }
+
+.user_comments {
+  width: 70%;
+  font: italic 14px Lato, sans-serif;
+  margin-left: 120px;
+  padding-top: 15px;
+  margin-right: 5px; }
 
 #dv {
   color: red; }
