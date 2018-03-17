@@ -197,8 +197,9 @@ google.charts.setOnLoadCallback(getApiData);
 
 
 
-// var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
-var apiKey = '9GZKv2mtTMZwnLXjV4lOWIQONW7Xq2ip';
+var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
+
+// var apiKey = '9GZKv2mtTMZwnLXjV4lOWIQONW7Xq2ip';
 var designerId = 'izutsu';
 var designer1 = 'rafaalvarez';
 var designer2 = 'clairehartley';
@@ -207,14 +208,52 @@ var designer4 = 'izutsu';
 var designer5 = 'MaryRabun';
 var designer6 = 'nahuelsal';
 
+getNameData();
 
 
+$('.dropdown-item').click(function(){
+  switch (this.id) {
+    case 'designerOne3':
+    designerId = 'rafaalvarez';
+    google.charts.setOnLoadCallback(getApiData);
+    getNameData();
+    break;
+    case 'designerTwo3':
+    designerId = 'clairehartley';
+     google.charts.setOnLoadCallback(getApiData);
+     getNameData();
+    break;
+    case 'designerThree3' :
+    designerId = 'Doralice';
+    google.charts.setOnLoadCallback(getApiData);
+    getNameData();
+    break;
+    case 'designerFour3' :
+    designerId = 'izutsu';
+    google.charts.setOnLoadCallback(getApiData);
+    getNameData();
+    break;
+    case 'designerFive3' :
+    designerId = 'MaryRabun';
+     google.charts.setOnLoadCallback(getApiData);
+     getNameData();
+    break;
+    case 'designerSix3' :
+    designerId = 'nahuelsal';
+    google.charts.setOnLoadCallback(getApiData);
+    getNameData();
+    break;
+  }
+});
 
 function getApiData(){
+
+
 	    $.ajax({     
         url:'https://api.behance.net/v2/users/' + designerId + '/projects?client_id=' + apiKey,
         dataType: 'jsonP',
         success: function(dataFromJSONP){
+
             // console.log(dataFromJSONP);
        
         var data = new google.visualization.arrayToDataTable([
@@ -273,6 +312,23 @@ function getApiData(){
 
 console.log('hello kelsey');
 
+function getNameData(){
+    $.ajax({     
+        url:'https://api.behance.net/v2/users/' + designerId + '?&api_key=' + apiKey,
+        dataType: 'jsonP',
+        success: function(dataFromJSONP2){
+            console.log(dataFromJSONP2);
+
+            $('#designerName3').empty();
+             $('#designerName3').append(dataFromJSONP2.user.display_name);
+             },
+        error: function(error){
+            console.log(error);
+            console.log("Something has gone wrong");
+        }
+    });
+}
+
 function drawPieChart(dataFromJSONP){
       var data = new google.visualization.DataTable();
         data.addColumn('string', 'Project Name');
@@ -305,10 +361,11 @@ function addDetails(dataFromJSONP){
 
         $('#viewStats3').empty();
         $('#commentStats3').empty();
+        $('#appreciationStats3').empty();
         $('#viewStats3').append(dataFromJSONP.projects[0].stats.views + 
         dataFromJSONP.projects[1].stats.views +
         dataFromJSONP.projects[2].stats.views);
-        $('#apreciationStats3').append(dataFromJSONP.projects[0].stats.appreciations + 
+        $('#appreciationStats3').append(dataFromJSONP.projects[0].stats.appreciations + 
         dataFromJSONP.projects[1].stats.appreciations + 
         dataFromJSONP.projects[2].stats.appreciations);
         $('#commentStats3').append(dataFromJSONP.projects[0].stats.comments +

@@ -303,16 +303,16 @@ body {
 .nameDescription {
   font: 12px Lato, sans-serif;
   float: right;
-  margin-top: 4%;
+  margin-top: 3%;
   margin-right: 10%; }
 
 .designerName {
   font: bold 38px Playfair Display, serif;
   color: #1B2D47;
   float: right;
-  margin-top: 2%;
+  margin-top: 1%;
   letter-spacing: 2px;
-  margin-right: -35%; }
+  margin-right: -38%; }
 
 #logo3 {
   width: 30%;
@@ -370,7 +370,7 @@ body {
 
 .kelsey {
   margin-left: 70%;
-  margin-top: -2.75%;
+  margin-top: -3%;
   font: 12px Lato, sans-serif; }
 
 .btn {
