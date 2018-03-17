@@ -1,9 +1,9 @@
 careyjavascript();
 function careyjavascript(){
 
-	var apiKey = 'cPSHY669vPegbDmBas5ELAxsxAp6pigv';
-	// var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
-	var userID = 'maryRabun';
+	// var apiKey = 'cPSHY669vPegbDmBas5ELAxsxAp6pigv';
+	var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
+	var userID = 'claireHartley';
 	var maryRabun = [58448623, 53585037, 53552369];
 	var projects = [];
 	// var claireHartley = this is ok
@@ -92,7 +92,6 @@ function careyjavascript(){
 			}
 		});
 	}
-	
 
 	//this is the ajax request for the third comments
 	function commentsDataThree(){
@@ -181,7 +180,6 @@ function careyjavascript(){
 		for (var i = 0; i < dataFromServerThree.comments.length; i++) {
 	        appendCommentsCardTwo(dataFromServerThree.comments[i]);
 	    }
-		// console.log(dataFromServerThree);
 	}
 
 	//this is the function to run the third lot of comments
@@ -189,9 +187,7 @@ function careyjavascript(){
 		for (var i = 0; i < dataFromServerFour.comments.length; i++) {
 	        appendCommentsCardThree(dataFromServerFour.comments[i]);
 	    }
-		console.log(dataFromServerFour);
 	}
-
 
 	// This is a function append the comments to the div in html
 	function appendCommentsCard(dataFromServerTwo) {

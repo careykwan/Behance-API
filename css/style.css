@@ -81,14 +81,14 @@
   margin-top: 15px; }
 
 .info_box {
-  height: 20%;
+  height: 25%;
   width: 92%;
   margin: 0 auto;
   background-color: #FFF;
   margin-top: 15px; }
 
 .comment_box {
-  height: 30%;
+  height: 25%;
   width: 92%;
   margin: 0 auto;
   background-color: #FFF;
@@ -129,7 +129,7 @@
 
 .data_box {
   width: 100%;
-  height: 35%;
+  height: 25%;
   display: flex;
   justify-content: space-around;
   align-items: center;
