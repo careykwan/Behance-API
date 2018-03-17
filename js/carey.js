@@ -92,10 +92,7 @@ function careyjavascript(){
 			}
 		});
 	}
-	//this is the function to run the second lot of comments and show in column
-	function runAppThree (dataFromServerThree){
-		console.log(dataFromServerThree);
-	}
+	
 
 	//this is the ajax request for the third comments
 	function commentsDataThree(){
@@ -112,11 +109,7 @@ function careyjavascript(){
 			}
 		});
 	}
-	//this is the function to run the third lot of comments
-	function runAppFour (dataFromServerFour){
-		console.log(dataFromServerFour);
-	}
-
+	
 	// function to display the user data
 	function runApp (dataFromServer) {
 		var firstProject = dataFromServer.projects[0].covers.original;
@@ -126,7 +119,6 @@ function careyjavascript(){
 		var timeTwo = timeFormatter(dataFromServer.projects[1].published_on);
 		var timeThree = timeFormatter(dataFromServer.projects[2].published_on);
 
-		console.log(dataFromServer);
 		//this is the function to convert the time to a readable format
 		function timeFormatter(timeFromBehance) {
 	    return moment.unix(timeFromBehance).format('Do MMM YYYY');
@@ -183,6 +175,24 @@ function careyjavascript(){
 	    }
 	}
 
+	//this is the function to run the second lot of comments and show in column
+	function runAppThree (dataFromServerThree){
+
+		for (var i = 0; i < dataFromServerThree.comments.length; i++) {
+	        appendCommentsCardTwo(dataFromServerThree.comments[i]);
+	    }
+		// console.log(dataFromServerThree);
+	}
+
+	//this is the function to run the third lot of comments
+	function runAppFour (dataFromServerFour){
+		for (var i = 0; i < dataFromServerFour.comments.length; i++) {
+	        appendCommentsCardThree(dataFromServerFour.comments[i]);
+	    }
+		console.log(dataFromServerFour);
+	}
+
+
 	// This is a function append the comments to the div in html
 	function appendCommentsCard(dataFromServerTwo) {
 	    var output2 = document.getElementById('commentBox');
@@ -193,7 +203,6 @@ function careyjavascript(){
 	    function commentsDate(commentTimeBehance){
 	    return moment.unix(commentTimeBehance).format('Do MMM YYYY'); 
 		}
-		console.log(timesUp);
 
 	    // creating div for comment card
 	    var commentDiv = document.createElement('div');
@@ -237,5 +246,112 @@ function careyjavascript(){
 
 	}
 
+	//This is a function append the comments to the second card of divs in html
+	function appendCommentsCardTwo(dataFromServerThree) {
+	    var output3 = document.getElementById('commentBoxTwo');
+	    var profileImgTwo = dataFromServerThree.user.images['50']; 
+	    var timesUpTwo = commentsDateTwo(dataFromServerThree.created_on);
+	    
+	    //This is the function to convert the date
+	    function commentsDateTwo(commentTimeBehanceTwo){
+	    return moment.unix(commentTimeBehanceTwo).format('Do MMM YYYY'); 
+		}
+
+	    // creating div for comment card
+	    var commentDiv = document.createElement('div');
+	    commentDiv.className = 'main_comment';
+	    output3.appendChild(commentDiv);
+
+	    var photoDiv = document.createElement('div');
+	    photoDiv.className = 'profile_pic';
+	    commentDiv.appendChild(photoDiv);
+
+	    var profilePic = document.createElement('img');
+	    profilePic.className = 'profileImage';
+	    profilePic.setAttribute('src', profileImgTwo);
+	    photoDiv.appendChild(profilePic);
+
+	    var nameTag = document.createElement('div');
+	    nameTag.className = 'profile_tag';
+	    commentDiv.appendChild(nameTag);
+
+	    var profileName = document.createElement('h3');
+	    profileName.className = 'profile_name';
+	    nameTag.appendChild(profileName);
+
+	    var showDate = document.createElement('p');
+	    showDate.className = 'small_date';
+	    nameTag.appendChild(showDate);
+
+	    var userComments = document.createElement('p');
+	    userComments.className = 'user_comments';
+	    commentDiv.appendChild(userComments);
+
+	    //These are to show the data in the dom
+	    var designer = document.createTextNode(dataFromServerThree.user.display_name);
+	    profileName.appendChild(designer);
+
+	    var date = document.createTextNode('.' + ' ' + timesUpTwo);
+	    showDate.appendChild(date);
+
+	    var comments = document.createTextNode(dataFromServerThree.comment);
+	    userComments.appendChild(comments);
+
+	}
+
+	//This is a function append the comments to the second card of divs in html
+	function appendCommentsCardThree(dataFromServerFour) {
+	    var output4 = document.getElementById('commentBoxThree');
+	    var profileImgThree = dataFromServerFour.user.images['50']; 
+	    var timesUpThree = commentsDateThree(dataFromServerFour.created_on);
+	    
+	    //This is the function to convert the date
+	    function commentsDateThree(commentTimeBehanceTwo){
+	    return moment.unix(commentTimeBehanceTwo).format('Do MMM YYYY'); 
+		}
+		console.log(timesUpThree);
+
+	    // creating div for comment card
+	    var commentDiv = document.createElement('div');
+	    commentDiv.className = 'main_comment';
+	    output4.appendChild(commentDiv);
+
+	    var photoDiv = document.createElement('div');
+	    photoDiv.className = 'profile_pic';
+	    commentDiv.appendChild(photoDiv);
+
+	    var profilePic = document.createElement('img');
+	    profilePic.className = 'profileImage';
+	    profilePic.setAttribute('src', profileImgThree);
+	    photoDiv.appendChild(profilePic);
+
+	    var nameTag = document.createElement('div');
+	    nameTag.className = 'profile_tag';
+	    commentDiv.appendChild(nameTag);
+
+	    var profileName = document.createElement('h3');
+	    profileName.className = 'profile_name';
+	    nameTag.appendChild(profileName);
+
+	    var showDate = document.createElement('p');
+	    showDate.className = 'small_date';
+	    nameTag.appendChild(showDate);
+
+	    var userComments = document.createElement('p');
+	    userComments.className = 'user_comments';
+	    commentDiv.appendChild(userComments);
+
+	    //These are to show the data in the dom
+	    var designer = document.createTextNode(dataFromServerFour.user.display_name);
+	    profileName.appendChild(designer);
+
+	    var date = document.createTextNode('.' + ' ' + timesUpThree);
+	    showDate.appendChild(date);
+
+	    var comments = document.createTextNode(dataFromServerFour.comment);
+	    userComments.appendChild(comments);
+
+	}
+//This is the ending bracket for careyjavascript function
 }
 
