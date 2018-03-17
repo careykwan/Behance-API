@@ -8,8 +8,8 @@ function florenceJavaScript() {
 
     function changeModalInfo() {
         grabUserID();
-        var apiKey = 'cUrZsmxKrahZRfyjKoZIY6XtbecnuEH5';
-        // var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOco';
+        // var apiKey = 'cUrZsmxKrahZRfyjKoZIY6XtbecnuEH5';
+        var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOco';
         // var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
         var userIDArray = [];
 
@@ -111,8 +111,8 @@ function florenceJavaScript() {
         // @AJAXBehanceRequest2 Runs a AJAX request to Behance API to grab data, if successful it will run showDesignerDetails function.
         function seconeAJAXBehanceRequest2() {
 
-            var apiKey = 'cUrZsmxKrahZRfyjKoZIY6XtbecnuEH5';
-            // var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOco';
+            // var apiKey = 'cUrZsmxKrahZRfyjKoZIY6XtbecnuEH5';
+            var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOco';
             // var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
 
             var designer1 = 'rafaalvarez';
