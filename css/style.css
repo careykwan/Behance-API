@@ -563,39 +563,56 @@ body {
         flex-direction: row; }
         .middle-section-wrapper-2 .homepage-middle-content-2 .contact-overlay-container-2 .contact-content-wrapper-2 .contact-box-wrapper-2 {
           max-width: 600px;
-          min-width: 450px;
+          min-width: 500px;
           max-height: 400px;
-          min-height: 250px;
-          background-color: white; }
+          min-height: 200px;
+          border-radius: 2px;
+          background-color: white;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          flex-direction: column; }
           .middle-section-wrapper-2 .homepage-middle-content-2 .contact-overlay-container-2 .contact-content-wrapper-2 .contact-box-wrapper-2 .close-wrapper-2 {
             width: 100%;
             height: 10%;
             display: flex;
             justify-content: flex-end;
             align-items: center; }
-            .middle-section-wrapper-2 .homepage-middle-content-2 .contact-overlay-container-2 .contact-content-wrapper-2 .contact-box-wrapper-2 .close-wrapper-2 i {
-              font-size: 30px;
-              color: black; }
+            .middle-section-wrapper-2 .homepage-middle-content-2 .contact-overlay-container-2 .contact-content-wrapper-2 .contact-box-wrapper-2 .close-wrapper-2 #closeContact {
+              margin: 10px;
+              opacity: 1; }
+              .middle-section-wrapper-2 .homepage-middle-content-2 .contact-overlay-container-2 .contact-content-wrapper-2 .contact-box-wrapper-2 .close-wrapper-2 #closeContact i {
+                font-size: 30px;
+                color: black; }
           .middle-section-wrapper-2 .homepage-middle-content-2 .contact-overlay-container-2 .contact-content-wrapper-2 .contact-box-wrapper-2 .contact-text-wrapper-2 {
             display: flex;
             justify-content: center;
             align-items: center; }
             .middle-section-wrapper-2 .homepage-middle-content-2 .contact-overlay-container-2 .contact-content-wrapper-2 .contact-box-wrapper-2 .contact-text-wrapper-2 p {
               font-family: "Lato", sans-serif;
-              font-size: 18px;
+              font-size: 20px;
               color: black;
               font-weight: 400;
               text-align: center; }
-          .middle-section-wrapper-2 .homepage-middle-content-2 .contact-overlay-container-2 .contact-content-wrapper-2 .contact-box-wrapper-2 .email-contact-us-button {
+          .middle-section-wrapper-2 .homepage-middle-content-2 .contact-overlay-container-2 .contact-content-wrapper-2 .contact-box-wrapper-2 .contact-button-wrapper {
             height: 65px;
-            width: 280px;
+            width: 330px;
+            padding: 10px;
+            margin: 10px;
+            margin-bottom: 40px;
             background-color: #1B2D47;
-            font-family: "Playfair Display", serif;
-            font-size: 20px;
-            color: white;
-            font-weight: 700;
-            text-transform: uppercase;
-            text-align: center; }
+            border-radius: 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            .middle-section-wrapper-2 .homepage-middle-content-2 .contact-overlay-container-2 .contact-content-wrapper-2 .contact-box-wrapper-2 .contact-button-wrapper .email-contact-us-button {
+              font-family: "Playfair Display", serif;
+              font-size: 25px;
+              color: white;
+              font-weight: 700;
+              text-transform: uppercase;
+              text-align: center;
+              text-decoration: none; }
     .middle-section-wrapper-2 .homepage-middle-content-2 .slick-designer-slideshow-2,
     .middle-section-wrapper-2 .homepage-middle-content-2 .designer-content-container-2 {
       width: 100%;
