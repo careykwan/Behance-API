@@ -61,12 +61,18 @@
 }
 
 .creator_name {
-	width: 60%;
+	width: 100%;
 	font: bold 38px Playfair Display, serif;
 	color: $darkBlue;
 	float: right;
-	margin-top: -39px;
+	margin-top: 15px;
 	letter-spacing: 1px;
+	background-color: none;
+	border: none;
+}
+
+.dropdown-menu {
+	width: 100%;
 }
 
 .projects_wrapper_one{
@@ -93,7 +99,7 @@
 }
 
 .info_box {
-	height: 25%;
+	height: 30%;
 	width: 92%;
 	margin: 0 auto;
 	background-color: #FFF;
@@ -101,7 +107,7 @@
 }
 
 .comment_box {
-	height: 25%;
+	height: 20%;
 	width: 92%;
 	margin: 0 auto;
 	background-color: #FFF;
@@ -116,10 +122,11 @@
 }
 
 .titles {
-	width: 95%;
-	height: 45%;
+	width: 100%;
+	height: 40%;
 	padding-top: 10px;
 	padding-left: 10px;
+
 }
 
 .project_name {
@@ -129,6 +136,8 @@
 
 .link_tag {
 	width: 98%;
+	border-bottom: 1px solid black;
+	padding-bottom: 15px;
 }
 
 .published {
@@ -150,13 +159,14 @@
 
 .data_box {
 	width: 100%;
-	height: 25%;
+	height: 30%;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	flex-direction: row;
 	font: italic 10px Lato, sans-serif;
 	text-transform: uppercase;
+	padding-top: 20px;
 }
 
 .icon_one {
@@ -178,13 +188,13 @@
 	clear: both;
 }
 
-.designer {
-	width: 50%;
-	display: inline-block;
-	font: 12px Lato, sans-serif;
-	text-transform: uppercase;
-	padding-top: 5px;
-}
+// .designer {
+// 	width: 50%;
+// 	display: inline-block;
+// 	font: 12px Lato, sans-serif;
+// 	text-transform: uppercase;
+// 	padding-top: 5px;
+// }
 
 .date {
 	width: 50%;
@@ -225,7 +235,7 @@
 
 .small_date {
 	color: #BFBFBF;
-	width: 90px;
+	width: 110px;
 	display: inline-block;
 	padding-left: 7px;
 	font: italic 12px Lato, sans-serif;

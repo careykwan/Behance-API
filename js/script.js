@@ -2,22 +2,98 @@ careyjavascript();
 function careyjavascript(){
 
 	// var apiKey = 'cPSHY669vPegbDmBas5ELAxsxAp6pigv';
-	var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
-	var userID = 'claireHartley';
-	var maryRabun = [58448623, 53585037, 53552369];
-	var projects = [];
-	// var claireHartley = this is ok
-	// var rafaalvarez = this is ok
-	// var Doralice = this is ok 
-	// var izutsu = this is ok
-	// var nahuelsal = this is ok
-	// var maryRabun =
+	// var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
+	var apiKey = 'VK7kypKbs5hNBZRc60UAHyy9TfnUBGMC';
+	var userID = 'maryRabun';
+	var projects = [58448623, 53585037, 53552369];
 
 	behanceData();
 	commentsData();
-	nameData();
 	commentsDataTwo();
 	commentsDataThree();
+
+	$('.dropdown-item').click(function(){
+	 switch (this.id) {
+	   case 'd1':
+	   userID = 'claireHartley';
+	   behanceData();
+	   projects = [58087873, 55991459, 53275341];
+	   $('.comment_box').empty();
+	   commentsData();
+	   commentsDataTwo();
+	   commentsDataThree();
+	   nameData();
+	   document.getElementsByClassName('link_one')[0].setAttribute('href', 'https://www.behance.net/gallery/58087873/Jardiniere-Sauvage-Brand-identity-Packaging');
+	   document.getElementsByClassName('link_one')[1].setAttribute('href', 'https://www.behance.net/gallery/55991459/Forest-Shore-Brand-identity-Packaging');
+	   document.getElementsByClassName('link_one')[2].setAttribute('href', 'https://www.behance.net/gallery/53275341/Hogans-Cider-Brand-Identity-Packaging');
+	   break;
+	   case 'd2':
+	   userID = 'rafaalvarez';
+	   behanceData();
+	   projects = [61898815, 61813935, 57438239];
+	   $('.comment_box').empty();
+	   commentsData();
+	   commentsDataTwo();
+	   commentsDataThree();
+	   nameData();
+	   document.getElementsByClassName('link_one')[0].setAttribute('href', 'https://www.behance.net/gallery/61898815/The-League-of-Extraordinary-Football-Players-(Video)');
+	   document.getElementsByClassName('link_one')[1].setAttribute('href', 'https://www.behance.net/gallery/61813935/The-Exchange-Illustrated-Wisedom-for-the-Modern-Men');
+	   document.getElementsByClassName('link_one')[2].setAttribute('href', 'https://www.behance.net/gallery/57438239/Berlin-Creative-Jam');
+	   break;
+	   case 'd3' :
+	   userID = 'Doralice';
+	   behanceData();
+	   projects = [62422395, 61381731, 59461965];
+	   $('.comment_box').empty();
+	   commentsData();
+	   commentsDataTwo();
+	   commentsDataThree();
+	   nameData();
+	   document.getElementsByClassName('link_one')[0].setAttribute('href', 'https://www.behance.net/gallery/62422395/The-Atlantic-The-Possibility-Report');
+	   document.getElementsByClassName('link_one')[1].setAttribute('href', 'https://www.behance.net/gallery/61381731/Anxious');
+	   document.getElementsByClassName('link_one')[2].setAttribute('href', 'https://www.behance.net/gallery/59461965/Lush-Christmas-2017');
+	   break;
+	   case 'd4' :
+	   userID = 'izutsu';
+	   behanceData();
+	   projects = [63145991, 62028201, 61987041];
+	   $('.comment_box').empty();
+	   commentsData();
+	   commentsDataTwo();
+	   commentsDataThree();
+	   nameData();
+	   document.getElementsByClassName('link_one')[0].setAttribute('href', 'https://www.behance.net/gallery/63145991/Adventure-over-the-sky20-2016-1012');
+	   document.getElementsByClassName('link_one')[1].setAttribute('href', 'https://www.behance.net/gallery/62028201/AN-IMAGE-113-To-the-Lst');
+	   document.getElementsByClassName('link_one')[2].setAttribute('href', 'https://www.behance.net/gallery/61987041/AN-IMAGE1112-');
+	   break;
+	   case 'd5' :
+	   userID= 'nahuelsal';
+	   behanceData();
+	   projects = [51695529, 46618799, 25525849];
+	   $('.comment_box').empty();
+	   commentsData();
+	   commentsDataTwo();
+	   commentsDataThree();
+	   nameData();
+	   document.getElementsByClassName('link_one')[0].setAttribute('href', 'https://www.behance.net/gallery/51695529/Onesal-Showcase');
+	   document.getElementsByClassName('link_one')[1].setAttribute('href', 'https://www.behance.net/gallery/46618799/Living-Interface-for-Discovery-Channel-Japan');
+	   document.getElementsByClassName('link_one')[2].setAttribute('href', 'https://www.behance.net/gallery/25525849/Giro-dItalia');
+	   break;
+	   case 'd6' :
+	   userID = 'maryRabun';
+	   behanceData();
+	   projects = [58448623, 53585037, 53552369];
+	   $('.comment_box').empty();
+	   commentsData();
+	   commentsDataTwo();
+	   commentsDataThree();
+	   nameData();
+	   document.getElementsByClassName('link_one')[0].setAttribute('href', 'https://www.behance.net/gallery/58448623/Poly-Co');
+	   document.getElementsByClassName('link_one')[1].setAttribute('href', 'https://www.behance.net/gallery/53585037/Juniper-Square');
+	   document.getElementsByClassName('link_one')[2].setAttribute('href', 'https://www.behance.net/gallery/53552369/Boll-Branch');
+	   break;
+	 	}
+	});	
 
 	//this is to pull designers name
 	function nameData(){
@@ -36,10 +112,10 @@ function careyjavascript(){
 			}		
 		 });
 	}
-	//this is a function to diplay names, will be deleted.
+
 	function runNames (dataNames){
-		$('#creator').empty();
-		$('#creator').append(dataNames.user.first_name + ' ' + dataNames.user.last_name);
+		$('.creator_name').empty();
+		$('.creator_name').append(dataNames.user.first_name + ' ' + dataNames.user.last_name);
 	}
 
 	// ajax request to grab user data
@@ -64,7 +140,7 @@ function careyjavascript(){
 	function commentsData(){
 		
 		$.ajax({
-			url: 'https://api.behance.net/v2/projects/' + maryRabun[0] + '/comments?client_id=' + apiKey,
+			url: 'https://api.behance.net/v2/projects/' + projects[0] + '/comments?client_id=' + apiKey,
 			dataType: 'jsonp',
 			success: function(dataFromServerTwo){
 				runAppTwo(dataFromServerTwo);
@@ -81,7 +157,7 @@ function careyjavascript(){
 	function commentsDataTwo(){
 		
 		$.ajax({
-			url: 'https://api.behance.net/v2/projects/' + maryRabun[1] + '/comments?client_id=' + apiKey,
+			url: 'https://api.behance.net/v2/projects/' + projects[1] + '/comments?client_id=' + apiKey,
 			dataType: 'jsonp',
 			success: function(dataFromServerThree){
 				runAppThree(dataFromServerThree);
@@ -97,7 +173,7 @@ function careyjavascript(){
 	function commentsDataThree(){
 		
 		$.ajax({
-			url: 'https://api.behance.net/v2/projects/' + maryRabun[2] + '/comments?client_id=' + apiKey,
+			url: 'https://api.behance.net/v2/projects/' + projects[2] + '/comments?client_id=' + apiKey,
 			dataType: 'jsonp',
 			success: function(dataFromServerFour){
 				runAppFour(dataFromServerFour);
@@ -136,6 +212,7 @@ function careyjavascript(){
 		$('#likesOne').append(dataFromServer.projects[0].stats.appreciations);
 		$('#commentsOne').empty();
 		$('#commentsOne').append(dataFromServer.projects[0].stats.comments);
+
 
 		$('#timeTwo').empty();
 		$('#timeTwo').append('Published:' + ' ' + timeTwo);	
@@ -305,7 +382,6 @@ function careyjavascript(){
 	    function commentsDateThree(commentTimeBehanceTwo){
 	    return moment.unix(commentTimeBehanceTwo).format('Do MMM YYYY'); 
 		}
-		console.log(timesUpThree);
 
 	    // creating div for comment card
 	    var commentDiv = document.createElement('div');

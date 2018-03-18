@@ -4,8 +4,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href=“https://fonts.googleapis.com/css?family=Lato:400,400i” rel=“stylesheet”>
     <link href=“https://fonts.googleapis.com/css?family=Playfair+Display:700,700i,900,900i” rel=“stylesheet”>
-
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
 	<div class='container_one'>
@@ -19,8 +18,17 @@
 			<a href='index.html'><button class='button_one'><i class="fas fa-long-arrow-alt-left arrow"></i>Back to designer's list</button></a>
 
 			<div class='name_tag'>
-				<p class='para'>View full profile in Behance</p>
-				<p class='creator_name' id='creator'></p>
+				<div class="dropdown">
+					  <button class="dropdown-toggle creator_name" type="button" id="dropdownMenu2 button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mary Rabun</button>
+					  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+					    <button class="dropdown-item" id="d1" type="button">Claire Hartley</button>
+					    <button class="dropdown-item" id="d2" type="button">Rafael Alvarez</button>
+					    <button class="dropdown-item" id="d3" type="button">Yukai Du</button>
+					    <button class="dropdown-item" id="d4" type="button">Hiroyuki Izutsu</button>
+					    <button class="dropdown-item" id="d5" type="button">Nahuel Salcedo</button>
+					    <button class="dropdown-item" id="d6" type="button">Mary Rabun</button>
+					  </div>
+				</div>
 			</div>
 		</div>
 
@@ -35,14 +43,10 @@
 						<h1 class='project_name' id='titleOne'></h1>
 						<h2 class='type' id='categoryOne'></h2>
 						<div class='link_tag'>
-							<a class='link_one'>View in Behance</a>
+							<a class='link_one' href='https://www.behance.net/gallery/58448623/Poly-Co'>View in Behance</a>
 							<p class='published' id='timeOne'></p>
 						</div>
 					</div>
-
-					<svg class='line'>
-						  <line x1='10' y1='10' x2='97%' y2='10'/>
-					</svg>
 					
 					<div class='data_box'>
 						<img class='icon_one' src='img/viewIcon.svg' alt='View icon'>
@@ -78,14 +82,10 @@
 						<h1 class='project_name' id='titleTwo'></h1>
 						<h2 class='type' id='categoryTwo'></h2>
 						<div class='link_tag'>
-							<a class='link_one'>View in Behance</a>
+							<a class='link_one' href='https://www.behance.net/gallery/53585037/Juniper-Square'>View in Behance</a>
 							<p class='published' id='timeTwo'></p>
 						</div>
 					</div>
-
-					<svg class='line'>
-						  <line x1='10' y1='10' x2='97%' y2='10'/>
-					</svg>
 					
 					<div class='data_box'>
 						<img class='icon_one' src='img/viewIcon.svg' alt='View icon'>
@@ -118,14 +118,10 @@
 						<h1 class='project_name' id='titleThree'></h1>
 						<h2 class='type' id='categoryThree'></h2>
 						<div class='link_tag'>
-							<a class='link_one'>View in Behance</a>
+							<a class='link_one' href='https://www.behance.net/gallery/53552369/Boll-Branch'>View in Behance</a>
 							<p class='published' id='timeThree'></p>
 						</div>
 					</div>
-
-					<svg class='line'>
-						  <line x1='10' y1='10' x2='97%' y2='10'/>
-					</svg>
 					
 					<div class='data_box'>
 						<img class='icon_one' src='img/viewIcon.svg' alt='View icon'>
@@ -151,6 +147,8 @@
 	<!-- This end of container div -->
 	</div>
 	<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	<script type="text/javascript" src="node_modules/moment/moment.js"></script>
 	<script type="text/javascript" src="js/carey.js"></script>
