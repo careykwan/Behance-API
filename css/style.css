@@ -210,6 +210,17 @@ body {
   height: 18%;
   background-color: white; }
 
+#logo3 {
+  width: 30%;
+  margin-left: 75px;
+  padding-top: 18px;
+  display: inline-block; }
+
+#secondLogo3 {
+  float: right;
+  margin-top: 25px;
+  margin-right: 75px; }
+
 .return3 {
   background-color: #1B2D47;
   border: #1B2D47;
@@ -221,6 +232,41 @@ body {
   margin-left: 40px;
   margin-top: 30px;
   cursor: pointer; }
+
+.nameDescription {
+  font: 12px Lato, sans-serif;
+  float: right;
+  margin-top: 3%;
+  margin-right: 10%; }
+
+.designerName {
+  font: bold 38px Playfair Display, serif;
+  color: #1B2D47;
+  float: right;
+  margin-top: 1%;
+  letter-spacing: 2px;
+  margin-right: -38%; }
+
+.kelsey {
+  margin-left: 70%;
+  margin-top: -3%;
+  font: 12px Lato, sans-serif; }
+
+.btn {
+  background-color: transparent;
+  color: black;
+  border: none; }
+
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:not(:disabled):not(.disabled):active,
+.show > .btn-secondary.dropdown-toggle {
+  background-color: transparent;
+  color: black;
+  border: none;
+  box-shadow: none; }
+
+.btn.focus, .btn:focus {
+  box-shadow: none; }
 
 #chart1Container {
   background-color: #EFEFEF;
@@ -264,6 +310,22 @@ body {
   height: 70%;
   padding-top: 6%; }
 
+#graphTitle {
+  text-align: center;
+  font: bold 32px Playfair Display, serif;
+  color: #E41E26; }
+
+#titleLocation {
+  padding-top: 10px; }
+
+#graphTitle2 {
+  text-align: center;
+  font: bold 32px Playfair Display, serif;
+  color: #E41E26; }
+
+#titleLocation2 {
+  padding-top: 10px; }
+
 #statsContainer {
   width: 95%;
   height: 78%;
@@ -296,31 +358,6 @@ body {
   grid-column: 3/4;
   height: 100%; }
 
-.nameDescription {
-  font: 12px Lato, sans-serif;
-  float: right;
-  margin-top: 3%;
-  margin-right: 10%; }
-
-.designerName {
-  font: bold 38px Playfair Display, serif;
-  color: #1B2D47;
-  float: right;
-  margin-top: 1%;
-  letter-spacing: 2px;
-  margin-right: -38%; }
-
-#logo3 {
-  width: 30%;
-  margin-left: 75px;
-  padding-top: 18px;
-  display: inline-block; }
-
-#secondLogo3 {
-  float: right;
-  margin-top: 25px;
-  margin-right: 75px; }
-
 .icon {
   width: 30%;
   height: 30%;
@@ -331,22 +368,6 @@ body {
   color: #E41E26;
   margin-left: 25%;
   margin-top: -50px; }
-
-#graphTitle {
-  text-align: center;
-  font: bold 32px Playfair Display, serif;
-  color: #E41E26; }
-
-#titleLocation {
-  padding-top: 10px; }
-
-#graphTitle2 {
-  text-align: center;
-  font: bold 32px Playfair Display, serif;
-  color: #E41E26; }
-
-#titleLocation2 {
-  padding-top: 10px; }
 
 .statsStyle {
   font: 20px Lato, sans-serif;
@@ -363,27 +384,6 @@ body {
 #phoneMessage {
   font: bold 32px Lato, serif;
   color: white; }
-
-.kelsey {
-  margin-left: 70%;
-  margin-top: -3%;
-  font: 12px Lato, sans-serif; }
-
-.btn {
-  background-color: transparent;
-  color: black;
-  border: none; }
-
-.btn-secondary:not(:disabled):not(.disabled).active,
-.btn-secondary:not(:disabled):not(.disabled):active,
-.show > .btn-secondary.dropdown-toggle {
-  background-color: transparent;
-  color: black;
-  border: none;
-  box-shadow: none; }
-
-.btn.focus, .btn:focus {
-  box-shadow: none; }
 
 @media only screen and (max-width: 768px) {
   #box4 {
