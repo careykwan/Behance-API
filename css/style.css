@@ -391,7 +391,7 @@ body {
 
 @media only screen and (max-width: 768px) {
   #statsContainer {
-    margin-top: 38%;
+    margin-top: 32%;
     width: 90%;
     margin-left: 5.5%; }
 
@@ -401,7 +401,8 @@ body {
 
   #chart2Container {
     width: 90%;
-    margin-top: 2%; }
+    margin-top: 2%;
+    margin-right: 4.75%; }
 
   #chart1Location {
     margin-left: 7%;
@@ -411,9 +412,9 @@ body {
     margin-left: 5%; }
 
   .designerName {
-    font-size: 28px;
-    margin-right: 6%;
-    margin-top: -5%; }
+    font-size: 20px;
+    margin-right: -58%;
+    margin-top: 5%; }
 
   .nameDescription {
     margin-right: 40%;
@@ -436,16 +437,17 @@ body {
   #logo3 {
     width: 39%;
     margin-left: 44px;
-    padding-top: 28px; } }
+    padding-top: 28px; }
+
+  .kelsey {
+    margin-left: 60%;
+    margin-top: -5.5%; } }
 @media only screen and (max-width: 725px) {
   #phoneScreen {
     display: block; }
 
   #body-container3 {
     display: none; } }
-@media only screen and (max-width: 1024px) {
-  .designerName {
-    margin-right: -38%; } }
 .homepage-container-2 {
   height: 100vh;
   width: 100vw;
