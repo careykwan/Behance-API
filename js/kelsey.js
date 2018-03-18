@@ -11,9 +11,9 @@ google.charts.setOnLoadCallback(getApiData);
 
 
 
-var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
+// var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
 
-// var apiKey = '9GZKv2mtTMZwnLXjV4lOWIQONW7Xq2ip';
+var apiKey = '9GZKv2mtTMZwnLXjV4lOWIQONW7Xq2ip';
 var designerId = 'izutsu';
 var designer1 = 'rafaalvarez';
 var designer2 = 'clairehartley';
