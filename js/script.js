@@ -9,8 +9,8 @@ function florenceJavaScript() {
     function changeModalInfo() {
         grabUserID();
         // var apiKey = 'cUrZsmxKrahZRfyjKoZIY6XtbecnuEH5';
-        // var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOco';
-        var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
+        var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOco';
+
         var userIDArray = [];
 
         // @grabUserID is a switch statement to push and empty certain UserIDs depending on what div has been clicked has been clicked.
@@ -112,8 +112,7 @@ function florenceJavaScript() {
         function seconeAJAXBehanceRequest2() {
 
             // var apiKey = 'cUrZsmxKrahZRfyjKoZIY6XtbecnuEH5';
-            // var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOco';
-            var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
+            var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOco';
 
             var designer1 = 'rafaalvarez';
             var designer2 = 'clairehartley';
