@@ -9,8 +9,8 @@ function florenceJavaScript() {
     function changeModalInfo() {
         grabUserID();
         // var apiKey = 'cUrZsmxKrahZRfyjKoZIY6XtbecnuEH5';
-        var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOco';
-        // var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
+        // var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOco';
+        var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
         var userIDArray = [];
 
         // @grabUserID is a switch statement to push and empty certain UserIDs depending on what div has been clicked has been clicked.
@@ -112,8 +112,8 @@ function florenceJavaScript() {
         function seconeAJAXBehanceRequest2() {
 
             // var apiKey = 'cUrZsmxKrahZRfyjKoZIY6XtbecnuEH5';
-            var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOco';
-            // var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
+            // var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOco';
+            var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
 
             var designer1 = 'rafaalvarez';
             var designer2 = 'clairehartley';
@@ -131,15 +131,13 @@ function florenceJavaScript() {
                     $('#slideProjectName1').hide();
                     $('#slideDesignerName1').hide();
 
-                    $('#loaderGIF1').show();
+                    $('#profileImg1').attr('src', 'img/loader.gif');
                 },
                 success: function (data2) {
                     requestingDesigner1Data(data2);
                     $('#slide-1').fadeIn(400);
                     $('#slideProjectName1').show();
                     $('#slideDesignerName1').show();
-
-                    $('#loaderGIF1').hide();
                 },
                 error: function (error2) {
                     console.log('Something has gone wrong');
@@ -164,7 +162,8 @@ function florenceJavaScript() {
                     $('#slideProjectName2').hide();
                     $('#slideDesignerName2').hide();
 
-                    $('#loaderGIF2').show();
+                    // $('#loaderGIF2').show();
+                    $('#profileImg2').attr('src', 'img/loader.gif');
                 },
                 success: function (data2) {
                     requestingDesigner2Data(data2);
@@ -172,7 +171,7 @@ function florenceJavaScript() {
                     $('#slideProjectName2').show();
                     $('#slideDesignerName2').show();
 
-                    $('#loaderGIF2').hide();
+                    // $('#loaderGIF2').hide();
                 },
                 error: function (error2) {
                     console.log(error2);
@@ -197,7 +196,8 @@ function florenceJavaScript() {
                     $('#slideProjectName3').hide();
                     $('#slideDesignerName3').hide();
 
-                    $('#loaderGIF3').show();
+                    // $('#loaderGIF3').show();
+                    $('#profileImg3').attr('src', 'img/loader.gif');
                 },
                 success: function (data2) {
                     requestingDesigner3Data(data2);
@@ -205,7 +205,7 @@ function florenceJavaScript() {
                     $('#slideProjectName3').show();
                     $('#slideDesignerName3').show();
 
-                    $('#loaderGIF3').hide();
+                    // $('#loaderGIF3').hide();
                 },
                 error: function (error2) {
                     console.log(error2);
@@ -230,7 +230,8 @@ function florenceJavaScript() {
                     $('#slideProjectName4').hide();
                     $('#slideDesignerName4').hide();
 
-                    $('#loaderGIF4').show();
+                    // $('#loaderGIF4').show();
+                    $('#profileImg4').attr('src', 'img/loader.gif');
                 },
                 success: function (data2) {
                     requestingDesigner4Data(data2);
@@ -238,7 +239,7 @@ function florenceJavaScript() {
                     $('#slideProjectName4').show();
                     $('#slideDesignerName4').show();
 
-                    $('#loaderGIF4').hide();
+                    // $('#loaderGIF4').hide();
                 },
                 error: function (error2) {
                     console.log(error2);
@@ -263,7 +264,8 @@ function florenceJavaScript() {
                     $('#slideProjectName5').hide();
                     $('#slideDesignerName5').hide();
 
-                    $('#loaderGIF5').show();
+                    // $('#loaderGIF5').show();
+                    $('#profileImg5').attr('src', 'img/loader.gif');
                 },
                 success: function (data2) {
                     requestingDesigner5Data(data2);
@@ -271,7 +273,7 @@ function florenceJavaScript() {
                     $('#slideProjectName5').show();
                     $('#slideDesignerName5').show();
 
-                    $('#loaderGIF5').hide();
+                    // $('#loaderGIF5').hide();
                 },
                 error: function (error2) {
                     console.log(error2);
@@ -296,7 +298,8 @@ function florenceJavaScript() {
                     $('#slideProjectName6').hide();
                     $('#slideDesignerName6').hide();
 
-                    $('#loaderGIF6').show();
+                    // $('#loaderGIF6').show();
+                    $('#profileImg6').attr('src', 'img/loader.gif');
                 },
                 success: function (data2) {
                     requestingDesigner6Data(data2);
@@ -304,7 +307,7 @@ function florenceJavaScript() {
                     $('#slideProjectName6').show();
                     $('#slideDesignerName6').show();
 
-                    $('#loaderGIF6').hide();
+                    // $('#loaderGIF6').hide();
                 },
                 error: function (error2) {
                     console.log(error2);

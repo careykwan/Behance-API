@@ -1,6 +1,6 @@
 # Behance API Summative | Pentagramer Designer Showcase 
 
-##Terminal Commands
+###Terminal Commands
 This project requires a server therefore if you are using a Vagrant server please ensure you have Node JS install inside the server.
 
 ### Installing Packages
@@ -39,6 +39,6 @@ We have used Grunt as our task runner therefore to get things running run the fo
 
 
 ## Collaborators
-[Carey Kwan](https://github.com/careykwan)
-[Kelsey Smith](https://github.com/Kelseys1993)
-[Florence Lof](https://github.com/fpwl)
+- [Carey Kwan](https://github.com/careykwan)
+- [Kelsey Smith](https://github.com/Kelseys1993)
+- [Florence Lo](https://github.com/fpwl)
