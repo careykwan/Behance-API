@@ -184,7 +184,7 @@
   font: italic 14px Lato, sans-serif;
   margin-left: 120px;
   padding-top: 15px;
-  margin-botton: 100px;
+  margin-bottom: 20px;
   margin-right: 5px;
   clear: both; }
 
@@ -199,6 +199,155 @@
   padding-left: 7px;
   font: italic 12px Lato, sans-serif; }
 
+@media only screen and (max-width: 820px) {
+  .name_tag {
+    width: 200px;
+    height: 50px;
+    float: right;
+    margin-right: 30px; }
+
+  .creator_name {
+    width: 220px;
+    font-size: 24px;
+    margin-top: 15px;
+    background-color: #FFF; }
+
+  .heading_one {
+    padding-top: 30px;
+    margin-left: 50px; }
+
+  .behance_one {
+    margin-top: 25px;
+    margin-right: 50px; }
+
+  .images {
+    height: 100%;
+    width: 100%; }
+
+  .project {
+    height: 20%; }
+
+  .project_name {
+    font-size: 16px;
+    padding-right: 5px; }
+
+  .link_one, .published, .type {
+    font-size: 10px;
+    padding-top: 5px; }
+
+  .published {
+    float: left; }
+
+  .titleMedia {
+    display: none; }
+
+  .data_box {
+    height: 20%;
+    padding-top: 0px; }
+
+  .info_box {
+    height: 23%; }
+
+  .comment_box {
+    height: 50%; }
+
+  .icon_one {
+    width: 25px; }
+
+  .link_tag {
+    width: 97%;
+    padding-bottom: 20px; }
+
+  .profileImage {
+    width: 35px; }
+
+  .profile_pic {
+    margin-left: 10px;
+    margin-top: 25px; }
+
+  .profile_name {
+    margin-left: 55px; }
+
+  .small_date {
+    margin-left: 55px;
+    padding-left: 0px; }
+
+  .profile_tag {
+    display: flex;
+    flex-direction: column; }
+
+  .user_comments {
+    width: 60%;
+    margin-left: 55px;
+    padding-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 5px; } }
+@media only screen and (min-device-width: 820px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .heading_one {
+    padding-top: 23px; }
+
+  .behance_one {
+    margin-top: 15px;
+    margin-right: 75px; }
+
+  .project_box {
+    height: 76%; }
+
+  .dropdown-menu {
+    width: 55%; }
+
+  .creator_name {
+    width: 55%; }
+
+  .titleMedia {
+    display: none; }
+
+  .images {
+    height: 100%;
+    width: 100%; }
+
+  .project {
+    height: 35%; }
+
+  .comment_box {
+    height: 25%; }
+
+  .profileImage {
+    width: 45px; }
+
+  .profile_pic {
+    width: 0px;
+    height: 0px;
+    margin-left: 15px;
+    margin-top: 15px; }
+
+  .profile_name {
+    margin-left: 85px; }
+
+  .small_date {
+    margin-left: 83px;
+    padding-left: 0px; }
+
+  .profile_tag {
+    display: flex;
+    flex-direction: column; }
+
+  .user_comments {
+    margin-left: 83px;
+    padding-top: 0px;
+    margin-bottom: 20px;
+    margin-right: 5px; }
+
+  .project_name {
+    font-size: 16px;
+    padding-right: 15px; }
+
+  .creator_name {
+    font-size: 30px;
+    background-color: #FFF; } }
+@media only screen and (max-width: 414px) {
+  .container_one {
+    display: none; } }
 #dv {
   color: red; }
 
