@@ -3,7 +3,7 @@ module.exports = function (grunt) {
     // initiliased the config
     grunt.initConfig({
         jshint: {
-            files: ['js/carey.js', 'js/kelsey.js', 'js/flo.js'],
+            files: ['js/carey.js', 'js/kelsey.js', 'js/script.js'],
             options: {
                 globals: {
                     jQuery: true
@@ -36,13 +36,13 @@ module.exports = function (grunt) {
                 }
             }
         },
-        concat: {
+        // concat: {
           
-            dist: {
-                src: ['js/carey.js', 'js/kelsey.js', 'js/flo.js'],
-                dest: 'js/script.js',
-            },
-        },
+        //     dist: {
+        //         src: ['js/carey.js', 'js/kelsey.js', 'js/flo.js'],
+        //         dest: 'js/script.js',
+        //     },
+        // },
         sass: {
             dist: {
                 files: {
@@ -53,7 +53,7 @@ module.exports = function (grunt) {
         browserSync: {
             bsFiles: {
                 src: [
-                    './*.html'
+                    './*.html',
                 ]
             },
             options: {
@@ -75,7 +75,7 @@ module.exports = function (grunt) {
             },
             js: {
                 files: ['js/*.js'],
-                tasks: ['jshint', 'concat']
+                tasks: ['jshint']
             }
         }
         
