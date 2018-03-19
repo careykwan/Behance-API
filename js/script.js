@@ -1,375 +1,3 @@
-careyjavascript();
-
-function careyjavascript(){
-
-	var apiKey = 'cPSHY669vPegbDmBas5ELAxsxAp6pigv';
-	// var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
-	var userID = 'maryRabun';
-	var maryRabun = 58448623;
-	var projects = [];
-	// var claireHartley = this is ok
-	// var rafaalvarez = this is ok
-	// var Doralice = this is ok 
-	// var izutsu = this is ok
-	// var nahuelsal = this is ok
-	// var maryRabun =
-
-	behanceData();
-	commentsData();
-	nameData();
-
-	//this is to pull designers name
-	function nameData(){
-
-		$.ajax({
-			url: 'http://www.behance.net/v2/users/' + userID + '?&api_key=' + apiKey,
-			dataType: 'jsonp',
-			success: function(dataNames){
-			
-				runNames(dataNames);
-
-			},
-			error:function(error){
-				console.log(error);
-				console.log("something went wrong");
-			}		
-		 });
-	}
-
-	function runNames (dataNames){
-		$('#creator').empty();
-		$('#creator').append(dataNames.user.first_name + ' ' + dataNames.user.last_name);
-	}
-
-	// ajax request to grab user data
-	function behanceData(){
-
-		$.ajax({
-			url: 'http://www.behance.net/v2/users/' + userID + '/projects?callback=?&api_key=' + apiKey,
-			dataType: 'jsonp',
-			success: function(dataFromServer){
-			
-				runApp(dataFromServer);	
-
-			},
-			error:function(error){
-				console.log(error);
-				console.log("something went wrong");
-			}		
-		 });
-	}
-
-	// ajax request to grab comment data from the users
-	function commentsData(){
-		
-		$.ajax({
-			url: 'https://api.behance.net/v2/projects/' + maryRabun + '/comments?client_id=' + apiKey,
-			dataType: 'jsonp',
-			success: function(dataFromServerTwo){
-				runAppTwo(dataFromServerTwo);
-				
-			},
-			error:function(error){
-				console.log(error);
-				console.log("something went wrong AGAIN");
-			}
-		});
-	}
-
-	// function to display the user data
-	function runApp (dataFromServer) {
-		var firstProject = dataFromServer.projects[0].covers.original;
-		var secondProject = dataFromServer.projects[1].covers.original;
-		var thirdProject = dataFromServer.projects[2].covers.original;
-		var timeOne = timeFormatter(dataFromServer.projects[0].published_on);
-		var timeTwo = timeFormatter(dataFromServer.projects[1].published_on);
-		var timeThree = timeFormatter(dataFromServer.projects[2].published_on);
-
-				
-		function timeFormatter(timeFromBehance) {
-	    return moment.unix(timeFromBehance).format('Do MMM YYYY');
-		}
-		
-		$('#timeOne').empty();
-		$('#timeOne').append('Published:' + ' ' + timeOne);	
-		$('#photoOne').attr({src: firstProject });
-		$('#titleOne').empty();
-		$('#titleOne').append(dataFromServer.projects[0].name);
-		$('#categoryOne').empty();
-		$('#categoryOne').append(dataFromServer.projects[0].fields[2]);
-		$('#viewsOne').empty();
-		$('#viewsOne').append(dataFromServer.projects[0].stats.views);
-		$('#likesOne').empty();
-		$('#likesOne').append(dataFromServer.projects[0].stats.appreciations);
-		$('#commentsOne').empty();
-		$('#commentsOne').append(dataFromServer.projects[0].stats.comments);
-
-		$('#timeTwo').empty();
-		$('#timeTwo').append('Published:' + ' ' + timeTwo);	
-		$('#photoTwo').attr({src: secondProject });
-		$('#titleTwo').empty();
-		$('#titleTwo').append(dataFromServer.projects[1].name);
-		$('#categoryTwo').empty();
-		$('#categoryTwo').append(dataFromServer.projects[1].fields[1]);
-		$('#viewsTwo').empty();
-		$('#viewsTwo').append(dataFromServer.projects[1].stats.views);
-		$('#likesTwo').empty();
-		$('#likesTwo').append(dataFromServer.projects[1].stats.appreciations);
-		$('#commentsTwo').empty();
-		$('#commentsTwo').append(dataFromServer.projects[1].stats.comments);
-
-		$('#timeThree').empty();
-		$('#timeThree').append('Published:' + ' ' + timeThree);	
-		$('#photoThree').attr({src: thirdProject });
-		$('#titleThree').empty();
-		$('#titleThree').append(dataFromServer.projects[2].name);
-		$('#categoryThree').empty();
-		$('#categoryThree').append(dataFromServer.projects[2].fields[2]);
-		$('#viewsThree').empty();
-		$('#viewsThree').append(dataFromServer.projects[2].stats.views);
-		$('#likesThree').empty();
-		$('#likesThree').append(dataFromServer.projects[2].stats.appreciations);
-		$('#commentsThree').empty();
-		$('#commentsThree').append(dataFromServer.projects[2].stats.comments);
-	}
-
-
-	// function to display the comments data
-	function runAppTwo (dataFromServerTwo) {
-		// console.log(dataFromServerTwo);
-		// console.log(dataFromServerTwo.comments[0].comment);
-		// console.log(dataFromServerTwo.comments[0].user.display_name);
-
-		for (var i = 0; i < dataFromServerTwo.comments.length; i++) {
-	        appendCommentsCard(dataFromServerTwo.comments[i]);
-	    }
-	}
-
-
-	// This is a function append the comments to the div in html
-	function appendCommentsCard(dataFromServerTwo) {
-	    var output2 = document.getElementById('commentBox');
-	    var profileImg = dataFromServerTwo.user.images['50']; 
-
-	    // creating div for comment card
-	    var commentDiv = document.createElement('div');
-	    commentDiv.className = 'mainComment';
-	    output2.appendChild(commentDiv);
-
-	    var photoDiv = document.createElement('div');
-	    photoDiv.className = 'profile_pic';
-	    commentDiv.appendChild(photoDiv);
-
-	    var profilePic = document.createElement('img');
-	    profilePic.className = 'profileImage';
-	    profilePic.setAttribute('src', profileImg);
-	    photoDiv.appendChild(profilePic);
-
-	    var profileName = document.createElement('h3');
-	    profileName.className = 'profile_name';
-	    commentDiv.appendChild(profileName);
-
-	    var userComments = document.createElement('p');
-	    userComments.className = 'user_comments';
-	    commentDiv.appendChild(userComments);
-
-	    var designer = document.createTextNode(dataFromServerTwo.user.display_name);
-	    profileName.appendChild(designer);
-
-	    var comments = document.createTextNode(dataFromServerTwo.comment);
-	    userComments.appendChild(comments);
-
-	}
-
-}
-
-
-//everything is wrapped inside a funciton 
-//this invokes that fucnction
-kelseyJavascript();
-
-function kelseyJavascript() {
-  //click function on return button to go back to desingers page
-  $('#returnBtn').click(function(){
-    window.location = 'designers.html';
-  });
-
-  google.charts.load('current', {'packages':['corechart' ,'bar']});
-  google.charts.setOnLoadCallback(getApiData);
-
-// var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
-  var apiKey = '9GZKv2mtTMZwnLXjV4lOWIQONW7Xq2ip';
-  var designerId = 'izutsu';
-  var designer1 = 'rafaalvarez';
-  var designer2 = 'clairehartley';
-  var designer3 = 'Doralice';
-  var designer4 = 'izutsu';
-  var designer5 = 'MaryRabun';
-  var designer6 = 'nahuelsal';
-
-  getNameData();
-
-// function to change desinger user id to get new desinger data from api
-  $('.dropdown-item').click(function(){
-    switch (this.id) {
-    case 'designerOne3':
-    designerId = 'rafaalvarez';
-    google.charts.setOnLoadCallback(getApiData);
-    getNameData();
-    break;
-    case 'designerTwo3':
-    designerId = 'clairehartley';
-    google.charts.setOnLoadCallback(getApiData);
-    getNameData();
-    break;
-    case 'designerThree3' :
-    designerId = 'Doralice';
-    google.charts.setOnLoadCallback(getApiData);
-    getNameData();
-    break;
-    case 'designerFour3' :
-    designerId = 'izutsu';
-    google.charts.setOnLoadCallback(getApiData);
-    getNameData();
-    break;
-    case 'designerFive3' :
-    designerId = 'MaryRabun';
-    google.charts.setOnLoadCallback(getApiData);
-    getNameData();
-    break;
-    case 'designerSix3' :
-    designerId = 'nahuelsal';
-    google.charts.setOnLoadCallback(getApiData);
-    getNameData();
-    break;
-    }
-  });
-
-//initial ajax request to get data from api
-//also includes functions to create bar graph and invokes
-//add details and drawpiechart functions
-  function getApiData(){
-
-    $.ajax({     
-      url:'https://api.behance.net/v2/users/' + designerId + '/projects?client_id=' + apiKey,
-      dataType: 'jsonP',
-      success: function(dataFromJSONP){
-
-      var data = new google.visualization.arrayToDataTable([
-        ['Click bars for more details', 'Appreciations', 'Views', ],
-        ['Project One',dataFromJSONP.projects[0].stats.appreciations, 
-        dataFromJSONP.projects[0].stats.views ],
-        ['Project Two',dataFromJSONP.projects[1].stats.appreciations, 
-        dataFromJSONP.projects[1].stats.views ],
-        ['Project Three',dataFromJSONP.projects[2].stats.appreciations, 
-        dataFromJSONP.projects[2].stats.views ]
-        
-
-      ]);
-
-
-      var options = {
-      chart: {
-        titlePosition: 'none',
-      },
-      legend: {
-        position: 'none'
-      },
-      fontName: 'sans-serif',
-      fontSize: 14,
-      bars: 'vertical',
-      vAxis: {
-        format: 'decimal',
-        },
-      colors: ['#1B2D47', '#1E3E75'],
-
-      };
-
-      var classicChart = new google.charts.Bar(document.getElementById('chart1Location'));
-      classicChart.draw(data, options);
-
-      addDetails(dataFromJSONP);
-      google.charts.setOnLoadCallback(drawPieChart(dataFromJSONP));
-
-      //click function to on designers name to take to desingers behance profile
-      $('#designerName3').click(function(){
-        window.location = 'https://www.behance.net/' + designerId;
-      });
-
-      },
-      error: function(error){
-        console.log(error);
-        console.log("Something has gone wrong");
-      }
-      });
-    }
-
-
-  // function to get the names of each designer and to display them
-  function getNameData(){
-    $.ajax({     
-        url:'https://api.behance.net/v2/users/' + designerId + '?&api_key=' + apiKey,
-        dataType: 'jsonP',
-        success: function(dataFromJSONP2){
-            console.log(dataFromJSONP2);
-
-            $('#designerName3').empty();
-             $('#designerName3').append(dataFromJSONP2.user.display_name);
-             },
-        error: function(error){
-            console.log(error);
-            console.log("Something has gone wrong");
-        }
-    });
-  }
-  //function to create the pice chart, data from inital ajax function is passed through as paramter
-  function drawPieChart(dataFromJSONP){
-    var data = new google.visualization.DataTable();
-      data.addColumn('string', 'Project Name');
-      data.addColumn('number', 'Comments');
-      data.addRows([
-        [dataFromJSONP.projects[0].name, dataFromJSONP.projects[0].stats.comments],
-        [dataFromJSONP.projects[1].name, dataFromJSONP.projects[1].stats.comments],
-        [dataFromJSONP.projects[2].name, dataFromJSONP.projects[2].stats.comments],
-       
-      ]);
-
-    var options = {
-        slices: [
-        {color: '#1B2D47'},
-        {color: '#1E3E75'},
-        {color: '#2F4C93'},
-         ],
-        chartArea:{
-        height:400,
-        width: 700
-      },
-       
-        };
-
-      var chart = new google.visualization.PieChart(document.getElementById('chart2Location'));
-      chart.draw(data, options);
-  }
-  //function to display data in the DOM
-  //data from ajax passed through as paramater
-  function addDetails(dataFromJSONP){
-
-    $('#viewStats3').empty();
-    $('#commentStats3').empty();
-    $('#appreciationStats3').empty();
-    $('#viewStats3').append(dataFromJSONP.projects[0].stats.views + 
-    dataFromJSONP.projects[1].stats.views +
-    dataFromJSONP.projects[2].stats.views);
-    $('#appreciationStats3').append(dataFromJSONP.projects[0].stats.appreciations + 
-    dataFromJSONP.projects[1].stats.appreciations + 
-    dataFromJSONP.projects[2].stats.appreciations);
-    $('#commentStats3').append(dataFromJSONP.projects[0].stats.comments +
-    dataFromJSONP.projects[1].stats.comments  +
-    dataFromJSONP.projects[2].stats.comments);
-              
-  }
-}
-
 // init function invokations
 florenceJavaScript();
 
@@ -380,9 +8,9 @@ function florenceJavaScript() {
 
     function changeModalInfo() {
         grabUserID();
-        var apiKey = 'cUrZsmxKrahZRfyjKoZIY6XtbecnuEH5';
-        // var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOco';
-        // var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
+        // var apiKey = 'cUrZsmxKrahZRfyjKoZIY6XtbecnuEH5';
+        var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOco';
+
         var userIDArray = [];
 
         // @grabUserID is a switch statement to push and empty certain UserIDs depending on what div has been clicked has been clicked.
@@ -423,16 +51,19 @@ function florenceJavaScript() {
             });
         }
 
-        // @AJAXBehanceRequest2 Runs a AJAX request to Behance API to grab data, if successful it will run showDesignerDetails function.
+        // @AJAXBehanceRequest2 Runs a AJAX request to Behance API to grab data for the designer details modal, if successful it will run showDesignerDetails function .
         function AJAXBehanceRequest2() {
             $.ajax({
                 url: 'http://behance.net/v2/users/' + userIDArray[0] + '?api_key=' + apiKey,
                 dataType: 'jsonp',
-                // beforeSend: function (e) {
-                //     console.log(e);
-                // },
+                beforeSend: function (e) {
+                    $(".modal-body-content-wrapper-2").css("display", "none");
+                    $("#loaderDiv2").css("display", "flex");
+                },
                 success: function (data) {
                     showDesignerDetails(data);
+                    $("#loaderDiv2").css("display", "none");
+                    $(".modal-body-content-wrapper-2").css("display", "flex");
                 },
                 error: function (error) {
                     console.log(error);
@@ -470,9 +101,9 @@ function florenceJavaScript() {
             $('.designer-name-2').text(data.user.first_name + ' ' + data.user.last_name);
         }
     }
-    
-// This code is unnecessary but I wanted to use a AJAX request to append all the info possible for my site. 
-// I could have made multiple AJAX request from the start but decided to try a way to replace the UserID in the request instead. 
+
+    // This code is unnecessary but I wanted to use a AJAX request to append all the info possible for my site. 
+    // I could have made multiple AJAX request from the start but decided to try a way to replace the UserID in the request instead. 
 
     function multipleAJAXRequestFunction() {
         seconeAJAXBehanceRequest2();
@@ -480,10 +111,9 @@ function florenceJavaScript() {
         // @AJAXBehanceRequest2 Runs a AJAX request to Behance API to grab data, if successful it will run showDesignerDetails function.
         function seconeAJAXBehanceRequest2() {
 
-            var apiKey = 'cUrZsmxKrahZRfyjKoZIY6XtbecnuEH5';
-            // var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOco';
-            // var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
-            
+            // var apiKey = 'cUrZsmxKrahZRfyjKoZIY6XtbecnuEH5';
+            var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOco';
+
             var designer1 = 'rafaalvarez';
             var designer2 = 'clairehartley';
             var designer3 = 'Doralice';
@@ -496,11 +126,17 @@ function florenceJavaScript() {
                 url: 'https://api.behance.net/v2/users/' + designer1 + '/projects?client_id=' + apiKey,
                 dataType: 'jsonp',
                 beforeSend: function () {
-                    $('#loaderGIF1').show();
+                    $('#slide-1').hide();
+                    $('#slideProjectName1').hide();
+                    $('#slideDesignerName1').hide();
+
+                    $('#profileImg1').attr('src', 'img/loader.gif');
                 },
                 success: function (data2) {
                     requestingDesigner1Data(data2);
-                    $('#loaderGIF1').hide();
+                    $('#slide-1').fadeIn(400);
+                    $('#slideProjectName1').show();
+                    $('#slideDesignerName1').show();
                 },
                 error: function (error2) {
                     console.log('Something has gone wrong');
@@ -510,22 +146,31 @@ function florenceJavaScript() {
             function requestingDesigner1Data(data2) {
                 $('#profileImg1').attr("src", data2.projects[0].owners[0].images['276']);
                 $('.designer1-name-2').text(data2.projects[0].owners[0].first_name + ' ' + data2.projects[0].owners[0].last_name);
-                $('#slide-6').attr("src", data2.projects[0].covers.original);
+                $('#slide-1').attr("src", data2.projects[0].covers.original);
                 $('#slideProjectName1').text(data2.projects[0].name);
                 $('#slideDesignerName1').text(data2.projects[0].owners[0].first_name + ' ' + data2.projects[0].owners[0].last_name);
 
             }
-           
+
             // // AJAX Request Designer 2
             $.ajax({
                 url: 'https://api.behance.net/v2/users/' + designer2 + '/projects?client_id=' + apiKey,
                 dataType: 'jsonp',
                 beforeSend: function () {
-                    $('#loaderGIF2').show();
+                    $('#slide-2').hide();
+                    $('#slideProjectName2').hide();
+                    $('#slideDesignerName2').hide();
+
+                    // $('#loaderGIF2').show();
+                    $('#profileImg2').attr('src', 'img/loader.gif');
                 },
                 success: function (data2) {
                     requestingDesigner2Data(data2);
-                    $('#loaderGIF2').hide();
+                    $('#slide-2').show();
+                    $('#slideProjectName2').show();
+                    $('#slideDesignerName2').show();
+
+                    // $('#loaderGIF2').hide();
                 },
                 error: function (error2) {
                     console.log(error2);
@@ -546,11 +191,20 @@ function florenceJavaScript() {
                 url: 'https://api.behance.net/v2/users/' + designer3 + '/projects?client_id=' + apiKey,
                 dataType: 'jsonp',
                 beforeSend: function () {
-                    $('#loaderGIF3').show();
+                    $('#slide-3').hide();
+                    $('#slideProjectName3').hide();
+                    $('#slideDesignerName3').hide();
+
+                    // $('#loaderGIF3').show();
+                    $('#profileImg3').attr('src', 'img/loader.gif');
                 },
                 success: function (data2) {
                     requestingDesigner3Data(data2);
-                    $('#loaderGIF3').hide();
+                    $('#slide-3').show();
+                    $('#slideProjectName3').show();
+                    $('#slideDesignerName3').show();
+
+                    // $('#loaderGIF3').hide();
                 },
                 error: function (error2) {
                     console.log(error2);
@@ -561,9 +215,9 @@ function florenceJavaScript() {
             function requestingDesigner3Data(data2) {
                 $('#profileImg3').attr("src", data2.projects[0].owners[0].images['276']);
                 $('.designer3-name-2').text(data2.projects[0].owners[0].first_name + ' ' + data2.projects[0].owners[0].last_name);
-                $('#slide-1').attr("src", data2.projects[1].covers.original);
+                $('#slide-3').attr("src", data2.projects[1].covers.original);
                 $('#slideProjectName3').text(data2.projects[1].name);
-                $('#slideDesignerName3').text(data2.projects[1].owners[0].first_name + ' ' + data2.projects[0].owners[0].last_name);
+                $('#slideDesignerName3').text(data2.projects[1].owners[0].first_name + ' ' + data2.projects[1].owners[0].last_name);
             }
 
             // // AJAX Request Designer 4
@@ -571,11 +225,20 @@ function florenceJavaScript() {
                 url: 'https://api.behance.net/v2/users/' + designer4 + '/projects?client_id=' + apiKey,
                 dataType: 'jsonp',
                 beforeSend: function () {
-                    $('#loaderGIF4').show();
+                    $('#slide-4').hide();
+                    $('#slideProjectName4').hide();
+                    $('#slideDesignerName4').hide();
+
+                    // $('#loaderGIF4').show();
+                    $('#profileImg4').attr('src', 'img/loader.gif');
                 },
                 success: function (data2) {
                     requestingDesigner4Data(data2);
-                    $('#loaderGIF4').hide();
+                    $('#slide-4').show();
+                    $('#slideProjectName4').show();
+                    $('#slideDesignerName4').show();
+
+                    // $('#loaderGIF4').hide();
                 },
                 error: function (error2) {
                     console.log(error2);
@@ -588,7 +251,7 @@ function florenceJavaScript() {
                 $('.designer4-name-2').text(data2.projects[0].owners[0].first_name + ' ' + data2.projects[0].owners[0].last_name);
                 $('#slide-4').attr("src", data2.projects[1].covers.original);
                 $('#slideProjectName4').text(data2.projects[1].name);
-                $('#slideDesignerName4').text(data2.projects[1].owners[0].first_name + ' ' + data2.projects[0].owners[0].last_name);
+                $('#slideDesignerName4').text(data2.projects[1].owners[0].first_name + ' ' + data2.projects[1].owners[0].last_name);
             }
 
             // // AJAX Request Designer 5
@@ -596,11 +259,20 @@ function florenceJavaScript() {
                 url: 'https://api.behance.net/v2/users/' + designer5 + '/projects?client_id=' + apiKey,
                 dataType: 'jsonp',
                 beforeSend: function () {
-                    $('#loaderGIF5').show();
+                    $('#slide-5').hide();
+                    $('#slideProjectName5').hide();
+                    $('#slideDesignerName5').hide();
+
+                    // $('#loaderGIF5').show();
+                    $('#profileImg5').attr('src', 'img/loader.gif');
                 },
                 success: function (data2) {
                     requestingDesigner5Data(data2);
-                    $('#loaderGIF5').hide();
+                    $('#slide-5').show();
+                    $('#slideProjectName5').show();
+                    $('#slideDesignerName5').show();
+
+                    // $('#loaderGIF5').hide();
                 },
                 error: function (error2) {
                     console.log(error2);
@@ -610,10 +282,10 @@ function florenceJavaScript() {
 
             function requestingDesigner5Data(data2) {
                 $('#profileImg5').attr("src", data2.projects[0].owners[1].images['276']);
-                $('.designer5-name-2').text(data2.projects[0].owners[1].first_name + ' ' + data2.projects[1].owners[1].last_name);
+                $('.designer5-name-2').text(data2.projects[0].owners[1].first_name + ' ' + data2.projects[0].owners[1].last_name);
                 $('#slide-5').attr("src", data2.projects[1].covers.original);
                 $('#slideProjectName5').text(data2.projects[1].name);
-                $('#slideDesignerName5').text(data2.projects[1].owners[0].first_name + ' ' + data2.projects[0].owners[0].last_name);
+                $('#slideDesignerName5').text(data2.projects[0].owners[1].first_name + ' ' + data2.projects[0].owners[1].last_name);
             }
 
             // // AJAX Request Designer 6
@@ -621,11 +293,20 @@ function florenceJavaScript() {
                 url: 'https://api.behance.net/v2/users/' + designer6 + '/projects?client_id=' + apiKey,
                 dataType: 'jsonp',
                 beforeSend: function () {
-                    $('#loaderGIF6').show();
+                    $('#slide-6').hide();
+                    $('#slideProjectName6').hide();
+                    $('#slideDesignerName6').hide();
+
+                    // $('#loaderGIF6').show();
+                    $('#profileImg6').attr('src', 'img/loader.gif');
                 },
                 success: function (data2) {
                     requestingDesigner6Data(data2);
-                    $('#loaderGIF6').hide();
+                    $('#slide-6').show();
+                    $('#slideProjectName6').show();
+                    $('#slideDesignerName6').show();
+
+                    // $('#loaderGIF6').hide();
                 },
                 error: function (error2) {
                     console.log(error2);
@@ -635,11 +316,11 @@ function florenceJavaScript() {
 
             function requestingDesigner6Data(data2) {
                 $('#profileImg6').attr("src", data2.projects[0].owners[1].images['276']);
-                $('.designer6-name-2').text(data2.projects[0].owners[1].first_name + ' ' + data2.projects[1].owners[1].last_name);
-                $('#slide-3').attr("src", data2.projects[1].covers.original);
+                $('.designer6-name-2').text(data2.projects[0].owners[1].first_name + ' ' + data2.projects[0].owners[1].last_name);
+                $('#slide-6').attr("src", data2.projects[1].covers.original);
                 $('#slideProjectName6').text(data2.projects[1].name);
-                $('#slideDesignerName6').text(data2.projects[1].owners[0].first_name + ' ' + data2.projects[0].owners[0].last_name);
-            } 
+                $('#slideDesignerName6').text(data2.projects[0].owners[1].first_name + ' ' + data2.projects[0].owners[1].last_name);
+            }
         }
     }
 
@@ -660,27 +341,32 @@ function florenceJavaScript() {
     $('button').click(function () {
         switch (this.id) {
             case 'aboutLink':
-                if ($('.about-overlay-container-2').css('display') !== 'none'){
-                    $('.about-overlay-container-2').css('display', 'none');
+                if ($('.about-overlay-container-2').css('display') !== 'none') {
+                    $('.about-overlay-container-2').fadeOut(250);
                     $('.contact-overlay-container-2').css('display', 'none');
+                    
                 }
-                else{
+                else {
+                    $('.about-overlay-container-2').fadeIn(250);
                     $('.about-overlay-container-2').css('display', 'block');
+                    $('.contact-overlay-container-2').fadeIn(250);
                     $('.contact-overlay-container-2').css('display', 'none');
                 }
                 break;
             case 'contactLink':
                 if ($('.contact-overlay-container-2').css('display') !== 'none') {
-                    $('.contact-overlay-container-2').css('display', 'none');
+                    $('.contact-overlay-container-2').fadeOut(250);
                     $('.about-overlay-container-2').css('display', 'none');
                 }
                 else {
+                    $('.contact-overlay-container-2').fadeIn(250);
                     $('.contact-overlay-container-2').css('display', 'block');
+                    $('.about-overlay-container-2').fadeIn(250);
                     $('.about-overlay-container-2').css('display', 'none');
                 }
                 break;
             case 'closeContact':
-                $('.contact-overlay-container-2').css('display', 'none');
+                $('.contact-overlay-container-2').fadeOut(250);
                 break;
         }
     });
@@ -689,5 +375,4 @@ function florenceJavaScript() {
         $('.contact-overlay-container-2').css('display', 'none');
     });
 }
-
 
