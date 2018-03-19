@@ -5,7 +5,7 @@ kelseyJavascript();
 function kelseyJavascript() {
   //click function on return button to go back to desingers page
   $('#returnBtn').click(function(){
-    window.location = 'designers.html';
+    window.location = 'index.html';
   });
 
   google.charts.load('current', {'packages':['corechart' ,'bar']});
