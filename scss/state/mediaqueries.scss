@@ -1,0 +1,293 @@
+// Large Tablet Size Width
+@media only screen and (max-width: 1370px) {
+    .app-container-2{
+        .homepage-container-2{        
+            .middle-section-wrapper-2{
+                .homepage-middle-content-2{
+                    .slick-designer-slideshow-2,
+                    .designer-content-container-2{
+                        .slick-dots{
+                            right: -460px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Large Tablet Size Width and height (portrait)
+@media only screen and (min-height: 1200px) and (min-width: 1000px) {
+    .app-container-2{
+        .homepage-container-2{        
+            .middle-section-wrapper-2{
+                .homepage-middle-content-2{
+                    .slick-designer-slideshow-2,
+                    .designer-content-container-2{
+                        .slick-dots{
+                            right: -460px;
+                        }
+                    }
+                }
+            }
+            .designer-middle-section-wrapper-2{
+                .designer-middle-content-2{
+                    .designer-profiles-wrapper-2{
+                        .profile-image-2{
+                            width: 35%;
+                            height: 20%;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+
+// Tablet Size Width
+@media only screen and (max-width: 1024px) {
+    .body{
+        background: $lighterGrey;
+    }
+    #phoneWrapper2{
+        display: none;
+    }
+    .app-container-2{
+        display: block;
+        .homepage-container-2{        
+            .middle-section-wrapper-2{
+                .homepage-middle-content-2{
+                    .about-overlay-container-2{
+                        .about-content-wrapper-2{
+                            flex-direction: row;
+                            justify-content: space-between;
+
+                            .about-logo-container-2{
+                                width: 45%;
+                                padding: 0;
+                                padding-right: 30px;
+                                padding-left: 30px;
+                                .short-logo-wrapper{
+                                    width: 100%;
+                                }
+                                .long-logo-wrapper{
+                                    width: 70%;
+                                }
+                            }
+                            .about-info-container-2{
+                                width: 55%;
+                                display: flex;
+                                flex-direction: column;
+                                padding: 30px;
+                                padding-left: 10px;
+                                text-align: left;
+                            }
+                        }
+                    }
+                    .slick-designer-slideshow-2,
+                    .designer-content-container-2{
+                        .slick-dots{
+                            bottom: 40px;
+                            right: -320px;
+                        }
+                        div{
+                            .slide-info-wrapper{
+                                position: absolute;
+                                width: 65%;
+                                max-height: 220px;
+                                padding: 5px;
+                            }
+                            .slide-image-wrapper{
+                                img{
+                                    height: 110%;
+                                    width: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }        
+        }
+    }
+}
+
+// Tablet Size Width
+@media only screen and (max-width: 800px) {
+    .body{
+        background: $lighterGrey;
+    }
+    #phoneWrapper2{
+        display: none;
+    }
+    .app-container-2{
+        display: block;
+        .homepage-container-2{        
+            .middle-section-wrapper-2{
+                .homepage-middle-content-2{
+                    .about-overlay-container-2{
+                        .about-content-wrapper-2{
+                            flex-direction: column;
+                            justify-content: center;
+
+                            .about-logo-container-2{
+                                width:  90%;
+                                padding-bottom: 30px;
+                                .short-logo-wrapper{
+                                    width: 100%;
+                                    margin-bottom: 30px;
+                                    margin-right: 0px;
+                                }
+                                .long-logo-wrapper{
+                                    width: 70%;
+                                    margin-right: 00px;
+                                }
+                            }
+                            .about-info-container-2{
+                                width: 80%;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                padding: 30px;
+                                text-align: center;
+                            }
+                        }
+                    }
+                    .slick-designer-slideshow-2,
+                    .designer-content-container-2{
+                        .slick-dots{
+                            bottom: 40px;
+                            right: -230px;
+                        }
+                        .slick-dots li button:before{
+                            font-size: 25px;
+                            color: $accentRed;
+                        }
+                        div{
+                            .slide-info-wrapper{
+                                position: absolute;
+                                width: 60%;
+                                max-height: 280px;
+                                padding: 10px;
+                            }
+                            .slide-image-wrapper{
+                                img{
+                                    height: 110%;
+                                    width: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .designer-middle-section-wrapper-2{
+                .designer-middle-content-2{
+                    .designer-profiles-wrapper-2{
+                        .profile-image-2{
+                            width: 35%;
+                            height: 20%;
+                        }
+                    }
+                }
+            }  
+        }
+        .menu-item-2{
+            text-transform: uppercase;
+            font-family: $headerFont;
+            color: $primaryBlue;
+            font-weight: $bold;
+            font-size: 28px;
+            border: none;
+            background-color: transparent; 
+        }
+        .menu-item-2:hover { 
+            border-bottom: solid 3px $primaryBlue;
+            cursor: pointer;
+        }
+    }
+
+    .designer-details-modal{
+        .designer-details-modal-dialog{
+            .modal-content{
+                width: 100%;
+                max-height: 1000px;
+                .modal-header{
+                    height: 100px;
+                    .modal-title{
+                        font-size: 35px;
+                    }
+                }
+
+                 .modal-body{
+                    padding: 0;
+                    max-height: 800px;
+                    .modal-body-content-wrapper-2{
+                        flex-direction: column;
+                        .designer-modal-picture-2{
+                            width: 50%;
+                            height: auto;
+                            margin: 0px;
+                            margin-right: 0px;
+                            margin-bottom: 5px;
+                        }
+                        .designer-modal-details-container-2{
+                            width: 95%;
+                            align-items: center;
+                            flex-direction: column;
+                            .designer-basic-info-container-2{
+                                text-align: center;
+                                .designer-name-loaction-wrapper-2{
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                        .designer-profile-statistics-wrapper-2{
+                            flex-direction: column;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Phone Size Width
+@media only screen and (max-width: 450px) {
+    .body{
+        background: white;
+    }
+    .app-container-2{
+        display: none;
+    }
+    
+    #phoneWrapper2{
+        display: block;
+         #phoneSize2{
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 85vw;
+            height: 100vh;
+
+            #phoneMessageHeader2{
+                font-family: $headerFont;
+                font-size: 60px;
+                color: $accentRed;
+                font-weight: $black;
+                margin-bottom: 25px;
+            }
+            #phoneMessage2{
+                font-family: $paragraphFont;
+                font-size: 30px;
+                color: $darkBlue;
+                font-weight: $regular;
+            }        
+        }
+    }
+}
+
+    
