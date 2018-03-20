@@ -13,13 +13,13 @@ function kelseyJavascript() {
 
 // var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
   var apiKey = '9GZKv2mtTMZwnLXjV4lOWIQONW7Xq2ip';
-  var designerId = 'izutsu';
-  var designer1 = 'rafaalvarez';
-  var designer2 = 'clairehartley';
-  var designer3 = 'Doralice';
-  var designer4 = 'izutsu';
-  var designer5 = 'MaryRabun';
-  var designer6 = 'nahuelsal';
+  var designerId = 'MaryRabun';
+  // var designer1 = 'rafaalvarez';
+  // var designer2 = 'clairehartley';
+  // var designer3 = 'Doralice';
+  // var designer4 = 'izutsu';
+  // var designer5 = 'MaryRabun';
+  // var designer6 = 'nahuelsal';
 
   getNameData();
 
@@ -70,7 +70,7 @@ function kelseyJavascript() {
       success: function(dataFromJSONP){
 
       var data = new google.visualization.arrayToDataTable([
-        ['Click bars for more details', 'Appreciations', 'Views', ],
+        ['', 'Appreciations', 'Views', ],
         ['Project One',dataFromJSONP.projects[0].stats.appreciations, 
         dataFromJSONP.projects[0].stats.views ],
         ['Project Two',dataFromJSONP.projects[1].stats.appreciations, 
@@ -87,10 +87,8 @@ function kelseyJavascript() {
         titlePosition: 'none',
       },
       legend: {
-        position: 'none'
+        position: 'bottom'
       },
-      fontName: 'sans-serif',
-      fontSize: 14,
       bars: 'vertical',
       vAxis: {
         format: 'decimal',
@@ -127,8 +125,8 @@ function kelseyJavascript() {
         success: function(dataFromJSONP2){
             console.log(dataFromJSONP2);
 
-            $('#designerName3').empty();
-             $('#designerName3').append(dataFromJSONP2.user.display_name);
+            $('.designerName3').empty();
+             $('.designerName3').append(dataFromJSONP2.user.display_name);
              },
         error: function(error){
             console.log(error);

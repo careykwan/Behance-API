@@ -390,7 +390,7 @@ body {
 
 #secondLogo3 {
   float: right;
-  margin-top: 25px;
+  padding-top: 18px;
   margin-right: 75px; }
 
 .return3 {
@@ -417,22 +417,20 @@ body {
   margin-left: 29%;
   margin-top: 7%; }
 
-.designerName {
+.designerName3 {
   font: bold 38px Playfair Display, serif;
-  color: #1B2D47;
+  color: #E41E26;
   letter-spacing: 2px;
   cursor: pointer;
-  float: right;
-  margin-top: 5%;
-  margin-right: 5%; }
+  float: right; }
 
 .kelsey {
-  font: 12px Lato, sans-serif;
-  margin-top: 6%; }
+  float: right;
+  margin-right: 5%;
+  margin-top: 2%; }
 
 .btn {
   background-color: transparent;
-  color: black;
   border: none; }
 
 .btn-secondary:not(:disabled):not(.disabled).active,
@@ -482,6 +480,12 @@ body {
   height: 60%;
   padding-top: 6%; }
 
+.graph-instructions {
+  font: 18px Lato, serif;
+  color: black;
+  margin-left: 25%;
+  margin-top: 6%; }
+
 #chart2Location {
   margin-left: 8%;
   width: 90%;
@@ -506,7 +510,7 @@ body {
 
 #statsContainer {
   width: 95%;
-  height: 90%;
+  height: 100%;
   margin: 0 auto;
   padding: 0.75%;
   background-color: #EFEFEF; }
@@ -516,6 +520,12 @@ body {
   width: 100%;
   height: 100%;
   margin: 0 auto; }
+
+.statsTitle {
+  font: bold 25px Playfair Display, serif;
+  margin-bottom: 0px;
+  color: #E41E26;
+  text-align: center; }
 
 #statsGridContainer {
   width: 95%;
@@ -539,16 +549,15 @@ body {
 .icon {
   width: 30%;
   height: 30%;
-  margin-top: 40px; }
+  margin-top: 30px; }
 
 .label {
-  font: 20px Lato, sans-serif;
-  color: #E41E26;
+  font: 16px Lato, sans-serif;
   margin-left: 25%;
-  margin-top: -50px; }
+  margin-top: -56px; }
 
 .statsStyle {
-  font: 20px Lato, sans-serif;
+  font: 16px Lato, sans-serif;
   margin-left: 25%; }
 
 #phoneScreen {
@@ -571,7 +580,7 @@ body {
     margin-top: 32%;
     width: 90%;
     margin-left: 5.5%;
-    height: 85%; }
+    height: 100%; }
 
   #chart1Container {
     width: 90%;
@@ -589,7 +598,7 @@ body {
   #chart2Location {
     margin-left: 5%; }
 
-  .designerName {
+  .designerName3 {
     font-size: 20px;
     margin-right: 3%;
     margin-top: -7%; }
@@ -618,8 +627,7 @@ body {
     padding-top: 28px; }
 
   .kelsey {
-    margin-left: 42%;
-    margin-top: -8%; } }
+    margin-top: 5%; } }
 @media only screen and (max-width: 725px) {
   #phoneScreen {
     display: block; }
@@ -633,14 +641,13 @@ body {
     margin-top: 55%;
     text-align: center; } }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  .designerName {
+  .designerName3 {
     margin-right: 3%;
     font-size: 20px;
     margin-top: -6%; }
 
   .kelsey {
-    margin-left: 55%;
-    margin-top: -6%; }
+    margin-top: 3%; }
 
   .nameDescription {
     margin-top: 10%; }
