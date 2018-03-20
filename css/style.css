@@ -809,7 +809,8 @@ body {
               .app-container-2 .homepage-container-2 .middle-section-wrapper-2 .homepage-middle-content-2 .contact-overlay-container-2 .contact-content-wrapper-2 .contact-box-wrapper-2 .contact-text-wrapper-2 {
                 display: flex;
                 justify-content: center;
-                align-items: center; }
+                align-items: center;
+                flex-direction: column; }
                 .app-container-2 .homepage-container-2 .middle-section-wrapper-2 .homepage-middle-content-2 .contact-overlay-container-2 .contact-content-wrapper-2 .contact-box-wrapper-2 .contact-text-wrapper-2 p {
                   font-family: "Lato", sans-serif;
                   font-size: 20px;
@@ -1088,7 +1089,6 @@ body {
             width: 60%;
             display: flex;
             justify-content: center;
-            align-items: space-around;
             flex-direction: column; }
             .designer-details-modal .designer-details-modal-dialog .modal-content .modal-body .modal-body-content-wrapper-2 .designer-modal-details-container-2 .designer-basic-info-container-2 {
               height: 40%;

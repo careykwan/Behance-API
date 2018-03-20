@@ -4,18 +4,19 @@ florenceJavaScript();
 
 function florenceJavaScript() {
 
+    // Multi Back up API keys
+    var apiKey = 'cUrZsmxKrahZRfyjKoZIY6XtbecnuEH5';
+    // var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOc';
+    // var apiKey = 'RqFnU3Lzee04vY3N3823YTbQMBw3aKvu';
+
     multipleAJAXRequestFunction();
     changeModalInfo();
 
     function changeModalInfo() {
         grabUserID();
-        // Multi Back up API keys
-        // var apiKey = 'cUrZsmxKrahZRfyjKoZIY6XtbecnuEH5';
-        var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOc';
-        // var apiKey = 'RqFnU3Lzee04vY3N3823YTbQMBw3aKvu';
-
+       
         var userIDArray = [];
-
+        
         // @grabUserID is a switch statement to push and empty certain UserIDs depending on what div has been clicked has been clicked.
         function grabUserID() {
             $('div').click(function () {
@@ -109,11 +110,6 @@ function florenceJavaScript() {
 
         // @AJAXBehanceRequest2 Runs a AJAX request to Behance API to grab data, if successful it will run showDesignerDetails function.
         function secondAJAXBehanceRequest2() {
-
-            // Multi Back up API keys
-            // var apiKey = 'cUrZsmxKrahZRfyjKoZIY6XtbecnuEH5';
-            var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOco';
-            // var apiKey = 'RqFnU3Lzee04vY3N3823YTbQMBw3aKvu';
 
             var designer1 = 'rafaalvarez';
             var designer2 = 'clairehartley';

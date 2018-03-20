@@ -225,6 +225,7 @@
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
+                                flex-direction: column;
                                 p{
                                     font-family: $paragraphFont;
                                     font-size: 20px;
@@ -583,7 +584,6 @@
                         width:  60%;
                         display: flex;
                         justify-content: center;
-                        align-items: space-around;
                         flex-direction: column;
                         .designer-basic-info-container-2{
                             height: 40%;
