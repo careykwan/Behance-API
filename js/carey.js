@@ -3,6 +3,7 @@ careyjavascript();
 function careyjavascript(){
 
 	var apiKey = 'MZysOrpqpvz4iqc0bAMYtXJiWovTMZSY';
+	// var apiKey = 'cPSHY669vPegbDmBas5ELAxsxAp6pigv';
 	var userID = 'maryRabun';
 	var projects = [58448623, 53585037, 53552369];
 
@@ -113,7 +114,6 @@ function careyjavascript(){
 			},
 			error:function(error){
 				console.log(error);
-				alert("Server cannot be reached.");
 			}		
 		 });
 	}
@@ -136,7 +136,7 @@ function careyjavascript(){
 			},
 			error:function(error){
 				console.log(error);
-				alert("Server cannot be reached.");
+				$('.error_box').show();
 			}		
 		 });
 	}
@@ -153,7 +153,6 @@ function careyjavascript(){
 			},
 			error:function(error){
 				console.log(error);
-				alert("Server cannot be reached.");
 			}
 		});
 	}
@@ -169,7 +168,6 @@ function careyjavascript(){
 			},
 			error:function(error){
 				console.log(error);
-				alert("Server cannot be reached.");
 			}
 		});
 	}
@@ -185,7 +183,6 @@ function careyjavascript(){
 			},
 			error:function(error){
 				console.log(error);
-				alert("Server cannot be reached.");
 			}
 		});
 	}
