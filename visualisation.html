@@ -1,21 +1,23 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Visualisations</title>
 	<!-- 	fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Lato:400,400i” rel=“stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,400i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,700i,900,900i" rel="stylesheet">
     <!-- bootstrap -->
     <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!-- custom stylesheet -->
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.min.css">
 </head>
 
 <body>
 	<!-- browser resize message -->
 	<div id='phoneScreen'>
-			<p id='phoneMessage'>Please Resize Browser</p>
+			 <p id="phoneMessageHeader3">OH NO!</p>
+            <p id="phoneMessage3">To view this site please use a larger screen sized device or resize your browser.</p>
 		</div>
 	<div id='body-container3'>
 		
@@ -23,33 +25,31 @@
 			<!-- header -->
 			<div class='box' id='box1'>
 				<a href="index.html"><img src="img/pentagramerLogo.png" alt="logo" id='logo3'></a>
-				<img src="img/behanceLogo.png" alt='behance logo'id='secondLogo3'>
+				<img src="img/behanceLogo.png" alt='behance logo' id='secondLogo3'>
 				
 			</div>
 
 			<!-- return button and designer list dropdown -->
 			<div class='box' id='box2'>
-				<button class='return3'id='returnBtn'>
+				<button class='return3' id='returnBtn'>
 					<i class="fas fa-long-arrow-alt-left arrow"></i>
-					BACK TO DESIGNERS LIST</button>
+					RETURN HOME</button>
 				
-					<p class='nameDescription'> Click to view another designer</p>
-					<p class='designerName' id='designerName3'></p>
-			
+					<div id='errorMessage'></div>
 					<div class="btn-group kelsey">
-						 <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						  Designers
+						 <button type="button" class="btn dropdown-toggle designerName3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						  Mary Rabun
 						 </button>
 						 <div class="dropdown-menu dropdown-menu-right">
 						   <button class="dropdown-item" type="button" id='designerOne3'>Rafael Alvarez</button>
 						   <button class="dropdown-item" type="button" id='designerTwo3'>Claire Hartley</button>
 						   <button class="dropdown-item" type="button" id='designerThree3'>Yukai Du</button>
 						   <button class="dropdown-item" type="button" id='designerFour3'>Hiroyuki Izutsu</button>
-						   <button class="dropdown-item" type="button"id='designerFive3'>Mary Rabun</button>
+						   <button class="dropdown-item" type="button" id='designerFive3'>Mary Rabun</button>
 						   <button class="dropdown-item" type="button" id='designerSix3'>Nahuel Salcedo</button>
 						 </div>
 					</div>
-						
+					
 			</div>
 			<!-- 	graphs -->
 			<div class='box' id='box3'>
@@ -62,6 +62,7 @@
 							<div id='chart1Location'>
 
 							</div>
+							<div class='graph-instructions'>Click bars for more details</div>
 						</div>
 					</div>
 	                <div id='chart2Container'>
@@ -82,21 +83,23 @@
 			<div class='box' id='box4'>
 				<div id='statsContainer'>
 					<div id='stats'>
+						<p class='statsTitle'> Total Views, Appreciations and Comments</p>
 						<div id='statsGridContainer'>
+
 							<div id='views'>
 								<img src="img/viewicon.svg" alt="view" class='icon'>
 								<p class='label'>VIEWS</p>
 								<p id='viewStats3' class='statsStyle'></p>
 							</div>
 							<div id='appreciations'>
-								<img src="img/likeicon.svg" class='icon'>
+								<img src="img/likeicon.svg" alt='likes' class='icon'>
 								<p class='label'>APPRECIATIONS</p>
 								<p id='appreciationStats3' class='statsStyle'></p>
 							</div>
 							<div id='comments'>
-								<img src="img/commentsicon.svg" class='icon'>
+								<img src="img/commentsicon.svg" alt='comments' class='icon'>
 								<p class='label'>COMMENTS</p>
-								<p id='commentStats3' class='statsStyle'</p>
+								<p id='commentStats3' class='statsStyle'></p>
 							</div>
 						</div>
 					</div>
@@ -113,11 +116,11 @@
 	 <!-- font awesome -->
 	 <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	 <!-- google charts -->
-	 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	 <script  src="https://www.gstatic.com/charts/loader.js"></script>
 	 <!-- popper js for dropdown -->
-	 <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js'></script>
+	 <script  src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js'></script>
 	 <!-- bootstrap js -->
-	 <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
 	 <!-- custom js -->
 	 	

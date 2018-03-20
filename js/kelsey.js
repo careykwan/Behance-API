@@ -1,11 +1,12 @@
-//everything is wrapped inside a funciton 
-//this invokes that fucnction
-kelseyJavascript();
-
 function kelseyJavascript() {
   //click function on return button to go back to desingers page
-  $('#returnBtn').click(function(){
+  $('#returnBtn').click(function (){
     window.location = 'index.html';
+  });
+  //click function that links behance logo to behance 
+  //homepage
+  $('#secondLogo3').click(function (){
+    window.location = 'https://www.behance.net/';
   });
 
   google.charts.load('current', {'packages':['corechart' ,'bar']});
@@ -13,13 +14,7 @@ function kelseyJavascript() {
 
 // var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
   var apiKey = '9GZKv2mtTMZwnLXjV4lOWIQONW7Xq2ip';
-  var designerId = 'izutsu';
-  var designer1 = 'rafaalvarez';
-  var designer2 = 'clairehartley';
-  var designer3 = 'Doralice';
-  var designer4 = 'izutsu';
-  var designer5 = 'MaryRabun';
-  var designer6 = 'nahuelsal';
+  var designerId = 'MaryRabun';
 
   getNameData();
 
@@ -70,7 +65,7 @@ function kelseyJavascript() {
       success: function(dataFromJSONP){
 
       var data = new google.visualization.arrayToDataTable([
-        ['Click bars for more details', 'Appreciations', 'Views', ],
+        ['', 'Appreciations', 'Views', ],
         ['Project One',dataFromJSONP.projects[0].stats.appreciations, 
         dataFromJSONP.projects[0].stats.views ],
         ['Project Two',dataFromJSONP.projects[1].stats.appreciations, 
@@ -87,10 +82,8 @@ function kelseyJavascript() {
         titlePosition: 'none',
       },
       legend: {
-        position: 'none'
+        position: 'bottom'
       },
-      fontName: 'sans-serif',
-      fontSize: 14,
       bars: 'vertical',
       vAxis: {
         format: 'decimal',
@@ -105,15 +98,11 @@ function kelseyJavascript() {
       addDetails(dataFromJSONP);
       google.charts.setOnLoadCallback(drawPieChart(dataFromJSONP));
 
-      //click function to on designers name to take to desingers behance profile
-      $('#designerName3').click(function(){
-        window.location = 'https://www.behance.net/' + designerId;
-      });
-
       },
       error: function(error){
-        console.log(error);
-        console.log("Something has gone wrong");
+        $('#errorMessage').empty();
+        $('#errorMessage').css('display','inline');
+       $('#errorMessage').append('Unable To Connect To Server!');
       }
       });
     }
@@ -127,12 +116,14 @@ function kelseyJavascript() {
         success: function(dataFromJSONP2){
             console.log(dataFromJSONP2);
 
-            $('#designerName3').empty();
-             $('#designerName3').append(dataFromJSONP2.user.display_name);
+            $('.designerName3').empty();
+             $('.designerName3').append(dataFromJSONP2.user.display_name);
              },
         error: function(error){
-            console.log(error);
-            console.log("Something has gone wrong");
+         $('#errorMessage').empty();
+        $('#errorMessage').css('display','inline');
+       $('#errorMessage').append('Unable To Connect To Server!');
+       $('.designerName3').css('display', 'none');
         }
     });
   }
@@ -183,3 +174,6 @@ function kelseyJavascript() {
               
   }
 }
+//everything is wrapped inside a funciton 
+//this invokes that fucnction
+kelseyJavascript();
