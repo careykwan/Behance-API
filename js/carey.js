@@ -2,9 +2,6 @@ careyjavascript();
 
 function careyjavascript(){
 
-	// var apiKey = 'cPSHY669vPegbDmBas5ELAxsxAp6pigv';
-	// var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
-	// var apiKey = 'VK7kypKbs5hNBZRc60UAHyy9TfnUBGMC';
 	var apiKey = 'MZysOrpqpvz4iqc0bAMYtXJiWovTMZSY';
 	var userID = 'maryRabun';
 	var projects = [58448623, 53585037, 53552369];
@@ -14,6 +11,12 @@ function careyjavascript(){
 	commentsDataTwo();
 	commentsDataThree();
 
+	//this is the function for the button to be clicked to be taken back to the index page
+	 $('.button_one').click(function(){
+    	window.location = 'index.html';
+  	});
+
+	//This switch statement is the function to display the correct data once the name is selected
 	$('.dropdown-item').click(function(){
 	 switch (this.id) {
 	   case 'd1':
@@ -110,7 +113,7 @@ function careyjavascript(){
 			},
 			error:function(error){
 				console.log(error);
-				console.log("something went wrong");
+				alert("Server cannot be reached.");
 			}		
 		 });
 	}
@@ -120,7 +123,7 @@ function careyjavascript(){
 		$('.creator_name').append(dataNames.user.first_name + ' ' + dataNames.user.last_name);
 	}
 
-	// ajax request to grab user data
+	// ajax request to grab users project details
 	function behanceData(){
 
 		$.ajax({
@@ -133,12 +136,12 @@ function careyjavascript(){
 			},
 			error:function(error){
 				console.log(error);
-				console.log("something went wrong");
+				alert("Server cannot be reached.");
 			}		
 		 });
 	}
 
-	// ajax request to grab comment data from the users
+	// ajax request to grab comment data for the first project for each designer
 	function commentsData(){
 		
 		$.ajax({
@@ -150,12 +153,12 @@ function careyjavascript(){
 			},
 			error:function(error){
 				console.log(error);
-				console.log("something went wrong AGAIN");
+				alert("Server cannot be reached.");
 			}
 		});
 	}
 
-	//this is the ajax request for the second comments
+	//this is the ajax request for comment data for the second project for each designer
 	function commentsDataTwo(){
 		
 		$.ajax({
@@ -166,12 +169,12 @@ function careyjavascript(){
 			},
 			error:function(error){
 				console.log(error);
-				console.log("something went wrong AGAIN");
+				alert("Server cannot be reached.");
 			}
 		});
 	}
 
-	//this is the ajax request for the third comments
+	//this is the ajax request comment data for the third project for each designer
 	function commentsDataThree(){
 		
 		$.ajax({
@@ -182,7 +185,7 @@ function careyjavascript(){
 			},
 			error:function(error){
 				console.log(error);
-				console.log("something went wrong AGAIN");
+				alert("Server cannot be reached.");
 			}
 		});
 	}
@@ -214,7 +217,6 @@ function careyjavascript(){
 		$('#likesOne').append(dataFromServer.projects[0].stats.appreciations);
 		$('#commentsOne').empty();
 		$('#commentsOne').append(dataFromServer.projects[0].stats.comments);
-
 
 		$('#timeTwo').empty();
 		$('#timeTwo').append('Published:' + ' ' + timeTwo);	
@@ -371,7 +373,6 @@ function careyjavascript(){
 
 	    var comments = document.createTextNode(dataFromServerThree.comment);
 	    userComments.appendChild(comments);
-
 	}
 
 	//This is a function append the comments to the second card of divs in html
@@ -424,8 +425,6 @@ function careyjavascript(){
 
 	    var comments = document.createTextNode(dataFromServerFour.comment);
 	    userComments.appendChild(comments);
-
 	}
-//This is the ending bracket for careyjavascript function
 }
 
