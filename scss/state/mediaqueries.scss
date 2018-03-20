@@ -1,23 +1,5 @@
-// Large Tablet Size Width
-@media only screen and (max-width: 1370px) {
-    .app-container-2{
-        .homepage-container-2{        
-            .middle-section-wrapper-2{
-                .homepage-middle-content-2{
-                    .slick-designer-slideshow-2,
-                    .designer-content-container-2{
-                        .slick-dots{
-                            right: -460px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
 // Large Tablet Size Width and height (portrait)
-@media only screen and (min-height: 1200px) and (min-width: 1000px) {
+@media only screen and (min-height: 1200px) and (min-width: 1020px) {
     .app-container-2{
         .homepage-container-2{        
             .middle-section-wrapper-2{
@@ -25,7 +7,7 @@
                     .slick-designer-slideshow-2,
                     .designer-content-container-2{
                         .slick-dots{
-                            right: -460px;
+                            right: -450px;
                         }
                     }
                 }
@@ -33,9 +15,10 @@
             .designer-middle-section-wrapper-2{
                 .designer-middle-content-2{
                     .designer-profiles-wrapper-2{
+                        height: 95%;
                         .profile-image-2{
-                            width: 35%;
-                            height: 20%;
+                            width: 40%;
+                            height: 25%;
                         }
                     }
                 }
@@ -45,7 +28,7 @@
 }
 
 // Tablet Size Width
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1025px) {
     .body{
         background: $lighterGrey;
     }
@@ -102,6 +85,20 @@
                                     height: 110%;
                                     width: auto;
                                 }
+                            }
+                        }
+                    }
+                }
+                .designer-middle-section-wrapper-2{
+                    .designer-middle-content-2{
+                        .return-homepage-wrapper2{
+                            height: 10%;
+                        }
+                        .designer-profiles-wrapper-2{
+                            height: 90%;
+                            .profile-image-2{
+                                width: 25%;
+                                height: 30%;
                             }
                         }
                     }
@@ -179,17 +176,16 @@
                     }
                 }
             }
-
             .designer-middle-section-wrapper-2{
                 .designer-middle-content-2{
                     .designer-profiles-wrapper-2{
                         .profile-image-2{
-                            width: 35%;
-                            height: 20%;
+                            width: 40%;
+                            height: 25%;
                         }
                     }
                 }
-            }  
+            } 
         }
         .menu-item-2{
             text-transform: uppercase;

@@ -9,8 +9,10 @@ function florenceJavaScript() {
 
     function changeModalInfo() {
         grabUserID();
+        // Multi Back up API keys
         // var apiKey = 'cUrZsmxKrahZRfyjKoZIY6XtbecnuEH5';
-        var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOco';
+        var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOc';
+        // var apiKey = 'RqFnU3Lzee04vY3N3823YTbQMBw3aKvu';
 
         var userIDArray = [];
 
@@ -67,8 +69,8 @@ function florenceJavaScript() {
                     $(".modal-body-content-wrapper-2").css("display", "flex");
                 },
                 error: function (error) {
-                    console.log(error);
-                    console.log('Something has gone wrong');
+                    $('.modal-body').empty();
+                    $('.modal-body').append('<div class=\'error-content\'><p class=\'error-title\'>Error: Unavailable</p><p class=\'error-message\'>Unable To Connect To Server.</p></div>');
                 }
             });
         }
@@ -98,22 +100,20 @@ function florenceJavaScript() {
             $('#appreciationValue2').text(data.user.stats.appreciations);
             $('#followersValue2').text(data.user.stats.followers);
             $('#followingValue2').text(data.user.stats.following);
-
-            $('.designer-name-2').text(data.user.first_name + ' ' + data.user.last_name);
         }
     }
 
-    // This code is unnecessary but I wanted to use a AJAX request to append all the info possible for my site. 
-    // I could have made multiple AJAX request from the start but decided to try a way to replace the UserID in the request instead. 
 
     function multipleAJAXRequestFunction() {
-        seconeAJAXBehanceRequest2();
+        secondAJAXBehanceRequest2();
 
         // @AJAXBehanceRequest2 Runs a AJAX request to Behance API to grab data, if successful it will run showDesignerDetails function.
-        function seconeAJAXBehanceRequest2() {
+        function secondAJAXBehanceRequest2() {
 
+            // Multi Back up API keys
             // var apiKey = 'cUrZsmxKrahZRfyjKoZIY6XtbecnuEH5';
             var apiKey = 'x5dUkwcodDRG0Nf0uz0ht0EMrA4sLOco';
+            // var apiKey = 'RqFnU3Lzee04vY3N3823YTbQMBw3aKvu';
 
             var designer1 = 'rafaalvarez';
             var designer2 = 'clairehartley';
@@ -140,7 +140,10 @@ function florenceJavaScript() {
                     $('#slideDesignerName1').show();
                 },
                 error: function (error2) {
-                    console.log('Something has gone wrong');
+                    $('.slide-info-wrapper').empty();
+                    $('.profile-image-2').empty();
+                    $('.slide-info-wrapper').append('<div class=\'error-content\'><p class=\'error-title\'>Error: Unavailable</p><p class=\'error-message\'>Unable To Connect To Server.</p></div>');
+                    $('.profile-image-2').append('<div class=\'error-content\'><p class=\'error-title\'>Error: Unavailable</p><p class=\'error-message\'>Unable To Connect To Server.</p></div>');
                 }
             });
 
@@ -174,8 +177,10 @@ function florenceJavaScript() {
                     // $('#loaderGIF2').hide();
                 },
                 error: function (error2) {
-                    console.log(error2);
-                    console.log('Something has gone wrong');
+                    $('.slide-info-wrapper').empty();
+                    $('.profile-image-2').empty();
+                    $('.slide-info-wrapper').append('<div class=\'error-content\'><p class=\'error-title\'>Error: Unavailable</p><p class=\'error-message\'>Unable To Connect To Server.</p></div>');
+                    $('.profile-image-2').append('<div class=\'error-content\'><p class=\'error-title\'>Error: Unavailable</p><p class=\'error-message\'>Unable To Connect To Server.</p></div>');
                 }
             });
 
@@ -208,8 +213,10 @@ function florenceJavaScript() {
                     // $('#loaderGIF3').hide();
                 },
                 error: function (error2) {
-                    console.log(error2);
-                    console.log('Something has gone wrong');
+                    $('.slide-info-wrapper').empty();
+                    $('.profile-image-2').empty();
+                    $('.slide-info-wrapper').append('<div class=\'error-content\'><p class=\'error-title\'>Error: Unavailable</p><p class=\'error-message\'>Unable To Connect To Server.</p></div>');
+                    $('.profile-image-2').append('<div class=\'error-content\'><p class=\'error-title\'>Error: Unavailable</p><p class=\'error-message\'>Unable To Connect To Server.</p></div>');
                 }
             });
 
@@ -242,8 +249,10 @@ function florenceJavaScript() {
                     // $('#loaderGIF4').hide();
                 },
                 error: function (error2) {
-                    console.log(error2);
-                    console.log('Something has gone wrong');
+                    $('.slide-info-wrapper').empty();
+                    $('.profile-image-2').empty();
+                    $('.slide-info-wrapper').append('<div class=\'error-content\'><p class=\'error-title\'>Error: Unavailable</p><p class=\'error-message\'>Unable To Connect To Server.</p></div>');
+                    $('.profile-image-2').append('<div class=\'error-content\'><p class=\'error-title\'>Error: Unavailable</p><p class=\'error-message\'>Unable To Connect To Server.</p></div>');
                 }
             });
 
@@ -276,8 +285,10 @@ function florenceJavaScript() {
                     // $('#loaderGIF5').hide();
                 },
                 error: function (error2) {
-                    console.log(error2);
-                    console.log('Something has gone wrong');
+                    $('.slide-info-wrapper').empty();
+                    $('.profile-image-2').empty();
+                    $('.slide-info-wrapper').append('<div class=\'error-content\'><p class=\'error-title\'>Error: Unavailable</p><p class=\'error-message\'>Unable To Connect To Server.</p></div>');
+                    $('.profile-image-2').append('<div class=\'error-content\'><p class=\'error-title\'>Error: Unavailable</p><p class=\'error-message\'>Unable To Connect To Server.</p></div>');
                 }
             });
 
@@ -310,8 +321,10 @@ function florenceJavaScript() {
                     // $('#loaderGIF6').hide();
                 },
                 error: function (error2) {
-                    console.log(error2);
-                    console.log('Something has gone wrong');
+                    $('.slide-info-wrapper').empty();
+                    $('.profile-image-2').empty();
+                    $('.slide-info-wrapper').append('<div class=\'error-content\'><p class=\'error-title\'>Error: Unavailable</p><p class=\'error-message\'>Unable To Connect To Server.</p></div>');
+                    $('.profile-image-2').append('<div class=\'error-content\'><p class=\'error-title\'>Error: Unavailable</p><p class=\'error-message\'>Unable To Connect To Server.</p></div>');
                 }
             });
 

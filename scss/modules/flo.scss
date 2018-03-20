@@ -22,7 +22,7 @@
         //  HOMRPAGE TOP SECTION STYLING
         .top-section-wrapper-2{
             width: 100%;
-            height: 8%;
+            height: 10%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -45,7 +45,7 @@
         // DESINGER PAGE TOP SECTION STYLING
         .designer-top-section-wrapper-2{
             width: 100%;
-            height: 8%;
+            height: 10%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -67,7 +67,7 @@
         // HOMEPAGE MIDDLE SECTION STYLING
         .middle-section-wrapper-2{
             width: 100%;
-            height: 84%;
+            height: 80%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -288,7 +288,7 @@
                             padding: 15px;
                             bottom: 40px;
                             left: 40px;
-                            background-color: rgba(47, 76, 147, 0.85);
+                            background-color: rgba(242, 242, 242, 0.75);
                             display: flex;
                             align-items: flex-start;
                             justify-content: center;
@@ -296,8 +296,7 @@
 
                             h3{
                                 font-family: $headerFont;
-                                font-size: 35px;
-                                color: white;
+                                color: $darkBlue;
                                 font-weight: $bold;
                                 text-transform: uppercase;
                                 padding-left: 40px;
@@ -307,7 +306,7 @@
                             h4{
                                 font-family: $paragraphFont;
                                 font-size: 25px;
-                                color: $darkBlue;
+                                color: $primaryBlue;
                                 font-weight: $regular;
                                 font-style: italic;
                                 padding-left: 40px;
@@ -333,7 +332,6 @@
             }
             
             .contact-link-wrapper-2{
-                // width: 72px;
                 width: 6%;
                 height: 100%;
                 display: flex;
@@ -352,7 +350,7 @@
         // DESINGER PAGE MIDDLE SECTION STYLING
         .designer-middle-section-wrapper-2{
             width: 100%;
-            height: 84%;
+            height: 90%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -363,12 +361,31 @@
                 width: 100%;
                 height: 100%;
                 display: flex;
-                justify-content: center;
-                align-items: center;
+                justify-content: space-around;
+                flex-direction: column;
+
+                .return-homepage-wrapper2{
+                    .return-homepage2{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 220px;
+                        height: 40px;
+                        background-color: $darkBlue;
+                        border-radius: 5px;
+                        margin-top: 30px;
+                        margin-left: 57px;
+                        color: #FFF;
+                        font: italic 12px Lato, sans-serif;
+                        border: $darkBlue;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                    }
+                }
                 
                 .designer-profiles-wrapper-2{
                     width: 100%;
-                    max-height: 100%;
+                    height: 90%;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -419,26 +436,25 @@
         // HOMEPAGE BOTTOM SECTION STYLING
         .bottom-section-wrapper-2{
             width: 100%;
-            height: 8%;
+            height: 10%;
             display: flex;
             justify-content: space-between;
             align-items: center;
 
             .designers-link-wrapper-2{
                 width: 90%;
-                height: 100%;
+                height: 90%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
 
                 .designers-menu-2{
                     text-decoration: none;
-                    color: $primaryBlue;
                 }
                 .designers-menu-2-active{
                     text-decoration: none;
-                    color: $primaryBlue;
-                    border-bottom: solid 3px $primaryBlue;
+                    color: $accentRed;
+                    border-bottom: solid 3px $accentRed;
                 }
             }
         }
@@ -446,6 +462,8 @@
         // DESINGER PAGE BOTTOM SECTION STYLING
         .designers-bottom-section-wrapper-2{
             justify-content: center;
+            width: 100%;
+            height: 10%;
         }  
     }
 }
@@ -460,11 +478,23 @@
     background-color: transparent; 
 }
 .menu-item-2:hover { 
-    border-bottom: solid 3px $primaryBlue;
+    text-transform: uppercase;
+    font-family: $headerFont;
+    font-weight: $bold;
+    font-size: 38px;
+    border: none;
+    background-color: transparent; 
+    color: $accentRed;
+    border-bottom: solid 3px $accentRed;
     cursor: pointer;
 }
 
 // Stylings for designers details modal pop up
+.modal-open .modal{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
 .designer-details-modal{
     height: 100vh;
     width: 100vw;
@@ -726,6 +756,25 @@
 #loaderGIFSlide5,
 #loaderGIFSlide6{
     display: none;
+}
+
+.error-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+
+    .error-title{
+         font: 25px $paragraphFont;
+         color: $accentRed;
+    }
+    .error-message{
+        font: 18px $paragraphFont;
+    }
+
 }
 
 

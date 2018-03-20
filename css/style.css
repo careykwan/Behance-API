@@ -660,7 +660,7 @@ body {
     background: #F7F7F7; }
     .app-container-2 .homepage-container-2 .top-section-wrapper-2 {
       width: 100%;
-      height: 8%;
+      height: 10%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -675,7 +675,7 @@ body {
         margin-right: 75px; }
     .app-container-2 .homepage-container-2 .designer-top-section-wrapper-2 {
       width: 100%;
-      height: 8%;
+      height: 10%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -690,7 +690,7 @@ body {
         margin-right: 75px; }
     .app-container-2 .homepage-container-2 .middle-section-wrapper-2 {
       width: 100%;
-      height: 84%;
+      height: 80%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -859,15 +859,14 @@ body {
               padding: 15px;
               bottom: 40px;
               left: 40px;
-              background-color: rgba(47, 76, 147, 0.85);
+              background-color: rgba(242, 242, 242, 0.75);
               display: flex;
               align-items: flex-start;
               justify-content: center;
               flex-direction: column; }
               .app-container-2 .homepage-container-2 .middle-section-wrapper-2 .homepage-middle-content-2 .slick-designer-slideshow-2 div .slide-info-wrapper h3 {
                 font-family: "Playfair Display", serif;
-                font-size: 35px;
-                color: white;
+                color: #1B2D47;
                 font-weight: 700;
                 text-transform: uppercase;
                 padding-left: 40px;
@@ -876,7 +875,7 @@ body {
               .app-container-2 .homepage-container-2 .middle-section-wrapper-2 .homepage-middle-content-2 .slick-designer-slideshow-2 div .slide-info-wrapper h4 {
                 font-family: "Lato", sans-serif;
                 font-size: 25px;
-                color: #1B2D47;
+                color: #1E3E75;
                 font-weight: 400;
                 font-style: italic;
                 padding-left: 40px; }
@@ -903,7 +902,7 @@ body {
           border-bottom: solid 3px #1E3E75; }
     .app-container-2 .homepage-container-2 .designer-middle-section-wrapper-2 {
       width: 100%;
-      height: 84%;
+      height: 90%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -913,11 +912,26 @@ body {
         width: 100%;
         height: 100%;
         display: flex;
-        justify-content: center;
-        align-items: center; }
+        justify-content: space-around;
+        flex-direction: column; }
+        .app-container-2 .homepage-container-2 .designer-middle-section-wrapper-2 .designer-middle-content-2 .return-homepage-wrapper2 .return-homepage2 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 220px;
+          height: 40px;
+          background-color: #1B2D47;
+          border-radius: 5px;
+          margin-top: 30px;
+          margin-left: 57px;
+          color: #FFF;
+          font: italic 12px Lato, sans-serif;
+          border: #1B2D47;
+          text-transform: uppercase;
+          text-decoration: none; }
         .app-container-2 .homepage-container-2 .designer-middle-section-wrapper-2 .designer-middle-content-2 .designer-profiles-wrapper-2 {
           width: 100%;
-          max-height: 100%;
+          height: 90%;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -954,25 +968,26 @@ body {
                 width: 100%; }
     .app-container-2 .homepage-container-2 .bottom-section-wrapper-2 {
       width: 100%;
-      height: 8%;
+      height: 10%;
       display: flex;
       justify-content: space-between;
       align-items: center; }
       .app-container-2 .homepage-container-2 .bottom-section-wrapper-2 .designers-link-wrapper-2 {
         width: 90%;
-        height: 100%;
+        height: 90%;
         display: flex;
         justify-content: center;
         align-items: center; }
         .app-container-2 .homepage-container-2 .bottom-section-wrapper-2 .designers-link-wrapper-2 .designers-menu-2 {
-          text-decoration: none;
-          color: #1E3E75; }
+          text-decoration: none; }
         .app-container-2 .homepage-container-2 .bottom-section-wrapper-2 .designers-link-wrapper-2 .designers-menu-2-active {
           text-decoration: none;
-          color: #1E3E75;
-          border-bottom: solid 3px #1E3E75; }
+          color: #E41E26;
+          border-bottom: solid 3px #E41E26; }
     .app-container-2 .homepage-container-2 .designers-bottom-section-wrapper-2 {
-      justify-content: center; }
+      justify-content: center;
+      width: 100%;
+      height: 10%; }
 
 .menu-item-2 {
   text-transform: uppercase;
@@ -984,8 +999,20 @@ body {
   background-color: transparent; }
 
 .menu-item-2:hover {
-  border-bottom: solid 3px #1E3E75;
+  text-transform: uppercase;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 38px;
+  border: none;
+  background-color: transparent;
+  color: #E41E26;
+  border-bottom: solid 3px #E41E26;
   cursor: pointer; }
+
+.modal-open .modal {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden; }
 
 .designer-details-modal {
   height: 100vh;
@@ -1205,18 +1232,30 @@ body {
 #loaderGIFSlide6 {
   display: none; }
 
-@media only screen and (max-width: 1370px) {
+.error-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px; }
+  .error-content .error-title {
+    font: 25px "Lato", sans-serif;
+    color: #E41E26; }
+  .error-content .error-message {
+    font: 18px "Lato", sans-serif; }
+
+@media only screen and (min-height: 1200px) and (min-width: 1020px) {
   .app-container-2 .homepage-container-2 .middle-section-wrapper-2 .homepage-middle-content-2 .slick-designer-slideshow-2 .slick-dots,
   .app-container-2 .homepage-container-2 .middle-section-wrapper-2 .homepage-middle-content-2 .designer-content-container-2 .slick-dots {
-    right: -460px; } }
-@media only screen and (min-height: 1200px) and (min-width: 1000px) {
-  .app-container-2 .homepage-container-2 .middle-section-wrapper-2 .homepage-middle-content-2 .slick-designer-slideshow-2 .slick-dots,
-  .app-container-2 .homepage-container-2 .middle-section-wrapper-2 .homepage-middle-content-2 .designer-content-container-2 .slick-dots {
-    right: -460px; }
-  .app-container-2 .homepage-container-2 .designer-middle-section-wrapper-2 .designer-middle-content-2 .designer-profiles-wrapper-2 .profile-image-2 {
-    width: 35%;
-    height: 20%; } }
-@media only screen and (max-width: 1024px) {
+    right: -450px; }
+  .app-container-2 .homepage-container-2 .designer-middle-section-wrapper-2 .designer-middle-content-2 .designer-profiles-wrapper-2 {
+    height: 95%; }
+    .app-container-2 .homepage-container-2 .designer-middle-section-wrapper-2 .designer-middle-content-2 .designer-profiles-wrapper-2 .profile-image-2 {
+      width: 40%;
+      height: 25%; } }
+@media only screen and (max-width: 1025px) {
   .body {
     background: #F7F7F7; }
 
@@ -1257,7 +1296,14 @@ body {
     .app-container-2 .homepage-container-2 .middle-section-wrapper-2 .homepage-middle-content-2 .slick-designer-slideshow-2 div .slide-image-wrapper img,
     .app-container-2 .homepage-container-2 .middle-section-wrapper-2 .homepage-middle-content-2 .designer-content-container-2 div .slide-image-wrapper img {
       height: 110%;
-      width: auto; } }
+      width: auto; }
+    .app-container-2 .homepage-container-2 .middle-section-wrapper-2 .designer-middle-section-wrapper-2 .designer-middle-content-2 .return-homepage-wrapper2 {
+      height: 10%; }
+    .app-container-2 .homepage-container-2 .middle-section-wrapper-2 .designer-middle-section-wrapper-2 .designer-middle-content-2 .designer-profiles-wrapper-2 {
+      height: 90%; }
+      .app-container-2 .homepage-container-2 .middle-section-wrapper-2 .designer-middle-section-wrapper-2 .designer-middle-content-2 .designer-profiles-wrapper-2 .profile-image-2 {
+        width: 25%;
+        height: 30%; } }
 @media only screen and (max-width: 800px) {
   .body {
     background: #F7F7F7; }
@@ -1306,8 +1352,8 @@ body {
       height: 110%;
       width: auto; }
     .app-container-2 .homepage-container-2 .designer-middle-section-wrapper-2 .designer-middle-content-2 .designer-profiles-wrapper-2 .profile-image-2 {
-      width: 35%;
-      height: 20%; }
+      width: 40%;
+      height: 25%; }
     .app-container-2 .menu-item-2 {
       text-transform: uppercase;
       font-family: "Playfair Display", serif;
