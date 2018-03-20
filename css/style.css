@@ -63,7 +63,8 @@ html {
   color: #E41E26;
   float: right;
   letter-spacing: 1px;
-  border: none; }
+  border: none;
+  background-color: #FFF; }
 
 .dropdown-menu {
   width: 100%; }
@@ -245,7 +246,6 @@ html {
 
   .name_tag {
     width: 200px;
-    height: 50px;
     float: right;
     margin-right: 30px; }
 
