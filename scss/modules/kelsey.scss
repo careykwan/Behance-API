@@ -31,7 +31,7 @@ body {
 }
 #box4 {
 	 grid-column: 1 / 6;
-	 height: 150px;
+	 height: 185px;
 	 background-color: white;	
 }
 
@@ -125,7 +125,7 @@ body {
 	float: left;
 	margin-left: 40px;
 	padding: 0.75%;
-	margin-bottom: 1%;
+	margin-top:16px;
 }
 #chart2Container {
 	background-color: $darkerGrey;
@@ -134,7 +134,7 @@ body {
 	float: right;
 	margin-right: 3%;
 	padding: 0.75%;
-	margin-bottom: 1%;	
+	margin-top:16px;
 }
 #chart1 {
 	background-color: white;
@@ -191,6 +191,7 @@ body {
 	margin: 0 auto;
 	padding: 0.75%;
 	background-color: $darkerGrey;
+	margin-top:55px;
 }
 #stats {
 	background-color: white;
@@ -206,7 +207,7 @@ body {
 }
 #statsGridContainer {
 	width: 95%;
-	
+	margin-top:10px;
 	margin: 0 auto;
 	display: grid;
 	grid-template-columns:repeat(3, 1fr) ;
@@ -226,12 +227,12 @@ body {
 .icon {
 	width: 30%;
 	height: 30%;
-	margin-top: 30px;
+	margin-top: 40px;
 }
 .label {
 	font: 18px Lato, sans-serif;
 	margin-left:25%;
-	margin-top:-44px;
+	margin-top:-40px;
 }
 
 .statsStyle {
