@@ -110,8 +110,9 @@ function kelseyJavascript() {
 
       },
       error: function(error){
-        console.log(error);
-        console.log("Something has gone wrong");
+        $('#errorMessage').empty();
+        $('#errorMessage').css('display','inline');
+       $('#errorMessage').append('Unable To Connect To Server!');
       }
       });
     }
@@ -129,8 +130,10 @@ function kelseyJavascript() {
              $('.designerName3').append(dataFromJSONP2.user.display_name);
              },
         error: function(error){
-            console.log(error);
-            console.log("Something has gone wrong");
+         $('#errorMessage').empty();
+        $('#errorMessage').css('display','inline');
+       $('#errorMessage').append('Unable To Connect To Server!');
+       $('.designerName3').css('display', 'none');
         }
     });
   }

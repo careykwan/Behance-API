@@ -444,6 +444,14 @@ body {
 .btn.focus, .btn:focus {
   box-shadow: none; }
 
+#errorMessage {
+  display: inline;
+  margin-left: 20%;
+  font: bold 32px Lato, serif;
+  border: 2px red solid;
+  padding: 18px;
+  display: none; }
+
 #chart1Container {
   background-color: #EFEFEF;
   width: 47.5%;
