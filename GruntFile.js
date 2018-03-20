@@ -10,14 +10,6 @@ module.exports = function (grunt) {
                 }
             }
         },
-        csslint: {
-            strict: {
-                options: {
-                    import: 2
-                },
-                src: ['css/style.css']
-            }
-        },
         cssmin: {
             target: {
                 files: [{
@@ -36,13 +28,6 @@ module.exports = function (grunt) {
                 }
             }
         },
-        // concat: {
-          
-        //     dist: {
-        //         src: ['js/carey.js', 'js/kelsey.js', 'js/flo.js'],
-        //         dest: 'js/script.js',
-        //     },
-        // },
         sass: {
             dist: {
                 files: {
@@ -88,8 +73,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-csslint');
     // run grunt mincss
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    // run grunt concat
-    grunt.loadNpmTasks('grunt-contrib-concat');
     // run grunt uglify js
     grunt.loadNpmTasks('grunt-contrib-uglify');
     // run gruntSass
@@ -103,9 +86,6 @@ module.exports = function (grunt) {
 
     // In terminal if entered 'grunt debug', 
     // it will only run the tasks inside the array 
-    grunt.registerTask('default', ['jshint', 'csslint']);
-    grunt.registerTask('min', ['csslint', 'cssmin', 'jshint', 'uglify']);
-    grunt.registerTask('compile', ['sass']);
     grunt.registerTask('server', ['browserSync']);
     grunt.registerTask('w', ['watch']);
 };

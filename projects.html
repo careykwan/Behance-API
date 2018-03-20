@@ -1,27 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Projects</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link href=“https://fonts.googleapis.com/css?family=Lato:400,400i” rel=“stylesheet”>
-    <link href=“https://fonts.googleapis.com/css?family=Playfair+Display:700,700i,900,900i” rel=“stylesheet”>
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,700i,900,900i" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
-	<div class='container_one'>
+	<div class='containerMobile'>
+		<p class='resizeHead'>OH NO!</p>
+		<p class='resize'>To view this site please use a larger screen sized device or resize your browser.</p>
+	</div>
+	<div class='container_one' id="pop_up">
 
 		<div class='navbar_one'>
-			<img class='heading_one' src='img/pentagramerLogo.png' alt='logo'>
-			<img class='behance_one' src="img/behanceLogo.png" alt="Behance logo">
+			<a href="index.html"><img class='heading_one' src='img/pentagramerLogo.png' alt='logo'></a>
+			<a href="https://www.behance.net/"><img class='behance_one' src="img/behanceLogo.png" alt="Behance logo"></a>
 		</div>
 		
 		<div class='nav_one'>
-			<a href='index.html'><button class='button_one'><i class="fas fa-long-arrow-alt-left arrow"></i>Back to designer's list</button></a>
+			<button class='button_one'><i class="fas fa-long-arrow-alt-left arrow"></i>Back to Homepage</button>
+
+			<div class="error_box">
+				<p class='error_message'>Error: Unable to connect to server!</p>
+			</div>
 
 			<div class='name_tag'>
 				<div class="dropdown">
-					  <button class="dropdown-toggle creator_name" type="button" id="dropdownMenu2 button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mary Rabun</button>
-					  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+					  <button class="dropdown-toggle creator_name" type="button" id="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mary Rabun</button>
+					  <div class="dropdown-menu">
 					    <button class="dropdown-item" id="d1" type="button">Claire Hartley</button>
 					    <button class="dropdown-item" id="d2" type="button">Rafael Alvarez</button>
 					    <button class="dropdown-item" id="d3" type="button">Yukai Du</button>
@@ -37,74 +48,78 @@
 			<!-- This is the first project -->
 			<div class='project_box'>
 				<div class='project' id='projectOne'>
-					<img class='images' id='photoOne' src='' alt='Project image'>
+					<img class='images' id='photoOne' src='#' alt='Project image'/>
 				</div>
 				<div class='info_box' id='infoOne'>
 					<div class='titles'>
-						<h1 class='project_name' id='titleOne'></h1>
-						<h2 class='type' id='categoryOne'></h2>
+						<h1 class='project_name' id='titleOne'>#</h1>
+						<h2 class='type' id='categoryOne'>#</h2>
 						<div class='link_tag'>
 							<a class='link_one' href='https://www.behance.net/gallery/58448623/Poly-Co'>View in Behance</a>
-							<p class='published' id='timeOne'></p>
+							<p class='published' id='timeOne'>#</p>
 						</div>
 					</div>
 					
 					<div class='data_box'>
-						<img class='icon_one' src='img/viewIcon.svg' alt='View icon'>
+						<img class='icon_one' src='img/viewIcon.svg' alt='View icon'/>
 						<div class='data_title'>
 							<p class='titleMedia'>Project Views</p>
-							<p class='views' id='viewsOne'></p>
+							<p class='views' id='viewsOne'>#</p>
 						</div>
-						<img class='icon_one' src='img/likeIcon.svg' alt='Like icon'>
+						<img class='icon_one' src='img/likeIcon.svg' alt='Like icon'/>
 						<div class='data_title'>
 							<p class='titleMedia'>Appreciations</p>
-							<p class='likes' id='likesOne'></p>
+							<p class='likes' id='likesOne'>#</p>
 						</div>
-						<img class='icon_one' src='img/commentsIcon.svg' alt='Comments icon'>
+						<img class='icon_one' src='img/commentsIcon.svg' alt='Comments icon'/>
 						<div class='data_title'>
 							<p class='titleMedia'>Comments</p>
-							<p class='comments' id='commentsOne'></p>
+							<p class='comments' id='commentsOne'>#</p>
 						</div>
 					</div>
 
 				</div>
-				<div class='comment_box' id='commentBox'>
-					
+				<div class='comTitle'>
+					<p class='commentTitle' id='comOne'>Comments:</p>
 				</div>
+				<div class='comment_box' id='commentBox'></div>
 			</div>
 
 			<!-- This is the second project -->
 			<div class='project_box'>
 				<div class='project' id='projectTwo'>
-					<img class='images' id='photoTwo' src='' alt='Project image'>
+					<img class='images' id='photoTwo' src='#' alt='Project image'/>
 				</div>
 				<div class='info_box' id='infoTwo'>
 					<div class='titles'>
-						<h1 class='project_name' id='titleTwo'></h1>
-						<h2 class='type' id='categoryTwo'></h2>
+						<h1 class='project_name' id='titleTwo'>#</h1>
+						<h2 class='type' id='categoryTwo'>#</h2>
 						<div class='link_tag'>
 							<a class='link_one' href='https://www.behance.net/gallery/53585037/Juniper-Square'>View in Behance</a>
-							<p class='published' id='timeTwo'></p>
+							<p class='published' id='timeTwo'>#</p>
 						</div>
 					</div>
 					
 					<div class='data_box'>
-						<img class='icon_one' src='img/viewIcon.svg' alt='View icon'>
+						<img class='icon_one' src='img/viewIcon.svg' alt='View icon'/>
 						<div class='data_title'>
 							<p class='titleMedia'>Project Views</p>
-							<p class='views' id='viewsTwo'></p>
+							<p class='views' id='viewsTwo'>#</p>
 						</div>
-						<img class='icon_one' src='img/likeIcon.svg' alt='Like icon'>
+						<img class='icon_one' src='img/likeIcon.svg' alt='Like icon'/>
 						<div class='data_title'>
 							<p class='titleMedia'>Appreciations</p>
-							<p class='likes' id='likesTwo'></p>
+							<p class='likes' id='likesTwo'>#</p>
 						</div>
-						<img class='icon_one' src='img/commentsIcon.svg' alt='Comments icon'>
+						<img class='icon_one' src='img/commentsIcon.svg' alt='Comments icon'/>
 						<div class='data_title'>
 							<p class='titleMedia'>Comments</p>
-							<p class='comments' id='commentsTwo'></p>
+							<p class='comments' id='commentsTwo'>#</p>
 						</div>
 					</div>
+				</div>
+				<div class='comTitle'>
+					<p class='commentTitle' id='comTwo'>Comments:</p>
 				</div>
 				<div class='comment_box' id='commentBoxTwo'></div>
 			</div>
@@ -112,47 +127,54 @@
 			<!-- This is the third project -->
 			<div class='project_box'>
 				<div class='project' id='projectThree'>
-					<img class='images' id='photoThree' src='' alt='Project image'>
+					<img class='images' id='photoThree' src='#' alt='Project image'/>
 				</div>
 				<div class='info_box' id='infoThree'>
 					<div class='titles'>
-						<h1 class='project_name' id='titleThree'></h1>
-						<h2 class='type' id='categoryThree'></h2>
+						<h1 class='project_name' id='titleThree'>#</h1>
+						<h2 class='type' id='categoryThree'>#</h2>
 						<div class='link_tag'>
 							<a class='link_one' href='https://www.behance.net/gallery/53552369/Boll-Branch'>View in Behance</a>
-							<p class='published' id='timeThree'></p>
+							<p class='published' id='timeThree'>#</p>
 						</div>
 					</div>
 					
 					<div class='data_box'>
-						<img class='icon_one' src='img/viewIcon.svg' alt='View icon'>
+						<img class='icon_one' src='img/viewIcon.svg' alt='View icon'/>
 						<div class='data_title'>
 							<p class='titleMedia'>Project Views</p>
-							<p class='views' id='viewsThree'></p>
+							<p class='views' id='viewsThree'>#</p>
 						</div>
-						<img class='icon_one' src='img/likeIcon.svg' alt='Like icon'>
+						<img class='icon_one' src='img/likeIcon.svg' alt='Like icon'/>
 						<div class='data_title'>
 							<p class='titleMedia'>Appreciations</p>
-							<p class='likes' id='likesThree'></p>
+							<p class='likes' id='likesThree'>#</p>
 						</div>
-						<img class='icon_one' src='img/commentsIcon.svg' alt='Comments icon'>
+						<img class='icon_one' src='img/commentsIcon.svg' alt='Comments icon'/>
 						<div class='data_title'>
 							<p class='titleMedia'>Comments</p>
-							<p class='comments' id='commentsThree'></p>
+							<p class='comments' id='commentsThree'>#</p>
 						</div>
 					</div>
 				</div>
-				<div class='comment_box' id='commentBoxThree'></div>
+				<div class='comTitle'>
+					<p class='commentTitle' id='comThree'>Comments:</p>
+				</div>
+				<div class='comment_box' id='commentBoxThree'>
+					
+
+				</div>
 			</div>
+		</div>
 			
 	<!-- This end of container div -->
 	</div>
-	<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-	<script type="text/javascript" src="node_modules/moment/moment.js"></script>
-	<script type="text/javascript" src="js/carey.js"></script>
+	<script src="node_modules/moment/moment.js"></script>
+	<script src="js/carey.js"></script>
 	
 		
 </body>
