@@ -1,11 +1,12 @@
-//everything is wrapped inside a funciton 
-//this invokes that fucnction
-kelseyJavascript();
-
 function kelseyJavascript() {
   //click function on return button to go back to desingers page
-  $('#returnBtn').click(function(){
+  $('#returnBtn').click(function (){
     window.location = 'index.html';
+  });
+  //click function that links behance logo to behance 
+  //homepage
+  $('#secondLogo3').click(function (){
+    window.location = 'https://www.behance.net/';
   });
 
   google.charts.load('current', {'packages':['corechart' ,'bar']});
@@ -14,12 +15,6 @@ function kelseyJavascript() {
 // var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
   var apiKey = '9GZKv2mtTMZwnLXjV4lOWIQONW7Xq2ip';
   var designerId = 'MaryRabun';
-  // var designer1 = 'rafaalvarez';
-  // var designer2 = 'clairehartley';
-  // var designer3 = 'Doralice';
-  // var designer4 = 'izutsu';
-  // var designer5 = 'MaryRabun';
-  // var designer6 = 'nahuelsal';
 
   getNameData();
 
@@ -103,11 +98,6 @@ function kelseyJavascript() {
       addDetails(dataFromJSONP);
       google.charts.setOnLoadCallback(drawPieChart(dataFromJSONP));
 
-      //click function to on designers name to take to desingers behance profile
-      $('#designerName3').click(function(){
-        window.location = 'https://www.behance.net/' + designerId;
-      });
-
       },
       error: function(error){
         $('#errorMessage').empty();
@@ -184,3 +174,6 @@ function kelseyJavascript() {
               
   }
 }
+//everything is wrapped inside a funciton 
+//this invokes that fucnction
+kelseyJavascript();
