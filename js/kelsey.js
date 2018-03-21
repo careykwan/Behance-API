@@ -9,16 +9,23 @@ function kelseyJavascript() {
     window.location = 'https://www.behance.net/';
   });
 
+//google charts functions to load the packages and invoke the code
   google.charts.load('current', {'packages':['corechart' ,'bar']});
   google.charts.setOnLoadCallback(getApiData);
 
+//spare api key if limit is reached can be changed
 // var apiKey = 's2I0yUtgNQA70LjwEMBJfy3TWu2MGOsG';
   var apiKey = '9GZKv2mtTMZwnLXjV4lOWIQONW7Xq2ip';
+
+    //default designer id when page loads and ajax request is sent
+  //data for this designer will display 
   var designerId = 'MaryRabun';
 
+  //invoking the getNameData function
   getNameData();
 
 // function to change desinger user id to get new desinger data from api
+//when dropdown name is clicked designer Id dropdown changes
   $('.dropdown-item').click(function(){
     switch (this.id) {
     case 'designerOne3':
@@ -55,7 +62,7 @@ function kelseyJavascript() {
   });
 
 //initial ajax request to get data from api
-//also includes functions to create bar graph and invokes
+//also includes google charts functions to create bar graph and invokes
 //add details and drawpiechart functions
   function getApiData(){
 
@@ -114,8 +121,7 @@ function kelseyJavascript() {
         url:'https://api.behance.net/v2/users/' + designerId + '?&api_key=' + apiKey,
         dataType: 'jsonP',
         success: function(dataFromJSONP2){
-            console.log(dataFromJSONP2);
-
+          
             $('.designerName3').empty();
              $('.designerName3').append(dataFromJSONP2.user.display_name);
              },
@@ -127,7 +133,8 @@ function kelseyJavascript() {
         }
     });
   }
-  //function to create the pice chart, data from inital ajax function is passed through as paramter
+  //function to create the google charts pie chart,
+  // data from inital ajax function is passed through as paramter
   function drawPieChart(dataFromJSONP){
     var data = new google.visualization.DataTable();
       data.addColumn('string', 'Project Name');
