@@ -16,7 +16,7 @@ function florenceJavaScript() {
        
         var userIDArray = [];
         
-        // @grabUserID is a switch statement to push and empty certain UserIDs depending on what div has been clicked has been clicked.
+        // @grabUserID is a switch statement to empty the UserIDArray and push a certian ID into it depending on what profile image div has been clicked.
         function grabUserID() {
             $('div').click(function () {
                 switch (this.id) {
@@ -54,7 +54,7 @@ function florenceJavaScript() {
             });
         }
 
-        // @AJAXBehanceRequest2 Runs a AJAX request to Behance API to grab data for the designer details modal, if successful it will run showDesignerDetails function .
+        // @AJAXBehanceRequest2 Runs a AJAX request to Behance API to grab data for the designer details modal, if it is successful it will run showDesignerDetails function .
         function AJAXBehanceRequest2() {
             $.ajax({
                 url: 'http://behance.net/v2/users/' + userIDArray[0] + '?api_key=' + apiKey,
@@ -92,6 +92,7 @@ function florenceJavaScript() {
                 designerWebsite = data.user.website;
             }
 
+            // The line of code below was referenced from a stack overflow answer at: https://stackoverflow.com/questions/8206269/how-to-remove-http-from-a-url-in-javascript
             var parsedDesignerWebsite = designerWebsite.replace(/(^\w+:|^)\/\//, '');
             $('#designerWebsiteLink2').text(parsedDesignerWebsite);
             $('#designerWebsiteLink2').attr("href", data.user.website);
@@ -103,11 +104,10 @@ function florenceJavaScript() {
         }
     }
 
-
     function multipleAJAXRequestFunction() {
         secondAJAXBehanceRequest2();
 
-        // @AJAXBehanceRequest2 Runs a AJAX request to Behance API to grab data, if successful it will run showDesignerDetails function.
+        // @secondAJAXBehanceRequest2 is a function that hold the multiple AJAX request for each designer profile.
         function secondAJAXBehanceRequest2() {
 
             var designer1 = 'rafaalvarez';
