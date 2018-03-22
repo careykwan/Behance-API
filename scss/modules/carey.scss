@@ -403,6 +403,10 @@ html {
 	.error_box {
 		left: 170px;
 	}
+
+	.link_tag {
+		padding-bottom: 5px;
+	}
 }
 //landscape of tablet
 @media only screen 
@@ -493,7 +497,6 @@ and (orientation: landscape) {
 	.project_name {
 		font-size: 16px;
 		padding-right: 15px;
-		margin-left: 85px;
 	}
 
 	.creator_name {
@@ -512,6 +515,16 @@ and (orientation: landscape) {
 	.error_box {
 		left: 300px;
 	}
+
+	.link_tag {
+		padding-bottom: 5px;
+	}
+
+	.comTitle {
+		height: 7%;
+	}
+
+
 }
 //Mobile phone
 @media only screen and (max-width: 414px) {

@@ -2,7 +2,6 @@ careyjavascript();
 
 function careyjavascript(){
 
-	// var apiKey = 'MZysOrpqpvz4iqc0bAMYtXJiWovTMZSY';
 	var apiKey = 'cPSHY669vPegbDmBas5ELAxsxAp6pigv';
 	var userID = 'maryRabun';
 	var projects = [58448623, 53585037, 53552369];
@@ -12,12 +11,12 @@ function careyjavascript(){
 	commentsDataTwo();
 	commentsDataThree();
 
-	//this is the function for the button to be clicked to be taken back to the index page
+	/**  this is the function for the button to be clicked to be taken back to the index page  **/
 	 $('.button_one').click(function(){
     	window.location = 'index.html';
   	});
 
-	//This switch statement is the function to display the correct data once the name is selected
+	/** This switch statement is the function to display the correct data once the name is selected  **/
 	$('.dropdown-item').click(function(){
 	 switch (this.id) {
 	   case 'd1':
@@ -101,7 +100,7 @@ function careyjavascript(){
 	 	}
 	});	
 
-	//this is to pull designers name
+	/**  this is the ajax request to the pull designers name  **/
 	function nameData(){
 
 		$.ajax({
@@ -123,7 +122,7 @@ function careyjavascript(){
 		$('.creator_name').append(dataNames.user.first_name + ' ' + dataNames.user.last_name);
 	}
 
-	// ajax request to grab users project details
+	/**  This is a ajax request to grab users project details  **/
 	function behanceData(){
 
 		$.ajax({
@@ -141,7 +140,7 @@ function careyjavascript(){
 		 });
 	}
 
-	// ajax request to grab comment data for the first project for each designer
+	/**  This is the ajax request to grab the comment data for the first project for each designer  **/
 	function commentsData(){
 		
 		$.ajax({
@@ -157,7 +156,7 @@ function careyjavascript(){
 		});
 	}
 
-	//this is the ajax request for comment data for the second project for each designer
+	/** this is the ajax request to pull comment data for the second project for each designer  **/
 	function commentsDataTwo(){
 		
 		$.ajax({
@@ -172,7 +171,7 @@ function careyjavascript(){
 		});
 	}
 
-	//this is the ajax request comment data for the third project for each designer
+	/** this is the ajax request comment data for the third project for each designer  **/
 	function commentsDataThree(){
 		
 		$.ajax({
@@ -187,7 +186,7 @@ function careyjavascript(){
 		});
 	}
 	
-	// function to display the user data
+	/** This function displays the user data to the dom **/
 	function runApp (dataFromServer) {
 		var firstProject = dataFromServer.projects[0].covers.original;
 		var secondProject = dataFromServer.projects[1].covers.original;
@@ -196,7 +195,7 @@ function careyjavascript(){
 		var timeTwo = timeFormatter(dataFromServer.projects[1].published_on);
 		var timeThree = timeFormatter(dataFromServer.projects[2].published_on);
 
-		//this is the function to convert the time to a readable format
+		/** this is the function to convert the time time stap to a readable format  **/
 		function timeFormatter(timeFromBehance) {
 	    return moment.unix(timeFromBehance).format('Do MMM YYYY');
 		}
@@ -244,7 +243,7 @@ function careyjavascript(){
 		$('#commentsThree').append(dataFromServer.projects[2].stats.comments);
 	}
 
-	// function to loop the comments data
+	/** This function loops through the comments data **/
 	function runAppTwo (dataFromServerTwo) {
 
 		for (var i = 0; i < dataFromServerTwo.comments.length; i++) {
@@ -252,7 +251,7 @@ function careyjavascript(){
 	    }
 	}
 
-	//this is the function to run the second lot of comments and show in column
+	/** this is the function to run the second lot of comments and show in column  **/
 	function runAppThree (dataFromServerThree){
 
 		for (var i = 0; i < dataFromServerThree.comments.length; i++) {
@@ -260,25 +259,25 @@ function careyjavascript(){
 	    }
 	}
 
-	//this is the function to run the third lot of comments
+	/** this is the function to run the third lot of comments**/
 	function runAppFour (dataFromServerFour){
 		for (var i = 0; i < dataFromServerFour.comments.length; i++) {
 	        appendCommentsCardThree(dataFromServerFour.comments[i]);
 	    }
 	}
 
-	// This is a function append the comments to the div in html
+	/** This is a function append the comments to the div in html **/
 	function appendCommentsCard(dataFromServerTwo) {
 	    var output2 = document.getElementById('commentBox');
 	    var profileImg = dataFromServerTwo.user.images['50']; 
 	    var timesUp = commentsDate(dataFromServerTwo.created_on);
 	    
-	    //This is the function to convert the date
+	    /** This is the function to convert the date **/
 	    function commentsDate(commentTimeBehance){
 	    return moment.unix(commentTimeBehance).format('Do MMM YYYY'); 
 		}
 
-	    // creating div for comment card
+	    /** creating div for comment card **/
 	    var commentDiv = document.createElement('div');
 	    commentDiv.className = 'main_comment';
 	    output2.appendChild(commentDiv);
@@ -308,7 +307,7 @@ function careyjavascript(){
 	    userComments.className = 'user_comments';
 	    commentDiv.appendChild(userComments);
 
-	    //These are to show the data in the dom
+	    /** These are to show the data in the dom **/
 	    var designer = document.createTextNode(dataFromServerTwo.user.display_name);
 	    profileName.appendChild(designer);
 
@@ -320,18 +319,18 @@ function careyjavascript(){
 
 	}
 
-	//This is a function append the comments to the second card of divs in html
+	/** This is a function to append the comments to the second card of divs in html **/
 	function appendCommentsCardTwo(dataFromServerThree) {
 	    var output3 = document.getElementById('commentBoxTwo');
 	    var profileImgTwo = dataFromServerThree.user.images['50']; 
 	    var timesUpTwo = commentsDateTwo(dataFromServerThree.created_on);
 	    
-	    //This is the function to convert the date
+	    /** This is the function to convert the date **/
 	    function commentsDateTwo(commentTimeBehanceTwo){
 	    return moment.unix(commentTimeBehanceTwo).format('Do MMM YYYY'); 
 		}
 
-	    // creating div for comment card
+	    /** creating div for comment card **/
 	    var commentDiv = document.createElement('div');
 	    commentDiv.className = 'main_comment';
 	    output3.appendChild(commentDiv);
@@ -361,7 +360,7 @@ function careyjavascript(){
 	    userComments.className = 'user_comments';
 	    commentDiv.appendChild(userComments);
 
-	    //These are to show the data in the dom
+	    /** These are to show the data in the dom **/
 	    var designer = document.createTextNode(dataFromServerThree.user.display_name);
 	    profileName.appendChild(designer);
 
@@ -372,18 +371,18 @@ function careyjavascript(){
 	    userComments.appendChild(comments);
 	}
 
-	//This is a function append the comments to the second card of divs in html
+	/** This is a function append the comments to the second card of divs in html **/
 	function appendCommentsCardThree(dataFromServerFour) {
 	    var output4 = document.getElementById('commentBoxThree');
 	    var profileImgThree = dataFromServerFour.user.images['50']; 
 	    var timesUpThree = commentsDateThree(dataFromServerFour.created_on);
 	    
-	    //This is the function to convert the date
+	    /** This is the function to convert the date **/
 	    function commentsDateThree(commentTimeBehanceTwo){
 	    return moment.unix(commentTimeBehanceTwo).format('Do MMM YYYY'); 
 		}
 
-	    // creating div for comment card
+	    /** creating div for comment card  **/
 	    var commentDiv = document.createElement('div');
 	    commentDiv.className = 'main_comment';
 	    output4.appendChild(commentDiv);
@@ -413,7 +412,7 @@ function careyjavascript(){
 	    userComments.className = 'user_comments';
 	    commentDiv.appendChild(userComments);
 
-	    //These are to show the data in the dom
+	    /** These are to show the data in the dom **/
 	    var designer = document.createTextNode(dataFromServerFour.user.display_name);
 	    profileName.appendChild(designer);
 
