@@ -253,11 +253,11 @@ body {
 
 
 @media only screen and (max-width: 820px) {
-	#box3{
-		height: 877px;
-	}
+#box3{
+	height: 877px;
+}
 #box4 {
-	height: 115px;
+	height: 126px;
     margin-top: -240px;
 }
 #statsContainer {
@@ -344,7 +344,10 @@ body {
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
 and (orientation : landscape) {
-
+#box4{
+	height:149px;
+	margin-top:-47px;
+}
 .designerName3 {
 	margin-right: 3%;
     font-size: 20px;
