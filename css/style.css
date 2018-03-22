@@ -333,7 +333,10 @@ html {
     overflow-y: hidden; }
 
   .error_box {
-    left: 170px; } }
+    left: 170px; }
+
+  .link_tag {
+    padding-bottom: 5px; } }
 @media only screen and (min-device-width: 820px) and (max-device-width: 1024px) and (orientation: landscape) {
   .containerMobile {
     display: none; }
@@ -400,8 +403,7 @@ html {
 
   .project_name {
     font-size: 16px;
-    padding-right: 15px;
-    margin-left: 85px; }
+    padding-right: 15px; }
 
   .creator_name {
     font-size: 30px;
@@ -414,7 +416,13 @@ html {
     overflow-y: hidden; }
 
   .error_box {
-    left: 300px; } }
+    left: 300px; }
+
+  .link_tag {
+    padding-bottom: 5px; }
+
+  .comTitle {
+    height: 7%; } }
 @media only screen and (max-width: 414px) {
   .container_one {
     display: none; }

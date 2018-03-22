@@ -24,7 +24,7 @@ module.exports = function (grunt) {
         uglify: {
             my_target: {
                 files: {
-                    'js/script.min.js': ['js/script.js']
+                    'js/script.min.js': ['js/script.js', 'js/carey.js', 'js/kelsey.js']
                 }
             }
         },
@@ -60,7 +60,7 @@ module.exports = function (grunt) {
             },
             js: {
                 files: ['js/*.js'],
-                tasks: ['jshint']
+                tasks: ['jshint', 'uglify']
             }
         }
         
@@ -84,7 +84,6 @@ module.exports = function (grunt) {
    
 
 
-    // In terminal if entered 'grunt debug', 
     // it will only run the tasks inside the array 
     grunt.registerTask('server', ['browserSync']);
     grunt.registerTask('w', ['watch']);
